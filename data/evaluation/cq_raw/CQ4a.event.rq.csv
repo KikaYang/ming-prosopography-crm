@@ -1,0 +1,5 @@
+﻿claim,sourceLabel,sourceNote,dateText,begin,end
+event:huagaidian-claim-cbdb-421880,CBDB POSTED_TO_OFFICE_DATA posting_id 421880,CBDB 标注出处为明史列传，但列传作嘉靖十三年，二者不符,1532,1532-02-16T00:00:00,1533-02-03T23:59:59
+event:huagaidian-claim-mingshi-110,明史 卷110 宰輔年表二,,嘉靖十一年三月,1532-04-16T00:00:00,1532-05-14T23:59:59
+event:huagaidian-claim-shilu-136,世宗實錄 卷136,,嘉靖十一年三月甲寅,1532-04-20T00:00:00,1532-04-20T23:59:59
+event:huagaidian-claim-mingshi-196,明史 卷196 列傳第八十四,,嘉靖十三年,1534-01-24T00:00:00,1535-02-11T23:59:59

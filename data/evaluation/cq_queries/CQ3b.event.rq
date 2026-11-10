@@ -1,0 +1,5 @@
+# 理由：召与赴召不是 E85，但决定“到京”的时间；取 type:zhao 的事件和由它引起（P17）的活动。
+SELECT ?e ?label ?begin ?end WHERE {
+  { ?e crm:P2_has_type type:zhao ; crm:P11_had_participant person:68266 } UNION { ?z crm:P2_has_type type:zhao . ?e crm:P17_was_motivated_by ?z ; crm:P11_had_participant person:68266 }
+  ?e rdfs:label ?label ; crm:P4_has_time-span ?ts . ?ts crm:P82a_begin_of_the_begin ?begin ; crm:P82b_end_of_the_end ?end .
+} ORDER BY ?begin

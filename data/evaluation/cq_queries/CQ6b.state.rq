@@ -1,0 +1,5 @@
+# 理由：state 版差遣只是人身上的头衔（D22），只能按修书班子的常见职名去取；这一步需要查询者预先知道职名。
+SELECT ?titleLabel ?person ?personLabel WHERE {
+  VALUES ?t { type:jianxiu-guan type:zongcai-guan type:fu-zongcai-guan type:zuanxiu-guan }
+  ?person mpv:holds_title ?t ; rdfs:label ?personLabel . ?t rdfs:label ?titleLabel . FILTER(LANG(?titleLabel)="zh-Hant")
+} ORDER BY ?titleLabel ?person

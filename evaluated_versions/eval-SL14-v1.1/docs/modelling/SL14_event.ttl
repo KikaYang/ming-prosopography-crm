@@ -1,0 +1,102 @@
+# SL14 event 版（框架：agent 编写 2026-11-02；第③块由 Yang 编写）。
+# 依据：信息单元清单 J161（info_units.csv v1.3，标签 units-SL14）、决策 D1–D26。共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
+# 原文字符串（rdfs:label @zh-Hant）据清单录文（简体）由 agent 转为繁体，待 Yang 对照影像核实。
+# 出处（决策 D7）：事件用 doc:shizong-shilu-161 P70 documents（第③块），原文称谓串用 P67 refers_to（第④块）。
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+@prefix work:   <https://kikayang.github.io/ming-prosopography-crm/id/work/> .
+@prefix place:  <https://kikayang.github.io/ming-prosopography-crm/id/place/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ① 人物（决策 D21）
+# person:68547（徐階）、person:ming-shizong 的定义见 vocab.ttl
+
+# ② 日期（决策 D14）
+
+ts:jj13-03-jimao a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj13-03-jimao ;
+    crm:P82a_begin_of_the_begin "1534-05-05T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1534-05-05T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十三年三月己卯（J161-U01；年月据卷首“嘉靖十三年三月丁卯朔”，己卯为三月十三）；儒略历 1534-04-25；已与中研院两千年中西历转换核对（儒略 1534-04-25 → 嘉靖13年3月13日；是年有闰二月，此三月非闰月）"@zh-Hans .
+
+name:date-jj13-03-jimao a crm:E41_Appellation ;
+    rdfs:label "嘉靖十三年三月己卯"@zh-Hant .
+
+# ③ 嘉靖十三年三月己卯：升浙江按察司佥事，提调学校（决策 D23–D26）
+
+## 父事件：升（D23）
+event:jj13-03-jimao-sheng a crm:E7_Activity ;
+    rdfs:label "升湖廣黃州府同知徐階為浙江按察司僉事，提調學校"@zh-Hant ;
+    crm:P2_has_type type:action-sheng ;
+    crm:P14_carried_out_by person:ming-shizong ;          # 原文未写，隐含
+    crm:P11_had_participant person:68547 ;         
+    crm:P4_has_time-span ts:jj13-03-jimao ;            
+    crm:P9_consists_of event:jj13-03-jimao-sheng-1 , event:jj13-03-jimao-sheng-2 ;   
+    rdfs:comment "J161-U02、U03。P14 为隐含（原文无主语）"@zh-Hans .
+
+## 组成部分一：加入浙江按察司（D3）
+event:jj13-03-jimao-sheng-1 a crm:E85_Joining ;       
+    crm:P143_joined person:68547 ;
+    crm:P144_joined_with group:zhejiang-anchasi .
+
+pc:jj13-03-jimao-sheng-1-anchasi a crm:PC144_joined_with ;
+    crm:P01_has_domain event:jj13-03-jimao-sheng-1 ;              
+    crm:P02_has_range  group:zhejiang-anchasi ;              
+    crm:P144.1_kind_of_member type:anchasi-qianshi .       
+
+## 组成部分二：离开黄州府（D24，隐含）
+event:jj13-03-jimao-sheng-2 a crm:E86_Leaving ;      
+    crm:P145_separated person:68547 ;
+    crm:P146_separated_from group:huangzhou-fu ;
+    rdfs:comment "隐含：原文只写'升'，未写离任（D24）。离开时的身份（同知）无法表达，见原文串与 T4"@zh-Hans .
+
+## 差遣：提调学校（D16、D25、D26）
+event:chaiqian-68547-tidiao-xuexiao a crm:E7_Activity ;
+    rdfs:label "提調學校（徐階）"@zh-Hant ;
+    crm:P2_has_type type:tidiao-xuexiao ;
+    crm:P14_carried_out_by person:68547 ;
+    crm:P7_took_place_at place:zhejiang ;            
+    crm:P11_had_participant group:zhejiang-anchasi ;        
+    crm:P17_was_motivated_by event:jj13-03-jimao-sheng ;        
+    rdfs:comment "J161-U08、U09"@zh-Hans .
+
+## 出处（D7）
+doc:shizong-shilu-161 crm:P70_documents event:jj13-03-jimao-sheng ,
+                                        event:jj13-03-jimao-sheng-1 ,
+                                        event:jj13-03-jimao-sheng-2 ,
+                                        event:chaiqian-68547-tidiao-xuexiao .
+
+# ④ 原文称谓串（决策 D4、D24）
+
+## 原官（J161-U04、U05）：按 D24，离任 E86 不能写身份（P146 无 .1 属性），原身份“同知”只由此串保留
+name:guanxian-jj13-03-jimao-xu-jie-yuan a crm:E41_Appellation ;
+    rdfs:label "湖廣黃州府同知徐階"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "升官前的称谓。原身份（府同知）只靠此串保留（D24、T4）"@zh-Hans .
+
+person:68547 crm:P1_is_identified_by name:guanxian-jj13-03-jimao-xu-jie-yuan .
+
+## 新官（J161-U06、U08、U09）
+name:guanxian-jj13-03-jimao-xu-jie-xin a crm:E41_Appellation ;
+    rdfs:label "浙江按察司僉事，提調學校"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "以新官带领差遣（J161-U09）；逗号为整理本所加"@zh-Hans .
+
+person:68547 crm:P1_is_identified_by name:guanxian-jj13-03-jimao-xu-jie-xin .
+
+doc:shizong-shilu-161 crm:P67_refers_to name:guanxian-jj13-03-jimao-xu-jie-yuan , name:guanxian-jj13-03-jimao-xu-jie-xin .

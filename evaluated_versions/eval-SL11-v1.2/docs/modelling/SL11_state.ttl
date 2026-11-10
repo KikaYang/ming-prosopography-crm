@@ -1,0 +1,237 @@
+# SL11 state 版（对照模型，决策 D15、D22；框架：agent 编写 2026-10-30，④⑤待 Yang 编写）。
+# 共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
+# 不建任何事件。人物、原文称谓串、凡例与书从 SL11_event.ttl 原样复制；如需修改两个文件同步改。
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+@prefix work:   <https://kikayang.github.io/ming-prosopography-crm/id/work/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ① 人物与原文称谓串（决策 D4、D6；与 event 版相同写法）
+
+## 张璁（与 SL12 两版相同；如需修改三个文件同步改）
+person:68266 a crm:E21_Person ;
+    rdfs:label "張璁"@zh-Hant ;
+    crm:P1_is_identified_by name:zhang-cong , name:zhang-fujing .
+
+name:zhang-cong a crm:E41_Appellation ;
+    rdfs:label "張璁"@zh-Hant ;
+    crm:P2_has_type type:benming .
+
+name:zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "張孚敬"@zh-Hant ;
+    crm:P2_has_type type:ciming .
+
+## 核心人物（D21）
+person:68194 a crm:E21_Person ;
+    rdfs:label "夏言"@zh-Hant ;
+    rdfs:comment "CBDB 68194（1482–1548），唯一；与 data/deep_cases/ 一致。原文直书“夏言”（J118-U41）"@zh-Hans .
+
+person:68547 a crm:E21_Person ;
+    rdfs:label "徐階"@zh-Hant ;
+    rdfs:comment "CBDB 68547（1503–1583）；同名另有 492716（清代）。与 data/deep_cases/ 一致。原文直书“徐阶”（J118-U50）"@zh-Hans .
+
+## 其他人物（D21：只建本敕中的差遣）
+person:130180 a crm:E21_Person ;
+    rdfs:label "郭勛"@zh-Hant ;
+    rdfs:comment "CBDB 130180（武定侯；同名 3 人，另两人为清代、宋代）。原文只作“卿勋”（J118-U26），识别为郭勋：建模者判断"@zh-Hans .
+
+person:68140 a crm:E21_Person ;
+    rdfs:label "李時"@zh-Hant ;
+    rdfs:comment "CBDB 68140（1471–1538，字宗易，谥文康）。同名“李時”共 34 人，其中明代 27 人。选取依据：只有 68140 有禮部尚書（1529，与 U13“礼部尚书李时”相合）和大學士任官；其余明代同名者中只有 283457 有翰林院侍讀學士，但其 c_index_year 为 1462，年代不合（agent 判断）。原文作“礼部尚书李时”（J118-U13）；敕中“卿时”（J118-U28）指李时：建模者判断"@zh-Hans .
+
+person:127536 a crm:E21_Person ;
+    rdfs:label "汪鋐"@zh-Hant ;
+    rdfs:comment "CBDB 127536，唯一。原文只作“卿𬭎”（J118-U30），识别为汪鋐：建模者判断"@zh-Hans .
+
+person:68285 a crm:E21_Person ;
+    rdfs:label "桂萼"@zh-Hant ;
+    rdfs:comment "CBDB 68285（卒 1531）；同名另有 566181（无任官记录）。原文只作“卿萼”（J118-U37），识别为桂萼：建模者判断"@zh-Hans .
+
+person:68136 a crm:E21_Person ;
+    rdfs:label "翟鑾"@zh-Hant ;
+    rdfs:comment "CBDB 68136（1477–1546），唯一。原文只作“卿鸾”（J118-U37，影像核对作“鸾”），识别为翟銮：建模者判断"@zh-Hans .
+
+person:132101 a crm:E21_Person ;
+    rdfs:label "廖道南"@zh-Hant ;
+    rdfs:comment "CBDB 132101（字鳴吾，正德十六年 1521 进士，有“學士”任官）。同名另有 122619：无生卒、无入仕、无别名、无任官记录，无法与本人对应；取 132101（agent 判断）。原文直书“廖道南”（J118-U48）"@zh-Hans .
+
+person:130490 a crm:E21_Person ;
+    rdfs:label "張袞"@zh-Hant ;
+    rdfs:comment "CBDB 130490（張袞，1487–1564，字補之）。690197（張衮）疑为同一人的重复记录：字同为補之，同为 1521 年进士，c_index_addr_id 同为 4614，有翰林院編修、侍讀學士、光祿寺卿等任官。取 130490（Yang 确认 2026-10-30）；重复记录见 data/deep_cases/REPORT.md 第 5 节。原文直书“张衮”（J118-U50）"@zh-Hans .
+
+person:131629 a crm:E21_Person ;
+    rdfs:label "程文德"@zh-Hant ;
+    rdfs:comment "CBDB 131629（1497–1559），唯一。原文直书“程文德”（J118-U50）"@zh-Hans .
+
+## 壬戌、辛未、癸酉称谓串（同 event 版第⑩块）
+
+## 壬戌（J118-U02、U03）：张璁奏储嗣（U04，in_scope=否）不建事件
+name:guanxian-jj09-10-renxu-zhang-cong a crm:E41_Appellation ;
+    rdfs:label "少傅兼太子太傅、吏部尚書張璁"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "嘉靖九年十月壬戌（十月初六；格里历 1530-11-05，儒略历 1530-10-26，已与中研院核对）。无殿阁衔（U02 note）"@zh-Hans .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-renxu-zhang-cong .
+doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-renxu-zhang-cong .
+
+## 辛未敕中称谓（J118-U25–U41）
+name:guanxian-jj09-10-xinwei-zhang-cong a crm:E41_Appellation ;
+    rdfs:label "知建造事、總督工程官卿璁"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-zhang-cong .
+
+name:guanxian-jj09-10-xinwei-guo-xun a crm:E41_Appellation ;
+    rdfs:label "知建造事總督工程官卿勛"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:130180 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-guo-xun .
+
+name:guanxian-jj09-10-xinwei-li-shi a crm:E41_Appellation ;
+    rdfs:label "同知建造事，督視規制官卿時"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68140 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-li-shi .
+
+name:guanxian-jj09-10-xinwei-wang-hong a crm:E41_Appellation ;
+    rdfs:label "監視巡察工程官卿𬭎"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "“𬭎”照清单录文（U30），未改为“鋐”"@zh-Hans .
+
+person:127536 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-wang-hong .
+
+name:guanxian-jj09-10-xinwei-gui-zhai a crm:E41_Appellation ;
+    rdfs:label "內閣輔臣大學士卿萼、卿鸞"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "一串指两人（U36、U37）"@zh-Hans .
+
+person:68285 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-gui-zhai .
+person:68136 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-gui-zhai .
+
+name:guanxian-jj09-10-xinwei-xia-yan a crm:E41_Appellation ;
+    rdfs:label "監視巡察工程官吏科都給事中夏言"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68194 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-xia-yan .
+
+doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-xinwei-zhang-cong , name:guanxian-jj09-10-xinwei-guo-xun ,
+                                        name:guanxian-jj09-10-xinwei-li-shi , name:guanxian-jj09-10-xinwei-wang-hong ,
+                                        name:guanxian-jj09-10-xinwei-gui-zhai , name:guanxian-jj09-10-xinwei-xia-yan .
+
+## 癸酉（J118-U61、U62）
+name:guanxian-jj09-10-guiyou-zhang-cong a crm:E41_Appellation ;
+    rdfs:label "輔臣璁"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-guiyou-zhang-cong .
+doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-guiyou-zhang-cong .
+
+## 初谕中张璁的称谓（J118-U11）
+name:guanxian-jj09-chuyu-zhang-cong a crm:E41_Appellation ;
+    rdfs:label "大學士"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "此处只称“大学士”，不带本官（U11）"@zh-Hans .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj09-chuyu-zhang-cong .
+doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-chuyu-zhang-cong .
+
+## 徐阶（同 event 版第⑦块）
+name:guanxian-jj09-10-xu-jie a crm:E41_Appellation ;
+    rdfs:label "編修徐階"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "原文作“编修张衮、徐阶、程文德”，“编修”管三人（J118-U49、U50）；此串由建模者拆出"@zh-Hans .
+
+person:68547 crm:P1_is_identified_by name:guanxian-jj09-10-xu-jie .
+
+doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-xu-jie .
+
+# ② 凡例与书（决策 D20；不建上谓、修书事件）
+
+work:siyi-chengdian-fanli a crm:E29_Design_or_Procedure ;
+    rdfs:label "祀儀成典凡例條目"@zh-Hans ;
+    rdfs:comment "建模者命名；内容见 J118-U15“录礼文、规制、器数、敕诰为书，不必杂以臣下之奏”"@zh-Hans .
+
+## 凡例所指之书
+work:siyi-chengdian-fanli crm:P67_refers_to work:siyi-chengdian .
+
+## 所修之书（D20）
+work:siyi-chengdian a crm:E73_Information_Object ;
+    rdfs:label "祀儀成典"@zh-Hant ;
+    crm:P102_has_title name:title-siyi-chengdian ;
+    rdfs:comment "书名由皇帝所定（J118-U16、U17）。书尚未成（“书成，朕当亲序之”），不用 P94；由凡例 P67 指向本书"@zh-Hans .
+
+name:title-siyi-chengdian a crm:E35_Title ;
+    rdfs:label "祀儀成典"@zh-Hant .
+
+# ③ 其他人的头衔与差遣（决策 D15、D22）
+# 没有机构的差遣与加衔同样用 mpv:holds_title（定义见 vocab.ttl）。不带时间（D15 规则 2）。
+# state 版无法表达：复合差遣两截的配对（D18）、以差遣身份任差遣（D17 的 P15）、差遣所属之事、委派之敕。
+# 本官（李时礼部尚书、廖道南中允、张衮等编修）按 D21 不建，同 event 版。
+
+person:130180 mpv:holds_title type:zhi-jianzao-shi ,              # 知建造事（U25）
+                              type:zongdu-gongcheng-guan ,        # 總督工程官（U25）
+                              type:jianxiu-guan .                 # 監修官（U31）
+
+person:68140 mpv:holds_title type:tongzhi-jianzao-shi ,           # 同知建造事（U27）
+                             type:dushi-guizhi-guan ,             # 督視規制官（U27）
+                             type:jianxiu-guan .                  # 監修官（U31）
+
+person:127536 mpv:holds_title type:jianshi-xuncha-gongcheng-guan ,   # 監視巡察工程官（U29）
+                              type:jianxiu-guan .                    # 監修官（U31）
+
+person:68285 mpv:holds_title type:fu-zongcai-guan .               # 副總裁官（U38）
+
+person:68136 mpv:holds_title type:fu-zongcai-guan .               # 副總裁官（U38）
+
+person:132101 mpv:holds_title type:zuanxiu-guan .                 # 纂修官（U51）
+
+person:130490 mpv:holds_title type:zuanxiu-guan .                 # 纂修官（U51）
+
+person:131629 mpv:holds_title type:zuanxiu-guan .                 # 纂修官（U51）
+
+person:68547 mpv:holds_title type:zuanxiu-guan .                  # 纂修官（U51）
+
+person:68194 mpv:holds_title type:jianshi-xuncha-gongcheng-guan . # 監視巡察工程官（U40）；翰林院、吏科见第⑤块
+
+# ④ 张璁的头衔与差遣（决策 D15、D22）
+# state 版只能说"他带过这三个差遣"，说不出属于哪件事、以哪个身份任哪个、谁委派、何时。
+
+person:68266 mpv:holds_title type:zhi-jianzao-shi ,      # 知建造事
+                             type:zongdu-gongcheng-guan ,      # 总督工程官
+                             type:zongcai-guan .      # 总裁官
+
+# ⑤ 夏言的 P107 + PC107（翰林院、吏科；决策 D22）
+# PC107 只能写一个身份，所以"照旧掌科事"（D19 掌事）表达不了；
+# P107 是"现在或以前的成员"，也说不出"升翰林"和"仍兼吏科"哪个在先、是否同时。
+
+## 新类型：吏科都给事中（定义见 vocab.ttl）
+
+## 翰林院：线 + 盒子
+group:hanlinyuan crm:P107_has_current_or_former_member person:68194 .
+
+pc:hanlinyuan-member-68194 a crm:PC107_has_current_or_former_member ;
+    crm:P01_has_domain group:hanlinyuan ;
+    crm:P02_has_range  person:68194 ;
+    crm:P107.1_kind_of_member type:hanlin-shidu-xueshi .
+
+group:li-ke crm:P107_has_current_or_former_member person:68194 .
+
+pc:li-ke-member-68194 a crm:PC107_has_current_or_former_member ;
+    crm:P01_has_domain group:li-ke ;
+    crm:P02_has_range  person:68194 ;
+    crm:P107.1_kind_of_member type:li-ke-du-jishizhong .

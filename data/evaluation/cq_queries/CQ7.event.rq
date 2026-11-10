@@ -1,0 +1,5 @@
+# 理由：“以……身份”按 D17 是差遣节点之间的 P15；取全部 P15，两端读差遣名和人。
+SELECT ?personLabel ?fromLabel ?toLabel WHERE {
+  ?to crm:P15_was_influenced_by ?from ; crm:P14_carried_out_by ?person ; rdfs:label ?toLabel .
+  ?from rdfs:label ?fromLabel . ?person rdfs:label ?personLabel .
+} ORDER BY ?personLabel

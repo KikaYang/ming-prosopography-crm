@@ -1,0 +1,9 @@
+# 理由：从授少傅的子事件走到父事件（D13），取发令者、起因、日期、同一父事件下的全部动作与头衔；这是 D13 的标准走法。
+SELECT ?issuerLabel ?motiveLabel ?begin ?action ?actionLabel ?titleLabel WHERE {
+  ?g mpv:conferred_title type:shaofu . ?p crm:P9_consists_of ?g .
+  ?p crm:P14_carried_out_by ?issuer ; crm:P4_has_time-span ?ts ; crm:P9_consists_of ?s .
+  ?issuer rdfs:label ?issuerLabel . FILTER(LANG(?issuerLabel)="zh-Hant")
+  OPTIONAL { ?p crm:P17_was_motivated_by ?m . ?m rdfs:label ?motiveLabel }
+  ?ts crm:P82a_begin_of_the_begin ?begin .
+  ?s rdfs:label ?actionLabel ; crm:P2_has_type ?action ; mpv:conferred_title ?t . ?t rdfs:label ?titleLabel . FILTER(LANG(?titleLabel)="zh-Hant")
+} ORDER BY ?actionLabel ?issuerLabel

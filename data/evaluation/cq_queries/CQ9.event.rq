@@ -1,0 +1,9 @@
+# 理由：取徐阶的全部 E85、E86，读机构、PC144 身份、时间（自身或父事件），以及是否隐含的说明。
+SELECT DISTINCT ?kind ?groupLabel ?memberLabel ?begin ?note WHERE {
+  { ?e crm:P143_joined person:68547 ; crm:P144_joined_with ?g . BIND("加入" AS ?kind) }
+  UNION { ?e crm:P145_separated person:68547 ; crm:P146_separated_from ?g . BIND("离开" AS ?kind) }
+  ?g rdfs:label ?groupLabel . FILTER(LANG(?groupLabel)="zh-Hant")
+  OPTIONAL { ?pc crm:P01_has_domain ?e ; crm:P144.1_kind_of_member ?m . ?m rdfs:label ?memberLabel . FILTER(LANG(?memberLabel)="zh-Hant") }
+  OPTIONAL { ?p crm:P9_consists_of ?e . ?p crm:P4_has_time-span ?ts . ?ts crm:P82a_begin_of_the_begin ?begin }
+  OPTIONAL { ?e rdfs:comment ?note }
+} ORDER BY ?kind

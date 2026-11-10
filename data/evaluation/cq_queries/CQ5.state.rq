@@ -1,0 +1,7 @@
+# 理由：state 版只有持有陈述和 E13 卡片；查这两处，并查与卷89 相连的内容。
+SELECT ?what ?value WHERE {
+  { BIND("holds_title" AS ?what) person:68266 mpv:holds_title type:shaofu . BIND(type:shaofu AS ?value) }
+  UNION { BIND("E13 来源" AS ?what) ?c crm:P141_assigned type:shaofu ; crm:P16_used_specific_object ?d . ?d rdfs:label ?value }
+  UNION { BIND("卷89 原文串" AS ?what) doc:shizong-shilu-089 crm:P67_refers_to ?n . ?n rdfs:label ?value }
+  UNION { BIND("授予者或起因" AS ?what) ?e crm:P14_carried_out_by ?x . ?e mpv:conferred_title type:shaofu . BIND(?x AS ?value) }
+} ORDER BY ?what ?value

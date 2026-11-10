@@ -1,0 +1,14 @@
+# 理由：与 CQ2a 同一模式，反过来列出同一上位类中被后授取代的衔（D12），对应标准答案中的“分别取代”。
+SELECT DISTINCT ?oldLabel ?newLabel ?d2 WHERE {
+  { ?g crm:P143_joined person:68266 ; crm:P4_has_time-span ?gts . ?g mpv:conferred_title ?t }
+  UNION { ?gp crm:P9_consists_of ?g ; crm:P11_had_participant person:68266 ; crm:P4_has_time-span ?gts . ?g mpv:conferred_title ?t }
+  UNION { ?gp crm:P9_consists_of ?g ; crm:P11_had_participant person:68266 . ?g mpv:conferred_title ?t . ?gc crm:P140_assigned_attribute_to ?gp ; crm:P141_assigned ?gts }
+  ?gts crm:P82a_begin_of_the_begin ?d1 .
+  { ?h crm:P143_joined person:68266 ; crm:P4_has_time-span ?hts . ?h mpv:conferred_title ?t2 }
+  UNION { ?hp crm:P9_consists_of ?h ; crm:P11_had_participant person:68266 ; crm:P4_has_time-span ?hts . ?h mpv:conferred_title ?t2 }
+  UNION { ?hp crm:P9_consists_of ?h ; crm:P11_had_participant person:68266 . ?h mpv:conferred_title ?t2 . ?hc crm:P140_assigned_attribute_to ?hp ; crm:P141_assigned ?hts }
+  ?hts crm:P82a_begin_of_the_begin ?d2 .
+  ?t crm:P127_has_broader_term ?b . ?t2 crm:P127_has_broader_term ?b .
+  FILTER(?t != ?t2 && ?d2 > ?d1 && ?d2 < "1532-05-15T00:00:00"^^xsd:dateTime)
+  ?t rdfs:label ?oldLabel . ?t2 rdfs:label ?newLabel . FILTER(LANG(?oldLabel)="zh-Hant" && LANG(?newLabel)="zh-Hant")
+} ORDER BY ?oldLabel ?d2

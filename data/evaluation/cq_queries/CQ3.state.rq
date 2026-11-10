@@ -1,0 +1,5 @@
+# 理由：state 版的内阁成员身份是 P107 + PC107；取出来看有没有时间信息。
+SELECT ?group ?groupLabel ?memberType ?typeLabel WHERE {
+  ?group crm:P107_has_current_or_former_member person:68266 ; rdfs:label ?groupLabel .
+  OPTIONAL { ?pc crm:P01_has_domain ?group ; crm:P02_has_range person:68266 ; crm:P107.1_kind_of_member ?memberType . ?memberType rdfs:label ?typeLabel . FILTER(LANG(?typeLabel)="zh-Hant") }
+} ORDER BY ?group

@@ -1,0 +1,11 @@
+﻿unit_id,type,text,v1_judgement,v1_cause,v2_judgement,v2_cause,change_source,change
+J089-U16,action,加,lost,omission,kept,,D13,第⑤块拆为子事件，P2 type:action-jia（Yang 手写，6b8a8f9）
+J089-U19,action,升,lost,omission,kept,,D13,同上，type:action-sheng
+J089-U23,relation,原衔与新衔的先后,partial,limit,partial,omission,D12,D12 取代规则使其余替换可推，limit 消除；少保未建模，少保→少傅仍无法推算，故为 partial / omission（Yang 审定改判，原 agent 初判 kept_judgement）
+J136-U02,status,原任,distorted,omission,kept_judgement,,补遗漏,第⑩块补建嘉靖十年致仕 E86 与召还 E85（2e38370）
+J136-U10,event,应召至京,lost,omission,kept,,补遗漏,第⑨块补建“应召至京”E7（2e38370）
+J136-U11,issuer,召；诏,partial,omission,kept_judgement,,补遗漏,第⑩块补建召事件并写 P14（2e38370）
+J136-U12,action,进,lost,omission,kept,,D13,第⑨块拆为子事件，P2 type:action-jin（Yang 手写，6b8a8f9）
+J136-U16,relation,余官如故,distorted,limit,kept_judgement,,D12,D12 取代规则推出替换，不再推出新旧衔并存
+J136-U22,event,兹加恩,lost,omission,kept,,补遗漏,第⑨块授衔事件加 P2 type:jiaen（Yang 手写，6b8a8f9）
+J149-U12,issuer,（召）,lost,omission,kept_judgement,,补遗漏,第⑦块补建卷146 召事件（P14），赴召 P17 指向它（2e38370）

@@ -1,0 +1,64 @@
+# SL14 state 版（对照模型，决策 D15、D22；框架：agent 编写 2026-11-02，②待 Yang 编写）。
+# 依据：信息单元清单 J161（info_units.csv v1.3，标签 units-SL14）、决策 D1–D26。共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
+# 不建任何事件；不带时间（D15 规则 2）。原文称谓串从 SL14_event.ttl 第④块原样复制；如需修改两个文件同步改。
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+@prefix work:   <https://kikayang.github.io/ming-prosopography-crm/id/work/> .
+@prefix place:  <https://kikayang.github.io/ming-prosopography-crm/id/place/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# 人物：person:68547（徐階）的定义见 vocab.ttl
+
+# ① 原文称谓串（决策 D4、D24；从 event 版第④块原样复制）
+
+## 原官“同知”在 state 版中由第②块的 PC107 表达；此原文串照录，与 event 版相同。
+name:guanxian-jj13-03-jimao-xu-jie-yuan a crm:E41_Appellation ;
+    rdfs:label "湖廣黃州府同知徐階"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "原身份在 event 版只靠此串保留（D24 未采用 E85 方案）；离开时的身份无法表达（T4）"@zh-Hans .
+
+person:68547 crm:P1_is_identified_by name:guanxian-jj13-03-jimao-xu-jie-yuan .
+
+## 新官（J161-U06、U08、U09）
+name:guanxian-jj13-03-jimao-xu-jie-xin a crm:E41_Appellation ;
+    rdfs:label "浙江按察司僉事，提調學校"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan ;
+    rdfs:comment "以新官带领差遣（J161-U09）；逗号为整理本所加"@zh-Hans .
+
+person:68547 crm:P1_is_identified_by name:guanxian-jj13-03-jimao-xu-jie-xin .
+
+doc:shizong-shilu-161 crm:P67_refers_to name:guanxian-jj13-03-jimao-xu-jie-yuan , name:guanxian-jj13-03-jimao-xu-jie-xin .
+
+# ② 徐阶的机构成员身份（P107 + PC107：浙江按察司、湖广黄州府）与提调学校的 mpv:holds_title（决策 D15、D22、D25）
+
+group:zhejiang-anchasi crm:P107_has_current_or_former_member person:68547 .
+
+pc:zhejiang-anchasi-member-68547 a crm:PC107_has_current_or_former_member ;
+    crm:P01_has_domain group:zhejiang-anchasi ;
+    crm:P02_has_range  person:68547 ;
+    crm:P107.1_kind_of_member type:anchasi-qianshi .
+
+group:huangzhou-fu crm:P107_has_current_or_former_member person:68547 .
+
+pc:huangzhou-fu-member-68547 a crm:PC107_has_current_or_former_member ;
+    crm:P01_has_domain group:huangzhou-fu ;
+    crm:P02_has_range  person:68547 ;
+    crm:P107.1_kind_of_member type:fu-tongzhi .
+
+## 提调学校：holds_title
+person:68547 mpv:holds_title type:tidiao-xuexiao .

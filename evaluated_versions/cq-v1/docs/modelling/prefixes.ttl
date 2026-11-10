@@ -1,0 +1,20 @@
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+@prefix work:   <https://kikayang.github.io/ming-prosopography-crm/id/work/> .
+@prefix place:  <https://kikayang.github.io/ming-prosopography-crm/id/place/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .

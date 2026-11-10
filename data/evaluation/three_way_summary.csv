@@ -1,0 +1,14 @@
+﻿type,n,cbdb_kept,cbdb_notes_only,cbdb_partial,cbdb_distorted,cbdb_lost,cbdb_unclear,cbdb_limit,cbdb_limit_convention,event_kept,event_kept_ext,event_kept_judgement,event_partial,event_distorted,event_lost,event_not_modelled,event_limit,event_limit_convention,state_kept,state_kept_ext,state_kept_judgement,state_partial,state_distorted,state_lost,state_not_modelled,state_limit,state_limit_convention
+title,18,17,0,0,0,1,0,0,0,0,15,0,0,0,2,1,0,0,0,17,0,0,0,0,1,0,0
+event,8,0,0,0,0,8,0,0,0,4,0,1,1,0,0,2,0,0,0,0,0,0,0,6,2,6,6
+relation,7,0,1,2,1,3,0,4,0,0,1,2,3,0,1,0,2,2,0,0,0,3,0,4,0,7,4
+issuer,4,0,0,0,0,4,0,3,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,3,1,3,3
+title_string,4,0,0,4,0,0,0,4,0,1,0,0,2,0,0,1,0,0,3,0,0,0,0,0,1,0,0
+name_form,4,4,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,3,0,0,1,0,0,0,0,0
+date,3,0,0,2,1,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,3,0
+action,3,0,0,0,0,3,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,3,3
+source,3,0,1,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+motive,2,0,0,0,0,2,0,2,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,2,0,2,2
+status,2,0,0,0,1,1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,2,0
+合计,58,21,2,8,3,24,0,13,0,18,16,8,7,0,4,5,2,2,9,17,0,6,0,21,5,26,18
+其中 implicit=是,3,0,0,0,0,3,0,3,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,3,3

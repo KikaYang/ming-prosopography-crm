@@ -1,0 +1,9 @@
+# 理由：按 D2、D13 找授予吏部尚书衔的动作（入阁 E85 上的，或加恩子事件上的），连带读出类型的定义，因为本题要区分衔与职（D1）。
+SELECT DISTINCT ?person ?personLabel ?titleLabel ?titleLabelEn ?titleNote ?begin WHERE {
+  ?g mpv:conferred_title ?t .
+  ?t rdfs:label ?titleLabel , ?titleLabelEn ; rdfs:comment ?titleNote .
+  FILTER(CONTAINS(STR(?titleLabel), "吏部尚書") && LANG(?titleLabel)="zh-Hant" && LANG(?titleLabelEn)="en" && LANG(?titleNote)="zh-Hans")
+  { ?g crm:P143_joined ?person ; crm:P4_has_time-span ?ts } UNION { ?p crm:P9_consists_of ?g ; crm:P11_had_participant ?person ; crm:P4_has_time-span ?ts }
+  ?ts crm:P82a_begin_of_the_begin ?begin .
+  ?person rdfs:label ?personLabel .
+} ORDER BY ?begin ?person

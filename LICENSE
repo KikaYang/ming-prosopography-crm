@@ -1,0 +1,17 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+Unless otherwise noted, the contents of this repository are licensed under CC BY-NC-SA 4.0.
+Full legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Attribution
+- Credit the author: Tianchi Yang, "Ming prosopography and European standards" (master's thesis
+  repository, University of Bologna, snapshot of November 2026), and indicate if changes were made.
+- Content derived from the China Biographical Database must also credit CBDB and the release used:
+  China Biographical Database (CBDB), https://cbdb.hsites.harvard.edu/, release CBDB_20260602
+  (file cbdb_20260613.sqlite3).
+- Use is limited to non-commercial purposes, and adapted material must be distributed under the
+  same licence.
+
+Exceptions
+- ontologies/: CIDOC-CRM 7.1.3 RDFS files, CC BY 4.0 (see ontologies/LICENSE.md).
+- data/apis/: sample from the Austrian APIS prosopography, CC BY-NC-SA 3.0 (see data/apis/LICENSE.md).

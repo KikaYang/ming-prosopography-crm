@@ -1,0 +1,6 @@
+# 理由：state 版的头衔用 mpv:holds_title（D15），同样读出类型定义；不带时间，无法限定 1528 年。
+SELECT DISTINCT ?person ?personLabel ?titleLabel ?titleLabelEn ?titleNote WHERE {
+  ?person mpv:holds_title ?t ; rdfs:label ?personLabel .
+  ?t rdfs:label ?titleLabel , ?titleLabelEn ; rdfs:comment ?titleNote .
+  FILTER(CONTAINS(STR(?titleLabel), "吏部尚書") && LANG(?titleLabel)="zh-Hant" && LANG(?titleLabelEn)="en" && LANG(?titleNote)="zh-Hans")
+} ORDER BY ?person

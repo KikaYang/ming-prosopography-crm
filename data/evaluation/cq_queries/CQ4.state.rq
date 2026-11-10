@@ -1,0 +1,6 @@
+# 理由：与 event 版同样读 E13，并取持有该头衔的陈述；state 版没有授衔事件，E13 只能挂在人物上。
+SELECT ?what ?value ?source WHERE {
+  { BIND("holds_title" AS ?what) person:68266 mpv:holds_title type:huagaidian-daxueshi . BIND(type:huagaidian-daxueshi AS ?value) }
+  UNION { BIND("E13" AS ?what) ?c crm:P141_assigned type:huagaidian-daxueshi ; crm:P16_used_specific_object ?d . ?d rdfs:label ?source . BIND(?c AS ?value) }
+  UNION { BIND("原文串" AS ?what) ?n crm:P2_has_type type:guanxian-chuan ; rdfs:label ?value . FILTER(CONTAINS(STR(?value), "華蓋殿")) ?d crm:P67_refers_to ?n ; rdfs:label ?source }
+} ORDER BY ?what ?value

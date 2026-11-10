@@ -1,0 +1,5 @@
+# 理由：与 event 版相同的通用查询。
+SELECT ?claim ?target ?property ?assigned ?sourceLabel WHERE {
+  ?claim a crm:E13_Attribute_Assignment ; crm:P140_assigned_attribute_to ?target ; crm:P177_assigned_property_of_type ?property ; crm:P141_assigned ?assigned ; crm:P16_used_specific_object ?src .
+  ?src rdfs:label ?sourceLabel .
+} ORDER BY ?target ?claim

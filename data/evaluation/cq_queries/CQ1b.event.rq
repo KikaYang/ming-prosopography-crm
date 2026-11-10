@@ -1,0 +1,5 @@
+# 理由：按 D19，掌事是 P2 type:zhangshi 的节点，P11 指向所掌机构；查全部掌事节点，看有没有吏部。
+SELECT ?person ?personLabel ?group ?groupLabel WHERE {
+  ?n crm:P2_has_type type:zhangshi ; crm:P14_carried_out_by ?person ; crm:P11_had_participant ?group .
+  ?person rdfs:label ?personLabel . ?group rdfs:label ?groupLabel . FILTER(LANG(?groupLabel)="zh-Hant")
+} ORDER BY ?person

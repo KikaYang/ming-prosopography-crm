@@ -1,0 +1,7 @@
+# 理由：state 版：谁持有提调学校这个头衔，再取此人的全部机构成员身份；没有地点和时间可以筛。
+SELECT DISTINCT ?personLabel ?titleLabel ?groupLabel ?memberLabel WHERE {
+  ?person mpv:holds_title ?t ; rdfs:label ?personLabel . ?t rdfs:label ?titleLabel .
+  FILTER(CONTAINS(STR(?titleLabel), "提調學校") && LANG(?titleLabel)="zh-Hant")
+  OPTIONAL { ?g crm:P107_has_current_or_former_member ?person ; rdfs:label ?groupLabel . FILTER(LANG(?groupLabel)="zh-Hant")
+             ?pc crm:P01_has_domain ?g ; crm:P02_has_range ?person ; crm:P107.1_kind_of_member ?m . ?m rdfs:label ?memberLabel . FILTER(LANG(?memberLabel)="zh-Hant") }
+} ORDER BY ?groupLabel

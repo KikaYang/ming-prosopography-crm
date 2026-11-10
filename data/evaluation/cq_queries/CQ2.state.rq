@@ -1,0 +1,6 @@
+# 理由：state 版不带时间，能做的只有列出张璁持有过的全部头衔，并带出 E13 卡片所记的异文。
+SELECT DISTINCT ?titleLabel ?claimSource WHERE {
+  { person:68266 mpv:holds_title ?t . OPTIONAL { ?c crm:P141_assigned ?t ; crm:P140_assigned_attribute_to person:68266 ; crm:P16_used_specific_object ?src . ?src rdfs:label ?claimSource } }
+  UNION { ?c crm:P140_assigned_attribute_to person:68266 ; crm:P141_assigned ?t ; crm:P16_used_specific_object ?src . ?src rdfs:label ?claimSource }
+  ?t rdfs:label ?titleLabel . FILTER(LANG(?titleLabel)="zh-Hant")
+} ORDER BY ?titleLabel ?claimSource

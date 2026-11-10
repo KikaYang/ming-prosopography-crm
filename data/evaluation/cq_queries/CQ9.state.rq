@@ -1,0 +1,5 @@
+# 理由：state 版取徐阶的全部机构成员身份和身份类型；没有时间可排序。
+SELECT ?groupLabel ?memberLabel WHERE {
+  ?g crm:P107_has_current_or_former_member person:68547 ; rdfs:label ?groupLabel . FILTER(LANG(?groupLabel)="zh-Hant")
+  ?pc crm:P01_has_domain ?g ; crm:P02_has_range person:68547 ; crm:P107.1_kind_of_member ?m . ?m rdfs:label ?memberLabel . FILTER(LANG(?memberLabel)="zh-Hant")
+} ORDER BY ?groupLabel

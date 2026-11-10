@@ -1,0 +1,59 @@
+﻿unit_id,type,text,judgement,cause,cbdb_evidence,implicit,note
+J089-U01,date,嘉靖七年六月辛丑朔,partial,omission,"POSTED_TO_OFFICE_DATA posting_id 421871/421872/421873/421874 c_firstyear=1528, c_fy_nh_year=嘉靖7",否,只到年；c_fy_month、c_fy_day、c_fy_day_gz 均空，月、干支、朔缺；cause：月、日、干支字段（c_fy_month/c_fy_day/c_fy_day_gz）存在但未填
+J089-U02,event,明伦大典书成进呈,lost,scope,,否,无事件记录（EVENTS_DATA 中无张璁、杨一清）。《明伦大典》只作为总裁官差遣的项目名出现在 c_notes（张璁 421868“總裁(明倫大典)”1527–1528；杨一清 421744 1527–1528），不表达“书成进呈”这一事件；cause：与人物仕途无直接关系的事件不在 CBDB 收录范围；EVENTS_DATA 中明代记录为 0
+J089-U04,event,加恩纂述效劳诸臣,lost,omission,,否,无事件记录；四个新衔为各自独立的 posting，任命方式均“未詳”，没有“加恩”这一次授予的记录；cause：结构上可以把多个官职挂在同一 posting 下（全库有 31 例），任命方式也有“加”(59)，但此处四衔分为四个 posting、方式未詳
+J089-U05,motive,（纂述效劳）,lost,limit,,否,无事件，因而也无起因；cause：任官记录没有表达起因的字段；复查（Yang 审核第一轮，2026-10-22）：POSTED_TO_OFFICE_DATA 与 POSTING_DATA 均无起因字段；APPOINTMENT_CODES 只有“恩例”(38)、“特進”(50) 等类别性代码，无法指向具体起因。维持 lost / limit
+J089-U06,issuer,上,lost,limit,,是,无事件，因而也无授予者；cause：任官记录没有表达授予者的字段；复查（Yang 审核第一轮，2026-10-22）：ASSOC_CODES 中没有“某人任命/授予/召某人”的代码（最接近：恩主 4/5、為Y起草任命文書 658/659、提議封贈Y 351）；明世宗即朱厚熜（personid 30160），与张璁之间无 ASSOC_DATA 记录。维持 lost / limit
+J089-U07,title_string,少师兼太子太师、吏部尚书、华盖殿大学士,partial,limit,杨一清 POSTED_TO_OFFICE_DATA posting_id 421738 少師(1526–)、421740 太子太師(1526–)、421736 吏部尚書(1526–1529)、421745 華蓋殿大學士(1527–1529),否,四个头衔都在，年份都覆盖 1528；原文头衔串未保留，“兼”只见 421740 的 c_notes“太子太師(兼)”；cause：没有保存原文头衔串的字段，只能拆成单个官职；Yang 审定 2026-10-22：同意
+J089-U08,title,吏部尚书,kept,,杨一清 POSTED_TO_OFFICE_DATA posting_id 421736（吏部尚書，1526–1529）,否,官职代码与年份都在；但不能区分阁臣兼衔与掌部事（决策 D1），与张璁 421873 在 1528 年同为吏部尚书
+J089-U10,name_form,张璁,kept,,BIOG_MAIN.c_name_chn = 張璁,否,名字在；“此时尚未改名”这一时间属性 CBDB 不记录
+J089-U11,title_string,少保、礼部尚书兼文渊阁大学士,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421870 少保(1528–)、421867 禮部尚書(1527–1528)、431869 文淵閣大學士(1527–1528),否,三个头衔都在，原文头衔串未保留。另：CBDB 1528 年还有 431870 太子少保（c_notes 作“太子太保(少保兼)”，即 70906 错码），卷89 原衔串中没有太子太保；cause：同上：没有原文头衔串字段；复查（Yang 审核第一轮，2026-10-22）：少保另有独立 posting 421870（70806 少保，1528–）；431870 为 70906 太子少保，c_notes“太子太保(少保兼)”。少保并非只以太子少保代码出现，故不改判 distorted，维持 partial / limit
+J089-U12,title,少保,kept,,POSTED_TO_OFFICE_DATA posting_id 421870（少保，c_firstyear 1528，无止年）,否,复查（Yang 审核第一轮，2026-10-22）：少保另有独立 posting 421870（70806 少保，1528–）；431870 为 70906 太子少保，c_notes“太子太保(少保兼)”。少保并非只以太子少保代码出现，维持 kept（421870）
+J089-U13,title,礼部尚书,kept,,POSTED_TO_OFFICE_DATA posting_id 421867（禮部尚書，1527–1528）,否,
+J089-U14,title,文渊阁大学士,kept,,POSTED_TO_OFFICE_DATA posting_id 431869（文淵閣大學士，1527–1528）,否,此条 c_notes 无出处引用
+J089-U15,relation,礼部尚书兼文渊阁大学士,notes_only,limit,POSTED_TO_OFFICE_DATA posting_id 431869 c_notes = “文淵閣大學士(禮部尚書兼)”,否,“兼”只见自由文本，c_appt_code 为未詳；两条记录年份区间重叠（1527–1528）可推出并存，但本官兼殿阁衔的主次关系未结构化；cause：“兼”(37) 可作任命方式，但无法指明与哪一官职相兼；主次关系只能写在 c_notes；Yang 审定 2026-10-22：同意
+J089-U16,action,加,lost,omission,,否,421871/421872 的 c_appt_code=0（未詳）。APPOINTMENT_CODES 有“加”(59)、“進”(57) 等代码，此处未使用；cause：任命方式代码有“加”(59)，未使用
+J089-U17,title,少傅,kept,,POSTED_TO_OFFICE_DATA posting_id 421871（少傅，1528–1534）,否,出处为明史列传卷196，非卷89
+J089-U18,title,太子太傅,kept,,POSTED_TO_OFFICE_DATA posting_id 421872（太子太傅，1528–1532）,否,出处为明史列传卷196，非卷89
+J089-U19,action,升,lost,omission,,否,421873/421874 的 c_appt_code=0（未詳）；“升”与“加”的区分未记录；cause：任命方式代码有“陞”(52)，未使用
+J089-U20,title,吏部尚书,kept,,POSTED_TO_OFFICE_DATA posting_id 421873（吏部尚書，1528–1532）,否,出处为明史列传卷196，非卷89；不能区分兼衔与掌部事（D1）
+J089-U21,title,谨身殿大学士,kept,,POSTED_TO_OFFICE_DATA posting_id 421874（謹身殿大學士，1528–1532）,否,出处为明史列传卷196，非卷89
+J089-U22,relation,四个新衔同出一次加恩,lost,omission,,否,属“各自独立、无关联”：四个头衔是 4 个独立 posting（421871–421874），c_sequence 均为 1，POSTING_DATA 不分组。唯一共同点是 c_firstyear=1528，但同年还有少保 421870、太子少保 431870、副使 421875，不能据年份推出“同出一次加恩”；cause：可把四衔挂在同一 posting 下（结构支持，全库 31 例），未这样记录
+J089-U23,relation,原衔与新衔的先后,lost,omission,,否,少保 421870 与少傅 421871 都只到年（1528），c_sequence 均为 1，无法表达先后；少保无止年，是否被少傅取代亦未记录（原文也未说明）；cause：月份字段与 c_sequence 可表达先后，均未填（c_sequence 全为 1）；复查（Yang 审核第一轮，2026-10-22）：少保另有独立 posting 421870（70806 少保，1528–）；431870 为 70906 太子少保，c_notes“太子太保(少保兼)”。少保并非只以太子少保代码出现；维持 lost / omission
+J089-U25,source,世宗實錄 卷89,lost,omission,,否,张璁、杨一清的全部记录中都没有引用卷89；张璁 1528 年四个新衔的 c_notes 出处均为明史列传卷196；cause：TEXT_CODES 有《世宗實錄》（如 13593），可作 c_source 并在 c_pages 注卷号；此处出处记为明史列传
+J136-U01,date,甲寅,partial,omission,"POSTED_TO_OFFICE_DATA posting_id 421879/421880 c_firstyear=1532, c_fy_nh_year=嘉靖11",否,只到年，月、干支缺；且这两条出处为明史列传卷196，非卷136；cause：月、日、干支字段存在但未填
+J136-U02,status,原任,lost,omission,,否,CBDB 无致仕或在任状态记录（STATUS_DATA 中张璁只有“經學家—禮經”）；嘉靖十年致仕本身也未记录；cause：任命方式有“致仕”(36)，嘉靖十年那次致仕未记录
+J136-U03,title_string,太傅兼太子太傅、吏部尚书、谨身殿大学士,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421872 太子太傅(1528–1532)、421873 吏部尚書(1528–1532)、421874 謹身殿大學士(1528–1532),否,原文头衔串未保留；“太傅”在 CBDB 中无对应（张璁只有少傅 421871），见 U04；cause：没有原文头衔串字段；Yang 审定 2026-10-22：同意
+J136-U04,title,太傅,lost,omission,,否,Yang 审定 2026-10-21：CBDB 可另立 posting 记录卷136 异文；异文间的冲突属冲突维度，不计入本单元
+J136-U05,title,太子太傅,kept,,POSTED_TO_OFFICE_DATA posting_id 421872（太子太傅，1528–1532）,否,止年 1532 与本条改授太子太师吻合
+J136-U06,title,吏部尚书,kept,,POSTED_TO_OFFICE_DATA posting_id 421873（吏部尚書，1528–1532）,否,
+J136-U07,title,谨身殿大学士,kept,,POSTED_TO_OFFICE_DATA posting_id 421874（謹身殿大學士，1528–1532）,否,止年 1532 与本条改授华盖殿吻合
+J136-U08,relation,太傅兼太子太傅,lost,limit,,否,影像核实：原文作“太傅”，与卷89“少傅”不合，疑传抄误，待查《校勘记》（清单 v1.1）。CBDB 无太傅，“太傅兼太子太傅”无从表达；“兼”也无法指明相兼对象；cause：limit（Yang 审定，2026-10-21）；Yang 审定 2026-10-22：同意
+J136-U09,name_form,张孚敬,kept,,ALTNAME_DATA c_alt_name_chn = 張孚敬（别名、曾用名）,否,改名时间（嘉靖十年二月）未记录
+J136-U10,event,应召至京,lost,omission,,否,无事件记录；cause：任命方式有“復起”(99) 等，可记录召回复职，未记录
+J136-U11,issuer,召；诏,lost,limit,,是,无事件，因而也无召令发出者；cause：没有授予者/发令者字段；复查（Yang 审核第一轮，2026-10-22）：ASSOC_CODES 中没有“某人任命/授予/召某人”的代码（最接近：恩主 4/5、為Y起草任命文書 658/659、提議封贈Y 351）；明世宗即朱厚熜（personid 30160），与张璁之间无 ASSOC_DATA 记录。维持 lost / limit
+J136-U12,action,进,lost,omission,,否,421879/421880 的 c_appt_code=0（未詳）；cause：任命方式代码有“進”(57)，未使用
+J136-U13,relation,兼,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421879/421880 与 421871 的年份区间,否,属“各自独立、可由区间推出并存”：太子太師(1532–)、華蓋殿(1532–)与少傅(1528–1534)重叠，但“兼”本身未编码；吏部尚書 421873 止于 1532、421882 从 1533 另起，中间断开；cause：“兼”(37) 无法指明与哪一官职相兼；并存只能由年份区间推出；Yang 审定 2026-10-22：同意
+J136-U14,title,太子太师,kept,,POSTED_TO_OFFICE_DATA posting_id 421879（太子太師，c_firstyear 1532，无止年）,否,出处为明史列传卷196，非卷136
+J136-U15,title,华盖殿大学士,kept,,POSTED_TO_OFFICE_DATA posting_id 421880（華蓋殿大學士，c_firstyear 1532）,否,出处为明史列传卷196，非卷136；列传作嘉靖十三年，出处与年份不符（示范案例 8）
+J136-U16,relation,余官如故,distorted,omission,POSTED_TO_OFFICE_DATA posting_id 421871/421872/421873/421874 的 c_lastyear,否,止年部分体现了替换：太子太傅、谨身殿止于 1532，少傅延续至 1534；但“余官如故”本身无编码，且吏部尚书在 1532 中断、1533 另起一条（421882），与“如故”不符；cause：原判 partial。改判 distorted：吏部尚书 421873 止于 1532、421882 从 1533 另起，会推出 1532–1533 间曾离开吏部尚书，与“余官如故”相反；本可延长原记录或用 c_fy_range 标注；Yang 审定 2026-10-22：同意
+J136-U17,name_form,孚敬,kept,,ALTNAME_DATA c_alt_name_chn = 孚敬（别名、曾用名）,否,CBDB 类型为“别名、曾用名”，原文中是简称用法
+J136-U18,event,疏辞,lost,scope,,否,无事件记录；cause：辞免往来不在 CBDB 收录范围
+J136-U19,issuer,上,lost,scope,,否,无事件记录；cause：“上曰”属辞免答复，不在收录范围
+J136-U21,motive,四郊督视，克尽勤诚，辅赞朕躬，多赖匡翊,lost,limit,,否,无事件，因而也无理由；cause：没有表达授衔理由的字段；复查（Yang 审核第一轮，2026-10-22）：POSTED_TO_OFFICE_DATA 与 POSTING_DATA 均无起因字段；APPOINTMENT_CODES 只有“恩例”(38)、“特進”(50) 等类别性代码，无法指向具体起因。维持 lost / limit
+J136-U22,event,兹加恩,lost,omission,,否,无事件记录；任命方式未詳；cause：任命方式代码有“加”(59)，可标明为加恩性质的授予，未使用
+J136-U24,event,其即承朕命，尽心供职，勿辞,lost,scope,,否,无事件记录（疏辞不允）；cause：疏辞不允属辞免往来，不在收录范围
+J136-U25,source,世宗實錄 卷136,lost,omission,,否,卷136 只在 posting 421881“殿試讀卷官”的 c_notes 中被引用，与本段内容无关；本段的太子太师、华盖殿两条均引明史列传；cause：可用《世宗實錄》作 c_source 并注卷号；本段两衔出处记为明史列传
+J149-U01,date,乙亥,distorted,omission,"POSTED_TO_OFFICE_DATA posting_id 421882/421883 c_firstyear=1533, c_fy_nh_year=嘉靖12",否,只到年，月、干支缺；且 CBDB 把这次“在任提及”记成了任期起点；cause：原判 partial。改判 distorted：把“在任提及”记作 c_firstyear=1533，会推出 1533 年才始任吏部尚书、华盖殿大学士（实为嘉靖七年、十一年）；c_fy_range 可标“之前”(-1)，未使用；Yang 影像核实：本卷为嘉靖十二年四月（2026-10-22）
+J149-U02,status,致仕,distorted,omission,,否,CBDB 无致仕状态；反而以卷149 为据新建了 1533 年起的吏部尚书、华盖殿任职记录；cause：原判 lost。改判 distorted：不仅致仕状态缺失，还据此新建了 1533 年起的任职记录，会推出此时在任而非致仕；任命方式有“致仕”(36)，未使用；Yang 审定 2026-10-22：同意
+J149-U03,title_string,少傅兼太子太师、吏部尚书、华盖殿大学士,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421871 少傅(1528–1534)、421879 太子太師(1532–)、421882 吏部尚書(1533–1535)、421883 華蓋殿大學士(1533–1535),否,四个头衔都在，年份覆盖 1533；原文头衔串未保留；cause：没有原文头衔串字段；Yang 审定 2026-10-22：同意
+J149-U04,title,少傅,kept,,POSTED_TO_OFFICE_DATA posting_id 421871（少傅，1528–1534）,否,
+J149-U05,title,太子太师,kept,,POSTED_TO_OFFICE_DATA posting_id 421879（太子太師，1532–）,否,
+J149-U06,title,吏部尚书,kept,,POSTED_TO_OFFICE_DATA posting_id 421882（吏部尚書，1533–1535）,否,c_notes 引卷149；但 CBDB 把在任提及当作起始年（参见决策 D1“时间依据”）
+J149-U07,title,华盖殿大学士,kept,,POSTED_TO_OFFICE_DATA posting_id 421883（華蓋殿大學士，1533–1535）,否,c_notes 引卷149
+J149-U08,relation,少傅兼太子太师,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421871 与 421879 的年份区间,否,属“各自独立、可由区间推出并存”：少傅(1528–1534)与太子太師(1532–)重叠，但“兼”未编码；cause：“兼”无法指明相兼对象；并存只能由年份区间推出；Yang 审定 2026-10-22：同意
+J149-U09,name_form,张孚敬,kept,,ALTNAME_DATA c_alt_name_chn = 張孚敬（别名、曾用名）,否,
+J149-U10,event,赴台,lost,omission,,否,无事件记录；cause：召回可用任命方式“復起”(99) 等记录，未记录
+J149-U11,event,至京,lost,scope,,否,无事件记录；cause：“至京”这类行程不在 CBDB 收录范围
+J149-U12,issuer,（召）,lost,limit,,是,无事件，因而也无召令发出者；cause：没有发令者字段；复查（Yang 审核第一轮，2026-10-22）：ASSOC_CODES 中没有“某人任命/授予/召某人”的代码（最接近：恩主 4/5、為Y起草任命文書 658/659、提議封贈Y 351）；明世宗即朱厚熜（personid 30160），与张璁之间无 ASSOC_DATA 记录。维持 lost / limit
+J149-U14,source,世宗實錄 卷149,notes_only,omission,POSTED_TO_OFFICE_DATA posting_id 421882/421883 c_notes = “(明實錄:世宗實錄;149卷)”,否,卷号只在自由文本中；结构化出处 c_source 为 9602（人名權威資料）；cause：可用《世宗實錄》作结构化出处 c_source，卷号写入 c_pages；现只在 c_notes

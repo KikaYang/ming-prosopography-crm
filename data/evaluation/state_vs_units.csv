@@ -1,0 +1,59 @@
+﻿unit_id,type,text,judgement,cause,ttl_evidence,implicit,note
+J089-U01,date,嘉靖七年六月辛丑朔,lost,limit,,否,state 版不带时间（D15 规则 2）；日期无处可挂
+J089-U02,event,明伦大典书成进呈,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）
+J089-U04,event,加恩纂述效劳诸臣,lost,limit,,否,state 版不建事件（D15）（杨一清部分另属 scope）；约定所致（D15）
+J089-U05,motive,（纂述效劳）,lost,limit,,否,state 版不建事件（D15），因而无起因；约定所致（D15）
+J089-U06,issuer,上,lost,limit,,是,state 版不建事件（D15），因而无授予者；约定所致（D15）
+J089-U07,title_string,少师兼太子太师、吏部尚书、华盖殿大学士,not_modelled,scope,,否,杨一清不在 SL12 范围
+J089-U08,title,吏部尚书,not_modelled,scope,,否,杨一清不在 SL12 范围
+J089-U10,name_form,张璁,kept,,person:68266 crm:P1_is_identified_by name:zhang-cong ; name:zhang-cong crm:P2_has_type type:benming,否,与 event 版共用第①块
+J089-U11,title_string,少保、礼部尚书兼文渊阁大学士,kept,,person:68266 crm:P1_is_identified_by name:guanxian-jj07-06-zhang-cong ; name:guanxian-jj07-06-zhang-cong crm:P2_has_type type:guanxian-chuan ; doc:shizong-shilu-089 crm:P67_refers_to name:guanxian-jj07-06-zhang-cong,否,卷89 原衔串建为 E41（event 版没有这一条）
+J089-U12,title,少保,kept_ext,,person:68266 mpv:holds_title type:shaobao,否,
+J089-U13,title,礼部尚书,kept_ext,,person:68266 mpv:holds_title type:shangshu-rites-xian,否,
+J089-U14,title,文渊阁大学士,kept_ext,,person:68266 mpv:holds_title type:wenyuange-daxueshi,否,
+J089-U15,relation,礼部尚书兼文渊阁大学士,partial,limit,type:shangshu-rites-xian crm:P127_has_broader_term type:pinjie-jianxian ; type:wenyuange-daxueshi crm:P127_has_broader_term type:dian-ge-xian,否,“兼”只在卷89 原文串的文字中，分类树区分品阶兼衔与殿阁衔；cause：D4 不设“兼”类型；约定所致（D4）
+J089-U16,action,加,lost,limit,,否,state 版不建事件（D15）；holds_title 无法带“加”这类动作；约定所致（D15）
+J089-U17,title,少傅,kept_ext,,person:68266 mpv:holds_title type:shaofu,否,
+J089-U18,title,太子太傅,kept_ext,,person:68266 mpv:holds_title type:taizi-taifu,否,
+J089-U19,action,升,lost,limit,,否,state 版不建事件（D15）；holds_title 无法带“升”；约定所致（D15）
+J089-U20,title,吏部尚书,kept_ext,,person:68266 mpv:holds_title type:shangshu-personnel-xian,否,
+J089-U21,title,谨身殿大学士,kept_ext,,person:68266 mpv:holds_title type:jinshendian-daxueshi,否,
+J089-U22,relation,四个新衔同出一次加恩,lost,limit,,否,九个 holds_title 是平列的，没有“同出一次加恩”的分组（第⑤块的“卷89 加/升”只是 Turtle 注释）；约定所致（D15）
+J089-U23,relation,原衔与新衔的先后,lost,limit,,否,state 版不带时间（D15 规则 2），无法表达先后；D12 的取代规则需要时间，state 版无从应用
+J089-U25,source,世宗實錄 卷89,kept,,doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-089 ; doc:shizong-shilu-089 crm:P67_refers_to name:guanxian-jj07-06-zhang-cong,否,出处只连到原文串（无事件，故无 P70）
+J136-U01,date,甲寅,lost,limit,,否,state 版不带时间（D15 规则 2）
+J136-U02,status,原任,partial,limit,"name:guanxian-jj11-03-zhang-fujing rdfs:label ""原任太傅兼太子太傅、吏部尚書、謹身殿大學士張孚敬""@zh-Hant",否,“原任”只保留在原文串的文字中；P107“current or former member”不能表达某时不在任；cause：state 版无时间；Yang 审定 2026-10-26：同意
+J136-U03,title_string,太傅兼太子太傅、吏部尚书、谨身殿大学士,kept,,person:68266 crm:P1_is_identified_by name:guanxian-jj11-03-zhang-fujing ; doc:shizong-shilu-136 crm:P67_refers_to name:guanxian-jj11-03-zhang-fujing,否,卷136 原衔串建为 E41（event 版没有这一条）
+J136-U04,title,太傅,kept_ext,,event:taifu-claim-shilu-136 crm:P177_assigned_property_of_type mpv:holds_title ; event:taifu-claim-shilu-136 crm:P141_assigned type:taifu ; event:taifu-claim-shilu-136 crm:P16_used_specific_object doc:shizong-shilu-136,否,作为有争议的主张（E13 卡片①，与卷132 少傅并列）；P177 指向扩展属性 holds_title；Yang 审定 2026-10-26：同意
+J136-U05,title,太子太傅,kept_ext,,person:68266 mpv:holds_title type:taizi-taifu,否,
+J136-U06,title,吏部尚书,kept_ext,,person:68266 mpv:holds_title type:shangshu-personnel-xian,否,
+J136-U07,title,谨身殿大学士,kept_ext,,person:68266 mpv:holds_title type:jinshendian-daxueshi,否,
+J136-U08,relation,太傅兼太子太傅,partial,limit,type:taifu crm:P127_has_broader_term type:sangong ; type:taizi-taifu crm:P127_has_broader_term type:donggong-sanshi,否,“兼”只在原文串中，分类树区分三公与东宫三师；cause：D4 不设“兼”类型；约定所致（D4）
+J136-U09,name_form,张孚敬,kept,,person:68266 crm:P1_is_identified_by name:zhang-fujing,否,
+J136-U10,event,应召至京,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）
+J136-U11,issuer,召；诏,lost,limit,,是,state 版不建事件（D15），因而无发令者；约定所致（D15）
+J136-U12,action,进,lost,limit,,否,state 版不建事件（D15）；holds_title 无法带“进”；约定所致（D15）
+J136-U13,relation,兼,lost,limit,,否,state 版不带时间（D15 规则 2）：holds_title 只表示曾经持有，新旧衔是否同时持有无从表达
+J136-U14,title,太子太师,kept_ext,,person:68266 mpv:holds_title type:taizi-taishi,否,
+J136-U15,title,华盖殿大学士,kept_ext,,person:68266 mpv:holds_title type:huagaidian-daxueshi,否,
+J136-U16,relation,余官如故,lost,limit,,否,state 版不带时间（D15 规则 2），替换无法表达。按 holds_title 的注释语义（曾经持有）不会推出新旧衔同时持有；若忽略该注释、把列表读作“现持有”，则会推出三殿阁衔并存，属 distorted 风险；Yang 审定 2026-10-26：同意
+J136-U17,name_form,孚敬,partial,omission,"name:zhang-fujing rdfs:label ""張孚敬""@zh-Hant",否,简称“孚敬”无单独 E41；cause：未建
+J136-U18,event,疏辞,not_modelled,scope,,否,辞免过程留待 3b
+J136-U19,issuer,上,not_modelled,scope,,否,辞免过程留待 3b
+J136-U21,motive,四郊督视，克尽勤诚，辅赞朕躬，多赖匡翊,lost,limit,,否,state 版不建事件（D15），因而无理由；约定所致（D15）
+J136-U22,event,兹加恩,lost,limit,,否,state 版不建事件（D15），“加恩”性质无处可挂；约定所致（D15）
+J136-U24,event,其即承朕命，尽心供职，勿辞,not_modelled,scope,,否,辞免过程留待 3b
+J136-U25,source,世宗實錄 卷136,kept,,doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-136 ; doc:shizong-shilu-136 crm:P67_refers_to name:guanxian-jj11-03-zhang-fujing,否,
+J149-U01,date,乙亥,lost,limit,,否,state 版不带时间（D15 规则 2）；Yang 影像核实：本卷为嘉靖十二年四月（2026-10-22）
+J149-U02,status,致仕,partial,limit,"name:guanxian-jj12-04-zhang-fujing rdfs:label ""致仕少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬""@zh-Hant",否,“致仕”只保留在原文串的文字中；P107 不能表达何时离阁；cause：state 版无时间；Yang 审定 2026-10-26：同意
+J149-U03,title_string,少傅兼太子太师、吏部尚书、华盖殿大学士,kept,,person:68266 crm:P1_is_identified_by name:guanxian-jj12-04-zhang-fujing ; doc:shizong-shilu-149 crm:P67_refers_to name:guanxian-jj12-04-zhang-fujing,否,
+J149-U04,title,少傅,kept_ext,,person:68266 mpv:holds_title type:shaofu,否,
+J149-U05,title,太子太师,kept_ext,,person:68266 mpv:holds_title type:taizi-taishi,否,
+J149-U06,title,吏部尚书,kept_ext,,person:68266 mpv:holds_title type:shangshu-personnel-xian,否,
+J149-U07,title,华盖殿大学士,kept_ext,,person:68266 mpv:holds_title type:huagaidian-daxueshi,否,
+J149-U08,relation,少傅兼太子太师,partial,limit,type:shaofu crm:P127_has_broader_term type:sangu ; type:taizi-taishi crm:P127_has_broader_term type:donggong-sanshi,否,“兼”只在原文串中；cause：D4 不设“兼”类型；约定所致（D4）
+J149-U09,name_form,张孚敬,kept,,person:68266 crm:P1_is_identified_by name:zhang-fujing,否,
+J149-U10,event,赴台,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）
+J149-U11,event,至京,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）
+J149-U12,issuer,（召）,lost,limit,,是,state 版不建事件（D15），因而无发令者；约定所致（D15）
+J149-U14,source,世宗實錄 卷149,kept,,doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-149 ; doc:shizong-shilu-149 crm:P67_refers_to name:guanxian-jj12-04-zhang-fujing,否,

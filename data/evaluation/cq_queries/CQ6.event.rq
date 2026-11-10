@@ -1,0 +1,6 @@
+# 理由：按 D16，差遣节点用 P9i 属于所修之事；按事的名称取节点，读出担任者和差遣类型。
+SELECT ?roleLabel ?person ?personLabel WHERE {
+  ?book a crm:E7_Activity ; rdfs:label ?bl . FILTER(CONTAINS(STR(?bl), "祀仪成典"))
+  ?n crm:P9i_forms_part_of ?book ; crm:P14_carried_out_by ?person ; crm:P2_has_type ?r .
+  ?person rdfs:label ?personLabel . ?r rdfs:label ?roleLabel . FILTER(LANG(?roleLabel)="zh-Hant")
+} ORDER BY ?roleLabel ?person

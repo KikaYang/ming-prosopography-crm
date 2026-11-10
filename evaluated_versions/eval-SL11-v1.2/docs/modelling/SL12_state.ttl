@@ -1,0 +1,132 @@
+# SL12 state 版（对照模型，决策 D15）。共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）；①的人物与名称两版各自保留，如需修改两个文件同步改。
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ① 人物与名称（决策 D6）
+
+person:68266 a crm:E21_Person ;
+    rdfs:label "張璁"@zh-Hant ;
+    crm:P1_is_identified_by name:zhang-cong , name:zhang-fujing .
+
+name:zhang-cong a crm:E41_Appellation ;
+    rdfs:label "張璁"@zh-Hant ;
+    crm:P2_has_type type:benming .
+
+name:zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "張孚敬"@zh-Hant ;
+    crm:P2_has_type type:ciming .
+
+# type:benming、type:ciming 的定义见 vocab.ttl
+
+# ② 史料（决策 D7）
+# （定义已移至 vocab.ttl）
+
+# ③ 头衔分类（决策 D4）
+# （定义已移至 vocab.ttl）
+
+# ④ 扩展词汇（决策 D15）
+# mpv:holds_title 的定义见 vocab.ttl
+
+# ⑤ 持有的头衔（决策 D15）
+person:68266 mpv:holds_title type:shaobao ,                    # 少保（卷89 原衔）
+                             type:shangshu-rites-xian ,        # 禮部尚書（卷89 原衔）
+                             type:wenyuange-daxueshi ,         # 文淵閣大學士（卷89 原衔）
+                             type:shaofu ,                     # 少傅（卷89 加）
+                             type:taizi-taifu ,                # 太子太傅（卷89 加）
+                             type:shangshu-personnel-xian ,    # 吏部尚書（卷89 升）
+                             type:jinshendian-daxueshi ,       # 謹身殿大學士（卷89 升）
+                             type:taizi-taishi ,               # 太子太師（卷136 進）
+                             type:huagaidian-daxueshi .        # 華蓋殿大學士（卷136 進）
+
+# ⑥ 内阁成员（P107 + PC107）
+# group:neige、type:daxueshi 的定义见 vocab.ttl
+
+## 普通的线：内阁 有成员 张璁
+group:neige crm:P107_has_current_or_former_member person:68266 .
+
+## 盒子：给这条线加上"身份是大学士"
+pc:neige-member-68266 a crm:PC107_has_current_or_former_member ;
+    crm:P01_has_domain group:neige ;          # 线的左端
+    crm:P02_has_range person:68266 ;          # 线的右端
+    crm:P107.1_kind_of_member type:daxueshi .   # 身份
+
+# ⑦ 原文头衔串与出处
+## type:guanxian-chuan 的定义见 vocab.ttl
+
+## 卷89 原衔（嘉靖七年六月）
+name:guanxian-jj07-06-zhang-cong a crm:E41_Appellation ;
+    rdfs:label "少保、禮部尚書兼文淵閣大學士張璁"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj07-06-zhang-cong .
+
+doc:shizong-shilu-089 crm:P67_refers_to name:guanxian-jj07-06-zhang-cong .
+
+## 卷136 原任（嘉靖十一年三月）
+name:guanxian-jj11-03-zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "原任太傅兼太子太傅、吏部尚書、謹身殿大學士張孚敬"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj11-03-zhang-fujing .
+
+doc:shizong-shilu-136 crm:P67_refers_to name:guanxian-jj11-03-zhang-fujing .
+
+## 卷149（嘉靖十二年四月；从 event 版第⑦(b)块复制）
+name:guanxian-jj12-04-zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "致仕少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj12-04-zhang-fujing .
+
+doc:shizong-shilu-149 crm:P67_refers_to name:guanxian-jj12-04-zhang-fujing .
+
+# ⑧ 有争议的主张（E13，决策 D7）
+
+## 补充定义
+type:sangong a crm:E55_Type ;
+    rdfs:label "三公"@zh-Hant , "Three Dukes"@en ;
+    rdfs:comment "本块新增，仅用于记录卷136'太傅'异文；Hucker 条目号待查"@zh-Hans ;
+    crm:P127_has_broader_term type:jiaxian .
+
+type:taifu a crm:E55_Type ;
+    rdfs:label "太傅"@zh-Hant , "Grand Mentor"@en ;
+    rdfs:comment "Hucker 条目号待查"@zh-Hans ;
+    crm:P127_has_broader_term type:sangong .
+
+mpv:holds_title a crm:E55_Type .        # 决策 D10：让它可以出现在 P177 后面
+
+# person:yang 的定义见 vocab.ttl
+
+## 卡片①：卷136 说是太傅
+event:taifu-claim-shilu-136 a crm:E13_Attribute_Assignment ;
+    rdfs:label "张孚敬原任头衔：世宗实录卷136 作太傅"@zh-Hans ;
+    crm:P140_assigned_attribute_to person:68266 ;
+    crm:P177_assigned_property_of_type mpv:holds_title ;
+    crm:P141_assigned type:taifu ;
+    crm:P16_used_specific_object doc:shizong-shilu-136 ;
+    crm:P14_carried_out_by person:yang .
+
+## 卡片②：卷132 说是少傅
+event:taifu-claim-shilu-132 a crm:E13_Attribute_Assignment ;
+    rdfs:label "张孚敬原任头衔：世宗实录卷132 作少傅"@zh-Hans ;
+    crm:P140_assigned_attribute_to person:68266 ;
+    crm:P177_assigned_property_of_type mpv:holds_title ;
+    crm:P141_assigned type:shaofu ;               
+    crm:P16_used_specific_object doc:shizong-shilu-132 ;    
+    crm:P14_carried_out_by person:yang .

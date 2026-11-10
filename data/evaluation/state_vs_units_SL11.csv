@@ -1,0 +1,63 @@
+﻿unit_id,type,text,judgement,cause,ttl_evidence,implicit,note
+J118-U01,date,嘉靖九年十月壬戌,lost,limit,,否,state 版不带时间（D15 规则 2）；Yang 审定 2026-10-31：同意
+J118-U02,title_string,少傅兼太子太傅、吏部尚书,kept,,"name:guanxian-jj09-10-renxu-zhang-cong rdfs:label ""少傅兼太子太傅、吏部尚書張璁""@zh-Hant ; person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-renxu-zhang-cong ; doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-renxu-zhang-cong",否,与 event 版共用的原文串
+J118-U03,name_form,张璁,kept,,person:68266 crm:P1_is_identified_by name:zhang-cong ; name:zhang-cong crm:P2_has_type type:benming,否,与 event 版共用第①块
+J118-U05,date,嘉靖九年十月辛未,lost,limit,,否,state 版不带时间（D15 规则 2）；Yang 审定 2026-10-31：同意
+J118-U06,date,初,lost,limit,,否,state 版不带时间（D15 规则 2）；Yang 审定 2026-10-31：同意
+J118-U07,issuer,上,lost,limit,,是,state 版不建事件（D15），因而无发令者；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U08,motive,以更定郊制，欲纂辑成书，以垂永久,lost,limit,,否,state 版不建事件（D15），因而无起因；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U09,action,谕……命,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U10,event,议定体例,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U11,title_string,大学士,kept,,"name:guanxian-jj09-chuyu-zhang-cong rdfs:label ""大學士""@zh-Hant ; person:68266 crm:P1_is_identified_by name:guanxian-jj09-chuyu-zhang-cong",否,
+J118-U12,relation,与……议定,lost,limit,,否,state 版不建事件（D15）；二人共同受命议定无从表达；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U13,title,礼部尚书,not_modelled,scope,,否,D21
+J118-U14,name_form,璁等,partial,limit,person:68266 crm:P1_is_identified_by name:zhang-cong,否,张璁可识别；“等”的所指要靠议定事件，state 版不建事件；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U15,event,议录礼文、规制、器数、敕诰为书，不必杂以臣下之奏,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U16,issuer,上,lost,limit,,是,state 版不建事件（D15），因而无发令者；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U17,event,名曰祀仪成典,partial,limit,"work:siyi-chengdian crm:P102_has_title name:title-siyi-chengdian ; name:title-siyi-chengdian rdfs:label ""祀儀成典""@zh-Hant",否,书名在（D20）；“由皇帝命名”无从表达：state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U19,date,俟十月吉,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U20,event,降敕,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U21,date,至是,lost,limit,,是,state 版不带时间（D15 规则 2）；Yang 审定 2026-10-31：同意
+J118-U22,motive,朕惟祭祀，国之大事。矧今郊祀已遵复我皇祖初制，其中事宜，不可无记，以垂将来,lost,limit,,否,state 版不建事件（D15），因而无起因；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U23,motive,今大工告竣，祀期在迩,lost,limit,,否,state 版不建事件（D15），因而无起因；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U24,action,特命,lost,limit,,否,state 版不建事件（D15）；holds_title 无法带“特命”；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U25,title_string,知建造事总督工程官,kept,,"name:guanxian-jj09-10-xinwei-guo-xun rdfs:label ""知建造事總督工程官卿勛""@zh-Hant ; person:130180 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-guo-xun ; person:130180 mpv:holds_title type:zhi-jianzao-shi ; person:130180 mpv:holds_title type:zongdu-gongcheng-guan",否,核心单元（D18）。原文串照录；holds_title 挂位次、职责两个类型，但两者属于同一个差遣这一配对无从表达（两条 holds_title 平列）
+J118-U26,name_form,卿勋,partial,scope,person:130180 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-guo-xun,是,“卿勛”只在原文头衔串的文字里；识别为郭勋（建模者判断）由 P1 表达；cause：其他人物按 D21 只建差遣节点，不建名称 E41
+J118-U27,title_string,同知建造事，督视规制官,kept,,"name:guanxian-jj09-10-xinwei-li-shi rdfs:label ""同知建造事，督視規制官卿時""@zh-Hant ; person:68140 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-li-shi ; person:68140 mpv:holds_title type:tongzhi-jianzao-shi ; person:68140 mpv:holds_title type:dushi-guizhi-guan",否,核心单元（D18）。原文串照录；两截分别为 holds_title，配对无从表达
+J118-U28,name_form,卿时,partial,scope,person:68140 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-li-shi,是,“卿時”只在原文头衔串的文字里；识别由 P1 表达（建模者判断）；cause：D21
+J118-U29,title_string,监视巡察工程官,kept,,"name:guanxian-jj09-10-xinwei-wang-hong rdfs:label ""監視巡察工程官卿𬭎""@zh-Hant ; person:127536 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-wang-hong ; person:127536 mpv:holds_title type:jianshi-xuncha-gongcheng-guan",否,不切分（D18）
+J118-U30,name_form,卿𬭎,partial,scope,person:127536 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-wang-hong,是,“卿𬭎”只在原文头衔串的文字里；识别由 P1 表达（建模者判断）；cause：D21
+J118-U31,title,监修官,kept_ext,,person:130180 mpv:holds_title type:jianxiu-guan ; person:68140 mpv:holds_title type:jianxiu-guan ; person:127536 mpv:holds_title type:jianxiu-guan,否,D22：无机构的差遣用 holds_title；与哪件事（修书）相连无从表达
+J118-U32,title_string,知建造事、总督工程官,kept,,"name:guanxian-jj09-10-xinwei-zhang-cong rdfs:label ""知建造事、總督工程官卿璁""@zh-Hant ; person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-zhang-cong ; person:68266 mpv:holds_title type:zhi-jianzao-shi ; person:68266 mpv:holds_title type:zongdu-gongcheng-guan",否,核心单元（D18）。原文串照录；第④块 holds_title 挂位次、职责两个类型，两者属于同一个差遣这一配对无从表达（与总裁官平列）
+J118-U33,name_form,卿璁,partial,omission,person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-zhang-cong,否,“卿璁”只在原文头衔串的文字里；cause：张璁为核心人物，称呼形式可建 E41，未建
+J118-U34,title,总裁官,kept_ext,,person:68266 mpv:holds_title type:zongcai-guan,否,D22；属于哪件事（修书）、谁委派、何时，无从表达
+J118-U35,relation,知建造事、总督工程官卿璁为总裁官,lost,limit,,否,核心单元（D17）。state 版没有差遣节点，holds_title 是人与类型之间的平列关系，无法表达“以工程差遣身份任总裁官”：第④块中知建造事、总督工程官、总裁官三条 holds_title 平列；cause：limit（D15、D22）；约定所致（D15、D22）；Yang 审定 2026-10-31：同意
+J118-U36,title_string,内阁辅臣大学士,kept,,"name:guanxian-jj09-10-xinwei-gui-zhai rdfs:label ""內閣輔臣大學士卿萼、卿鸞""@zh-Hant ; person:68285 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-gui-zhai ; person:68136 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-gui-zhai",否,
+J118-U37,name_form,卿萼、卿鸾,partial,scope,person:68285 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-gui-zhai ; person:68136 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-gui-zhai,是,“卿萼、卿鸞”只在原文头衔串的文字里；识别由 P1 表达（建模者判断）；cause：D21
+J118-U38,title,副总裁官,kept_ext,,person:68285 mpv:holds_title type:fu-zongcai-guan ; person:68136 mpv:holds_title type:fu-zongcai-guan,否,D22
+J118-U39,motive,首倡正议,lost,limit,,否,state 版不建事件（D15），因而无起因；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U40,title_string,监视巡察工程官吏科都给事中,kept,,"name:guanxian-jj09-10-xinwei-xia-yan rdfs:label ""監視巡察工程官吏科都給事中夏言""@zh-Hant ; person:68194 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-xia-yan ; person:68194 mpv:holds_title type:jianshi-xuncha-gongcheng-guan",否,
+J118-U41,name_form,夏言,partial,omission,person:68194 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-xia-yan,否,姓名只在原文头衔串的文字和人物的 rdfs:label 中，无本名 E41；cause：夏言为核心人物，可按 D6 建，未建
+J118-U42,action,升,lost,limit,,否,state 版不建事件（D15）；holds_title 无法带“升”；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U43,title,翰林院侍读学士,kept,,group:hanlinyuan crm:P107_has_current_or_former_member person:68194 ; pc:hanlinyuan-member-68194 crm:P107.1_kind_of_member type:hanlin-shidu-xueshi,否,P107 + PC107（D22）；“升”与时间无从表达，见 U42
+J118-U44,relation,仍兼,lost,limit,,否,state 版不带时间（D15 规则 2）：翰林院、吏科两条 P107 各自独立；P107 是“现在或以前的成员”，不能表达两者同时（同 J136-U13）。属“连并存也推不出”；Yang 审定 2026-10-31：同意
+J118-U45,title,吏科都给事中,kept,,"group:li-ke crm:P107_has_current_or_former_member person:68194 ; pc:li-ke-member-68194 crm:P107.1_kind_of_member type:li-ke-du-jishizhong ; type:li-ke-du-jishizhong rdfs:label ""吏科都給事中""@zh-Hant",否,P107 + PC107（D22）
+J118-U46,status,不妨照旧掌科事,lost,limit,,否,核心单元（D19）。第⑤块吏科 PC107 的 P107.1 已写为吏科都給事中，一个 PC107 只能带一个身份，“掌科事”无处可写（第⑤块注释亦如此说明）；“照旧”“不妨”涉及时间与起因，state 版无从表达；cause：limit（D15、D22）；约定所致（D15、D22；“照旧”的时间部分属 CRM 本身）；Yang 审定 2026-10-31：同意
+J118-U47,title,中允,not_modelled,scope,,否,D21
+J118-U48,name_form,廖道南,partial,scope,person:132101 mpv:holds_title type:zuanxiu-guan,否,姓名只在人物的 rdfs:label 中；cause：D21
+J118-U49,title,编修,partial,omission,"name:guanxian-jj09-10-xu-jie rdfs:label ""編修徐階""@zh-Hant ; person:68547 crm:P1_is_identified_by name:guanxian-jj09-10-xu-jie",否,徐阶的编修只在原文串（由建模者拆出）的文字里；张衮、程文德的编修按 D21 不建；cause：徐阶为核心人物（D21：建原文所载全部职任），编修未建为头衔，属未建
+J118-U50,name_form,张衮、徐阶、程文德,partial,omission,person:68547 crm:P1_is_identified_by name:guanxian-jj09-10-xu-jie,否,三人姓名只在 rdfs:label（徐阶另在原文串）中，无本名 E41；cause：徐阶为核心人物，可按 D6 建，未建（张衮、程文德属 D21 范围外）
+J118-U51,title,纂修官,kept_ext,,person:132101 mpv:holds_title type:zuanxiu-guan ; person:130490 mpv:holds_title type:zuanxiu-guan ; person:68547 mpv:holds_title type:zuanxiu-guan ; person:131629 mpv:holds_title type:zuanxiu-guan,否,D22
+J118-U52,name_form,卿勋暨卿璁等官,partial,limit,person:130180 mpv:holds_title type:jianxiu-guan,否,各人可识别并持有修书差遣类型；“等官”作为同一修书班子的群体无从表达（D22 否决“班子” E74）；约定所致（D22）；Yang 审定 2026-10-31：同意
+J118-U53,event,遵照朕谕卿璁凡例条目，纂辑成书,lost,limit,,否,state 版不建事件（D15）；凡例 E29 与书 E73 在，但修书活动与 P33 无从表达；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U54,action,凡敕中未载应行，并朕前谕卿璁条目，逐一开具奏请区处,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U55,relation,朕谕卿璁凡例条目；朕前谕卿璁条目,lost,limit,,否,state 版不建事件（D15）；凡例在，皇帝前谕与本敕的回指无从表达；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U56,date,嘉靖九年十月癸酉,lost,limit,,否,state 版不带时间（D15 规则 2）；Yang 审定 2026-10-31：同意
+J118-U59,issuer,上,lost,limit,,是,state 版不建事件（D15），因而无发令者；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U60,action,仍召,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U61,title_string,辅臣,kept,,"name:guanxian-jj09-10-guiyou-zhang-cong rdfs:label ""輔臣璁""@zh-Hant ; person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-guiyou-zhang-cong",否,
+J118-U62,name_form,璁,partial,omission,person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-guiyou-zhang-cong,否,单名“璁”只在原文串里；cause：可建 E41，未建
+J118-U63,event,同视,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U64,action,复出手扎示璁,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U65,event,手扎论郊坛诸工进度，令“卿可思处”,lost,limit,,否,state 版不建事件（D15）；约定所致（D15）；Yang 审定 2026-10-31：同意
+J118-U66,source,世宗實錄 卷118,kept,,doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-xinwei-zhang-cong,否,出处只连到原文串（无事件，故无 P70）

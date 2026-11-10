@@ -1,0 +1,752 @@
+PREFIX cidoc: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX crm:   <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX dct:   <http://purl.org/dc/terms/>
+PREFIX geo:   <http://www.opengis.net/ont/geosparql#>
+PREFIX ns1:   <https://omnipot.acdh.oeaw.ac.at/>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX void:  <http://rdfs.org/ns/void#>
+PREFIX xml:   <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5705>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Sonstige Bildungseinrichtungen" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5771>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Bibliothek" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5727>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Periodische Medien >> Reihe" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5739>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Hochschule >> Lyzeum" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5737>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Museum" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5713>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Schule" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5714>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Verein" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5706>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Periodische Medien >> Zeitschrift" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5712>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "Hochschule >> Universität" .
+
+<https://apis.acdh.oeaw.ac.at/entity/94572>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Geschichtsverein für Kärnten"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5714> .
+
+<https://apis.acdh.oeaw.ac.at/entity/94610>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Universitätsbibliothek (Lemberg)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5771> .
+
+<https://apis.acdh.oeaw.ac.at/entity/96085>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Carinthia. Zeitschrift für Vaterlandskunde, Belehrung und Unterhaltung"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5706> .
+
+<https://apis.acdh.oeaw.ac.at/entity/96045>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Kaiserlich-Königliches Lyceum (Klagenfurt)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5739> .
+
+<https://apis.acdh.oeaw.ac.at/entity/96088>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Archiv für österreichische Geschichte (Reihe)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5727> .
+
+<https://apis.acdh.oeaw.ac.at/entity/96098>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Historischer Verein für Innerösterreich"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5714> .
+
+<https://apis.acdh.oeaw.ac.at/entity/96039>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Kaiserlich-Königliches Stiftsgymnasium der Benediktiner (Sankt Paul im Lavanttal)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5713> .
+
+<https://apis.acdh.oeaw.ac.at/entity/94924>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Historischer Verein für Steiermark"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5714> .
+
+<https://apis.acdh.oeaw.ac.at/entity/96092>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Mittheilungen des Historischen Vereines für Steiermark"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5706> .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5612>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitarbeiter von >> war leitender Mitarbeiter" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5629>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitarbeiter von >> war leitender Mitarbeiter >> war Dekan" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5677>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitarbeiter von >> war Lehrer" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5691>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitarbeiter von >> war leitender Mitarbeiter >> war Rektor" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5761>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitglied >> war Kuratoriumsmitglied" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5642>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war in Ausbildung >> war Student" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5697>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war in Ausbildung >> war Schüler" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5760>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war in Kontakt mit" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5398>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitglied" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5611>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitarbeiter von" .
+
+<https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5689>
+        rdf:type    crm:E55_Type;
+        rdfs:label  "war Mitarbeiter von >> war Professor" .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96100>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96100>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94572>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5398> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96060>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96060>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96057>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5642> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96079>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96079>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96077>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5612> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96064>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96064>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96062>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5642> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96069>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96069>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94610>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5612> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96076>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96076>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94047>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5689> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96072>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96072>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5629> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96087>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96087>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96085>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5611> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96073>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96073>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5691> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96047>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96047>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96045>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5697> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96066>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96066>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94854>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5677> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96091>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96091>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96088>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5611> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96080>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96080>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94047>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5691> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96099>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96099>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96098>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5398> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96081>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96081>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94047>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5691> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96074>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96074>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94172>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5760> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96054>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96054>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96052>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5642> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96102>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96102>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/95910>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5761> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96071>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96071>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5642> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96043>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96043>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96039>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5697> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96065>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96065>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/95022>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5760> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96101>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96101>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94924>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5398> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96097>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96097>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/96092>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5611> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined_pc/96068>
+        rdf:type                   crm:PC144_joined_with;
+        crm:P01_has_domain         <https://apis.acdh.oeaw.ac.at/events/joined/96068>;
+        crm:P02_has_range          <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P144.1_kind_of_member  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5689> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/birth/date/27527>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1799-08-17";
+        crm:P82a_begin_of_the_begin  "1799-08-17"^^xsd:date;
+        crm:P82b_end_of_the_end      "1799-08-17"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/death/date/27527>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1866-11-12";
+        crm:P82a_begin_of_the_begin  "1866-11-12"^^xsd:date;
+        crm:P82b_end_of_the_end      "1866-11-12"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96054>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1822";
+        crm:P82a_begin_of_the_begin  "1822-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1822-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/96052>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Kaiserlich-Königliches Lyceum (Graz)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5739> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96066>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1832";
+        crm:P82a_begin_of_the_begin  "1832-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1832-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/94854>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "K.K. Akademisches Staats-Gymnasium zu Innsbruck"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5713> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96073>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1848";
+        crm:P82a_begin_of_the_begin  "1848-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1848-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96079>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1851";
+        crm:P82a_begin_of_the_begin  "1851-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1851-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/96077>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Allgemeine Abteilung der theoretischen Staatsprüfungen (Graz)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5705> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96068>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1851";
+        crm:P82a_begin_of_the_begin  "1851-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1851-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96102>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1863";
+        crm:P82a_begin_of_the_begin  "1863-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1863-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/95910>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Joanneum Graz"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5737> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96074>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1848";
+        crm:P82a_begin_of_the_begin  "1848-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1848-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/94172>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Universität Wien"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5712> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96064>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1825";
+        crm:P82a_begin_of_the_begin  "1825-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1825-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/96062>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Universität Padua. Facoltà di Giurisprudenza"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5712> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96071>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1836";
+        crm:P82a_begin_of_the_begin  "1836-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1836-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/94605>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Universität Lemberg"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5712> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96060>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1825";
+        crm:P82a_begin_of_the_begin  "1825-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1825-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/96057>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Lyzeum zu Innsbruck (1810-1826)"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5705> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96076>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1863";
+        crm:P82a_begin_of_the_begin  "1863-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1863-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96081>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1859";
+        crm:P82a_begin_of_the_begin  "1859-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1859-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96065>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1828";
+        crm:P82a_begin_of_the_begin  "1828-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1828-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/95022>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Universität Olmütz"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5712> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/left/date/96080>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1853";
+        crm:P82a_begin_of_the_begin  "1853-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1853-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/entity/94047>
+        rdf:type         crm:E74_Group;
+        rdfs:label       "Karl-Franzens-Universität Graz"@de;
+        crm:P2_has_type  <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/5712> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96100>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1849";
+        crm:P82a_begin_of_the_begin  "1849-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1849-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96060>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1825";
+        crm:P82a_begin_of_the_begin  "1825-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1825-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96079>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1851";
+        crm:P82a_begin_of_the_begin  "1851-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1851-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96064>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1825";
+        crm:P82a_begin_of_the_begin  "1825-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1825-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96076>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1850";
+        crm:P82a_begin_of_the_begin  "1850-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1850-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96073>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1848";
+        crm:P82a_begin_of_the_begin  "1848-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1848-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96066>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1822";
+        crm:P82a_begin_of_the_begin  "1822-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1822-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96080>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1852";
+        crm:P82a_begin_of_the_begin  "1852-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1852-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96099>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1844";
+        crm:P82a_begin_of_the_begin  "1844-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1844-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96081>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1858";
+        crm:P82a_begin_of_the_begin  "1858-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1858-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96074>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1848";
+        crm:P82a_begin_of_the_begin  "1848-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1848-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96054>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1820";
+        crm:P82a_begin_of_the_begin  "1820-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1820-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96102>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1863";
+        crm:P82a_begin_of_the_begin  "1863-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1863-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96071>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1836";
+        crm:P82a_begin_of_the_begin  "1836-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1836-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96043>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1812";
+        crm:P82a_begin_of_the_begin  "1812-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1812-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96065>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1828";
+        crm:P82a_begin_of_the_begin  "1828-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1828-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96101>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1851";
+        crm:P82a_begin_of_the_begin  "1851-07-02"^^xsd:date;
+        crm:P82b_end_of_the_end      "1851-07-02"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/joined/date/96068>
+        rdf:type                     crm:E52_Time-Span;
+        rdfs:label                   "1832";
+        crm:P82a_begin_of_the_begin  "1832-07-01"^^xsd:date;
+        crm:P82b_end_of_the_end      "1832-07-01"^^xsd:date .
+
+<https://apis.acdh.oeaw.ac.at/appellation/birth/27527>
+        rdf:type                   crm:E67_Birth;
+        rdfs:label                 "Geburt von Karlmann Tangl"@de;
+        crm:P4_has_time-span       <https://apis.acdh.oeaw.ac.at/appellation/birth/date/27527>;
+        crm:P98_brought_into_life  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/appellation/death/27527>
+        rdf:type               crm:E69_Death;
+        rdfs:label             "Tod von Karlmann Tangl"@de;
+        crm:P100_was_death_of  <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span   <https://apis.acdh.oeaw.ac.at/appellation/death/date/27527> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96054>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/96052>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96054> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96066>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94854>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96066> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96073>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96073> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96079>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/96077>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96079> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96068>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96068> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96102>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/95910>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96102> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96074>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94172>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96074> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96064>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/96062>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96064> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96071>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94605>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96071> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96060>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/96057>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96060> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96076>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94047>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96076> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96081>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94047>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96081> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96065>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/95022>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96065> .
+
+<https://apis.acdh.oeaw.ac.at/events/left/96080>
+        rdf:type                 crm:E86_Leaving;
+        crm:P145_seperated       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P146_seperated_from  <https://apis.acdh.oeaw.ac.at/entity/94047>;
+        crm:P4_has_time-span     <https://apis.acdh.oeaw.ac.at/appellation/left/date/96080> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96100>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96100> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96060>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96060> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96079>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96079> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96064>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96064> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96069>
+        rdf:type         crm:E85_Joining;
+        crm:P143_joined  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96076>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96076> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96072>
+        rdf:type         crm:E85_Joining;
+        crm:P143_joined  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96087>
+        rdf:type         crm:E85_Joining;
+        crm:P143_joined  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96073>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96073> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96047>
+        rdf:type         crm:E85_Joining;
+        crm:P143_joined  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96066>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96066> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96091>
+        rdf:type         crm:E85_Joining;
+        crm:P143_joined  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96080>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96080> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96099>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96099> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96081>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96081> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96074>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96074> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96054>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96054> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96102>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96102> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96071>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96071> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96043>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96043> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96065>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96065> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96101>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96101> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96097>
+        rdf:type         crm:E85_Joining;
+        crm:P143_joined  <https://apis.acdh.oeaw.ac.at/entity/27527/> .
+
+<https://apis.acdh.oeaw.ac.at/events/joined/96068>
+        rdf:type              crm:E85_Joining;
+        crm:P143_joined       <https://apis.acdh.oeaw.ac.at/entity/27527/>;
+        crm:P4_has_time-span  <https://apis.acdh.oeaw.ac.at/appellation/joined/date/96068> .
+
+<https://apis.acdh.oeaw.ac.at/entity/27527/>
+        rdf:type                 crm:E21_Person;
+        rdfs:label               "Karlmann Tangl"@de;
+        crm:P1_is_identified_by  [ rdf:type    crm:E41_Appellation;
+                                   rdfs:label  "Karlmann Tangl"@de
+                                 ];
+        owl:sameAs               <https://apis-edits.acdh-dev.oeaw.ac.at/entity/27527/> .

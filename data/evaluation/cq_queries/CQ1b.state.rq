@@ -1,0 +1,6 @@
+# 理由：state 版若表达掌事，只能是 holds_title 或 PC107 的身份为 type:zhangshi，或有名为吏部的机构；三处都查。
+SELECT ?kind ?x ?y WHERE {
+  { BIND("holds_title 掌事" AS ?kind) ?x mpv:holds_title type:zhangshi . BIND("" AS ?y) }
+  UNION { BIND("PC107 掌事" AS ?kind) ?x crm:P107.1_kind_of_member type:zhangshi . BIND("" AS ?y) }
+  UNION { BIND("名含吏部的机构" AS ?kind) ?x a crm:E74_Group ; rdfs:label ?y . FILTER(CONTAINS(STR(?y), "吏部")) }
+} ORDER BY ?kind ?x

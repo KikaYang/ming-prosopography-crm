@@ -1,0 +1,277 @@
+# SL12 共用词汇（2026-10-28 从 SL12_event.ttl / SL12_state.ttl 抽出，三元组不变）。
+# 案例文件只写案例本身的三元组；检查时与本文件一起加载：
+#   python scripts/check_crm.py docs/modelling/SL12_event.ttl --vocab docs/modelling/vocab.ttl
+
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ① 名称类型（决策 D6）
+
+type:benming a crm:E55_Type ;
+    rdfs:label "本名"@zh-Hans , "personal name"@en .
+
+type:ciming a crm:E55_Type ;
+    rdfs:label "赐名"@zh-Hans , "name bestowed by the emperor"@en .
+
+# ② 史料（决策 D7）
+doc:shizong-shilu a crm:E31_Document ;
+    rdfs:label "世宗實錄"@zh-Hant ;
+    crm:P102_has_title name:title-shizong-shilu ;
+    crm:P106_is_composed_of doc:shizong-shilu-089 , doc:shizong-shilu-128 , doc:shizong-shilu-132 , doc:shizong-shilu-135 ,
+                            doc:shizong-shilu-136 , doc:shizong-shilu-141 , doc:shizong-shilu-146 , doc:shizong-shilu-149 ;   # 2026-10-24 改：增 128/132/135/141/146
+    rdfs:comment "正式题名：明世宗肅皇帝實錄。核对所用：识典古籍平台，底本为红格本（同史语所校印本底本），粗校文本。"@zh-Hans .
+
+name:title-shizong-shilu a crm:E35_Title ;
+    rdfs:label "世宗實錄"@zh-Hant .
+
+doc:shizong-shilu-089 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷089"@zh-Hant .
+
+doc:shizong-shilu-128 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷128"@zh-Hant .
+
+doc:shizong-shilu-132 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷132"@zh-Hant .
+
+doc:shizong-shilu-135 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷135"@zh-Hant .
+
+doc:shizong-shilu-136 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷136"@zh-Hant .
+
+doc:shizong-shilu-141 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷141"@zh-Hant .
+
+doc:shizong-shilu-146 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷146"@zh-Hant .
+
+doc:shizong-shilu-149 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷149"@zh-Hant .
+
+doc:mingshi-110 a crm:E31_Document ;
+    rdfs:label "明史 卷110 宰輔年表二"@zh-Hant .
+
+# ③ 头衔分类（决策 D4）
+## 顶层大类
+type:jiaxian a crm:E55_Type ;
+    rdfs:label "加衔"@zh-Hans , "honorary title"@en .
+
+type:pinjie-jianxian a crm:E55_Type ;
+    rdfs:label "品阶兼衔"@zh-Hans , "concurrent nominal title"@en .
+
+type:dian-ge-xian a crm:E55_Type ;
+    rdfs:label "殿阁衔"@zh-Hans , "grand secretary hall title"@en .
+
+## 中层
+type:sangu a crm:E55_Type ;
+    rdfs:label "三孤"@zh-Hant , "Three Solitaries"@en ;
+    rdfs:comment "Hucker 1985, #4864" ;
+    crm:P127_has_broader_term type:jiaxian .
+
+type:donggong-sanshi a crm:E55_Type ;
+    rdfs:label "東宮三師"@zh-Hant , "Three Preceptors of the Heir Apparent"@en ;
+    rdfs:comment "Hucker 1985, #7445（太子三師的异称）"@zh-Hans ;
+    crm:P127_has_broader_term type:jiaxian .
+
+## 底层：三孤
+type:shaobao a crm:E55_Type ;
+    rdfs:label "少保"@zh-Hant , "Junior Guardian"@en ;
+    rdfs:comment "Hucker 1985, #5110" ;
+    crm:P127_has_broader_term type:sangu .
+
+type:shaofu a crm:E55_Type ;
+    rdfs:label "少傅"@zh-Hant , "Junior Mentor"@en ;
+    rdfs:comment "Hucker 1985, #5096" ;
+    crm:P127_has_broader_term type:sangu .
+
+## 底层：东宫三师
+type:taizi-taifu a crm:E55_Type ;
+    rdfs:label "太子太傅"@zh-Hant , "Grand Mentor of the Heir Apparent"@en ;
+    rdfs:comment "Hucker 1985, #6256" ;
+    crm:P127_has_broader_term type:donggong-sanshi .
+
+type:taizi-taishi a crm:E55_Type ;
+    rdfs:label "太子太師"@zh-Hant , "Grand Preceptor of the Heir Apparent"@en ;
+    rdfs:comment "Hucker 1985, #6258" ;
+    crm:P127_has_broader_term type:donggong-sanshi .
+
+## 底层：尚书（阁臣兼衔，决策 D1）
+type:shangshu-personnel-xian a crm:E55_Type ;
+    rdfs:label "吏部尚書"@zh-Hant , "Minister of Personnel (concurrent nominal title held by a Grand Secretary)"@en ;
+    rdfs:comment "阁臣兼衔，非掌部事（决策 D1）"@zh-Hans , "Hucker 1985, #3630, #5042" ;
+    crm:P127_has_broader_term type:pinjie-jianxian .
+
+type:shangshu-rites-xian a crm:E55_Type ;
+    rdfs:label "禮部尚書"@zh-Hant , "Minister of Rites (concurrent nominal title held by a Grand Secretary)"@en ;
+    rdfs:comment "阁臣兼衔，非掌部事（决策 D1）"@zh-Hans , "Hucker 1985, #3631, #5042" ;
+    crm:P127_has_broader_term type:pinjie-jianxian . 
+
+## 底层：殿阁衔
+type:wenyuange-daxueshi a crm:E55_Type ;
+    rdfs:label "文淵閣大學士"@zh-Hant , "Grand Secretary of the Hall of Literary Profundity"@en ;
+    rdfs:comment "Hucker 1985, #7729" ;
+    crm:P127_has_broader_term type:dian-ge-xian .
+
+type:jinshendian-daxueshi a crm:E55_Type ;
+    rdfs:label "謹身殿大學士"@zh-Hant , "Jinshendian Daxueshi"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，待人工翻检索引"@zh-Hans ;
+    crm:P127_has_broader_term type:dian-ge-xian .
+
+type:huagaidian-daxueshi a crm:E55_Type ;
+    rdfs:label "華蓋殿大學士"@zh-Hant , "Huagaidian Daxueshi"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，待人工翻检索引"@zh-Hans ;
+    crm:P127_has_broader_term type:dian-ge-xian .
+
+# 授衔动作类型（决策 D13）
+
+type:shouxian-action a crm:E55_Type ;
+    rdfs:label "授衔动作"@zh-Hans , "title-conferral action"@en .
+
+type:action-jia a crm:E55_Type ;
+    rdfs:label "加"@zh-Hans , "add (title)"@en ;
+    crm:P127_has_broader_term type:shouxian-action .
+
+type:action-sheng a crm:E55_Type ;
+    rdfs:label "升"@zh-Hans , "promote"@en ;
+    crm:P127_has_broader_term type:shouxian-action .
+
+type:action-jin a crm:E55_Type ;
+    rdfs:label "进"@zh-Hans , "advance"@en ;
+    crm:P127_has_broader_term type:shouxian-action .
+
+# 内阁与成员身份（决策 D3）
+
+group:neige a crm:E74_Group ;
+    rdfs:label "內閣"@zh-Hant .
+
+type:daxueshi a crm:E55_Type ;
+    rdfs:label "大學士"@zh-Hant , "Grand Secretary"@en .
+
+# 原文头衔串类型（决策 D4）
+
+type:guanxian-chuan a crm:E55_Type ;
+    rdfs:label "官衔串"@zh-Hans , "official title string"@en .
+
+# 解读者（决策 D7）
+
+person:yang a crm:E21_Person ;
+    rdfs:label "Yang Tianchi (modeller)"@en .
+
+# ===== SL11 新增（2026-10-30，agent 编写；SL11_event.ttl 与后续案例共用）=====
+
+# 史料
+doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-118 .
+
+doc:shizong-shilu-118 a crm:E31_Document ;
+    rdfs:label "世宗實錄 卷118"@zh-Hant .
+
+# 皇帝（2026-10-30 从 SL12_event.ttl 第⑤块移入）
+person:ming-shizong a crm:E21_Person ;
+    rdfs:label "明世宗"@zh-Hant , "朱厚熜"@zh-Hant .
+
+# 差遣类型（决策 D16、D18）
+type:chaiqian a crm:E55_Type ;
+    rdfs:label "差遣"@zh-Hant , "duty assignment"@en ;
+    rdfs:comment "Hucker 1985, #67" .
+
+## D18 的两类：位次、职责（上位类由 agent 按 D18 设，待 Yang 审定）
+type:chaiqian-weici a crm:E55_Type ;
+    rdfs:label "差遣位次"@zh-Hans , "rank within a duty assignment"@en ;
+    crm:P127_has_broader_term type:chaiqian .
+
+type:chaiqian-zhize a crm:E55_Type ;
+    rdfs:label "差遣职责"@zh-Hans , "function of a duty assignment"@en ;
+    crm:P127_has_broader_term type:chaiqian .
+
+## 郊坛工程
+type:zhi-jianzao-shi a crm:E55_Type ;
+    rdfs:label "知建造事"@zh-Hant , "Zhi jianzao shi"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，用拼音；位次（D18）"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian-weici .
+
+type:tongzhi-jianzao-shi a crm:E55_Type ;
+    rdfs:label "同知建造事"@zh-Hant , "Tongzhi jianzao shi"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，用拼音；位次（D18）"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian-weici .
+
+type:zongdu-gongcheng-guan a crm:E55_Type ;
+    rdfs:label "總督工程官"@zh-Hant , "Zongdu gongcheng guan"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出（#7158 總督 为 Supreme Commander，与此不同），用拼音；职责（D18）"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian-zhize .
+
+type:dushi-guizhi-guan a crm:E55_Type ;
+    rdfs:label "督視規制官"@zh-Hant , "Dushi guizhi guan"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，用拼音；职责（D18）"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian-zhize .
+
+type:jianshi-xuncha-gongcheng-guan a crm:E55_Type ;
+    rdfs:label "監視巡察工程官"@zh-Hant , "Jianshi xuncha gongcheng guan"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，用拼音；原文无位次部分，未按 D18 切分"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian-zhize .
+
+## 修书
+type:zongcai-guan a crm:E55_Type ;
+    rdfs:label "總裁官"@zh-Hant , "Director-general"@en ;
+    rdfs:comment "Hucker 1985, #7156（總裁）" ;
+    crm:P127_has_broader_term type:chaiqian .
+
+type:fu-zongcai-guan a crm:E55_Type ;
+    rdfs:label "副總裁官"@zh-Hant , "Fu zongcai guan"@en ;
+    rdfs:comment "Hucker 1985 文字层未检出，用拼音"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian .
+
+type:jianxiu-guan a crm:E55_Type ;
+    rdfs:label "監修官"@zh-Hant , "Jianxiu guan"@en ;
+    rdfs:comment "Hucker 1985 只收 #829 監修國史（宋辽金），未收監修官，用拼音"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian .
+
+type:zuanxiu-guan a crm:E55_Type ;
+    rdfs:label "纂修官"@zh-Hant , "Compiler"@en ;
+    rdfs:comment "Hucker 1985, #7058（条目标为清代）"@zh-Hans ;
+    crm:P127_has_broader_term type:chaiqian .
+
+# 掌事（决策 D19）
+type:zhangshi a crm:E55_Type ;
+    rdfs:label "掌事"@zh-Hans , "in charge of the affairs of an office"@en ;
+    rdfs:comment "建模者设的类型（D19），用于“掌部事”“掌科事”等"@zh-Hans .
+
+# 新机构与成员身份（决策 D3、D19）
+group:hanlinyuan a crm:E74_Group ;
+    rdfs:label "翰林院"@zh-Hant , "Hanlin Academy"@en ;
+    rdfs:comment "Hucker 1985, #2154" .
+
+group:li-ke a crm:E74_Group ;
+    rdfs:label "吏科"@zh-Hant , "Office of Scrutiny for Personnel"@en ;
+    rdfs:comment "Hucker 1985, #3616" .
+
+type:hanlin-shidu-xueshi a crm:E55_Type ;
+    rdfs:label "翰林院侍讀學士"@zh-Hant , "Academician Reader-in-waiting"@en ;
+    rdfs:comment "Hucker 1985, #5326（侍讀學士）" .
+
+# 2026-10-30 起由 SL11_state.ttl 第⑤块使用；2026-10-31 移入
+type:li-ke-du-jishizhong a crm:E55_Type ;
+    rdfs:label "吏科都給事中"@zh-Hant , "Chief Supervising Secretary of the Office of Scrutiny for Personnel"@en ;
+    rdfs:comment "Hucker 1985, #7189" .
+
+# ===== state 版扩展属性（2026-10-30 从 SL12_state.ttl 第④块移入）=====
+mpv:holds_title a rdf:Property ;
+    rdfs:label "holds title"@en , "持有头衔"@zh-Hans ;
+    rdfs:domain crm:E21_Person ;
+    rdfs:range  crm:E55_Type ;
+    rdfs:comment "某人持有某头衔（state 版）。三孤、东宫三师没有对应机构，无法用 P107；CIDOC-CRM 7.1.3 中没有表达'某人持有某头衔'的属性。不带时间：只表示曾经持有，不表示何时持有（决策 D15 规则 2）。"@zh-Hans .

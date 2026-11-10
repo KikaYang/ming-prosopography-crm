@@ -1,0 +1,40 @@
+digraph G {
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL14_event.ttl：全部 19 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
+  node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9, color="#555555"];
+  n0 [label="doc:shizong-shilu-161
+E31_Document
+世宗實錄 卷161", fillcolor="#ead1dc", style="rounded,filled"];
+  n1 [label="name:date-jj13-03-jimao
+E41_Appellation
+嘉靖十三年三月己卯", fillcolor="#cfe2f3", style="rounded,filled"];
+  n2 [label="name:guanxian-jj13-03-jimao-xu-jie-xin
+E41_Appellation
+浙江按察司僉事，提調學校", fillcolor="#cfe2f3", style="rounded,filled"];
+  n3 [label="name:guanxian-jj13-03-jimao-xu-jie-yuan
+E41_Appellation
+湖廣黃州府同知徐階", fillcolor="#cfe2f3", style="rounded,filled"];
+  n4 [label="person:68547
+E21_Person
+徐階", fillcolor="#f4cccc", style="rounded,filled"];
+  n5 [label="ts:jj13-03-jimao
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n6 [label="type:guanxian-chuan
+E55_Type
+official title string
+官衔串", fillcolor="#eeeeee", style="rounded,filled"];
+  n0 -> n2 [label="P67_refers_to"];
+  n0 -> n3 [label="P67_refers_to"];
+  n2 -> n6 [label="P2_has_type"];
+  n3 -> n6 [label="P2_has_type"];
+  n4 -> n2 [label="P1_is_identified_by"];
+  n4 -> n3 [label="P1_is_identified_by"];
+  n5 -> n1 [label="P1_is_identified_by"];
+  lit7 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-05-05T00:00:00
+^^xsd:dateTime"];
+  n5 -> lit7 [label="P82a_begin_of_the_begin", style=dotted];
+  lit8 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-05-05T23:59:59
+^^xsd:dateTime"];
+  n5 -> lit8 [label="P82b_end_of_the_end", style=dotted];
+  legend [shape=plaintext, fontsize=9, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD><B>图例</B></TD></TR><TR><TD BGCOLOR="#ead1dc">文献 E31/E73</TD></TR><TR><TD BGCOLOR="#cfe2f3">名称 E41</TD></TR><TR><TD BGCOLOR="#f4cccc">人物 E21</TD></TR><TR><TD BGCOLOR="#fff2cc">时间段 E52</TD></TR><TR><TD BGCOLOR="#eeeeee">类型 E55</TD></TR></TABLE>>];
+}

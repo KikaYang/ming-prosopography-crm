@@ -1,0 +1,7 @@
+# 理由：state 版没有 P15，最接近的做法是找同时持有工程差遣和修书差遣的人；这只能说明两者并存，不能说明“以……身份”。
+SELECT ?personLabel ?fromLabel ?toLabel WHERE {
+  VALUES ?from { type:zhi-jianzao-shi type:tongzhi-jianzao-shi type:zongdu-gongcheng-guan type:dushi-guizhi-guan type:jianshi-xuncha-gongcheng-guan }
+  VALUES ?to { type:jianxiu-guan type:zongcai-guan type:fu-zongcai-guan type:zuanxiu-guan }
+  ?person mpv:holds_title ?from , ?to ; rdfs:label ?personLabel .
+  ?from rdfs:label ?fromLabel . ?to rdfs:label ?toLabel . FILTER(LANG(?fromLabel)="zh-Hant" && LANG(?toLabel)="zh-Hant")
+} ORDER BY ?personLabel ?fromLabel

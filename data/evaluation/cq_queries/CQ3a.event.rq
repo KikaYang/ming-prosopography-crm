@@ -1,0 +1,7 @@
+# 理由：入阁、离阁按 D3、D5 是对 group:neige 的 E85、E86，取全部这类事件，按时间排出。
+SELECT ?e ?label ?kind ?begin ?end ?source WHERE {
+  { ?e crm:P143_joined person:68266 ; crm:P144_joined_with group:neige . BIND("加入" AS ?kind) }
+  UNION { ?e crm:P145_separated person:68266 ; crm:P146_separated_from group:neige . BIND("离开" AS ?kind) }
+  ?e rdfs:label ?label ; crm:P4_has_time-span ?ts . ?ts crm:P82a_begin_of_the_begin ?begin ; crm:P82b_end_of_the_end ?end .
+  OPTIONAL { ?d crm:P70_documents ?e ; rdfs:label ?source }
+} ORDER BY ?begin ?source

@@ -1,0 +1,5 @@
+﻿claim,target,property,assigned,sourceLabel
+event:huagaidian-claim-cbdb-421880,event:huagaidian-conferral,crm:P4_has_time-span,ts:cbdb-421880,CBDB POSTED_TO_OFFICE_DATA posting_id 421880
+event:huagaidian-claim-mingshi-110,event:huagaidian-conferral,crm:P4_has_time-span,ts:jj11-03,明史 卷110 宰輔年表二
+event:huagaidian-claim-mingshi-196,event:huagaidian-conferral,crm:P4_has_time-span,ts:jj13,明史 卷196 列傳第八十四
+event:huagaidian-claim-shilu-136,event:huagaidian-conferral,crm:P4_has_time-span,ts:jj11-03-jiayin,世宗實錄 卷136

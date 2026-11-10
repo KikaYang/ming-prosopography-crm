@@ -1,0 +1,7 @@
+# 理由：有争议的时间按 D7 记在 E13 上：取以华盖殿授衔事件为对象的全部 E13，读出来源和日期（含原文日期写法）；这是 E13 的通用读法。
+SELECT ?claim ?sourceLabel ?sourceNote ?dateText ?begin ?end WHERE {
+  ?p crm:P9_consists_of ?g . ?g mpv:conferred_title type:huagaidian-daxueshi .
+  ?claim crm:P140_assigned_attribute_to ?p ; crm:P177_assigned_property_of_type crm:P4_has_time-span ; crm:P141_assigned ?ts ; crm:P16_used_specific_object ?src .
+  ?src rdfs:label ?sourceLabel . OPTIONAL { ?src rdfs:comment ?sourceNote }
+  ?ts crm:P82a_begin_of_the_begin ?begin ; crm:P82b_end_of_the_end ?end ; crm:P1_is_identified_by ?n . ?n rdfs:label ?dateText .
+} ORDER BY ?begin

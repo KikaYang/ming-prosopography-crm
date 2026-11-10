@@ -1,0 +1,59 @@
+﻿unit_id,type,text,judgement,cause,ttl_evidence,implicit,note
+J089-U01,date,嘉靖七年六月辛丑朔,kept,,"ts:jj07-06-01 crm:P1_is_identified_by name:date-jj07-06-01 ; name:date-jj07-06-01 rdfs:label ""嘉靖七年六月辛丑朔""@zh-Hant",否,原文写法保留为 E41；P82a/b 已换算为格里历 1528-06-27（D14）
+J089-U02,event,明伦大典书成进呈,kept,,event:minglun-dadian-jincheng rdf:type crm:E7_Activity ; doc:shizong-shilu-089 crm:P70_documents event:minglun-dadian-jincheng,否,
+J089-U04,event,加恩纂述效劳诸臣,partial,scope,event:jj07-06-jiaen crm:P2_has_type type:jiaen ; event:jj07-06-jiaen crm:P11_had_participant person:68266,否,加恩事件只连张璁；集体加恩、杨一清的参与未表达；cause：杨一清不在 SL12 范围
+J089-U05,motive,（纂述效劳）,kept,,event:jj07-06-jiaen crm:P17_was_motivated_by event:minglun-dadian-jincheng,否,
+J089-U06,issuer,上,kept_judgement,,event:jj07-06-jiaen crm:P14_carried_out_by person:ming-shizong,是,隐含主语“上”由建模者写为明世宗
+J089-U07,title_string,少师兼太子太师、吏部尚书、华盖殿大学士,not_modelled,scope,,否,杨一清不在 SL12 范围
+J089-U08,title,吏部尚书,not_modelled,scope,,否,杨一清不在 SL12 范围
+J089-U10,name_form,张璁,kept,,person:68266 crm:P1_is_identified_by name:zhang-cong ; name:zhang-cong crm:P2_has_type type:benming,否,改名时间未表达（D6 已知局限）
+J089-U11,title_string,少保、礼部尚书兼文渊阁大学士,partial,omission,event:jj06-10-ruge mpv:conferred_title type:shangshu-rites-xian ; event:jj06-10-ruge mpv:conferred_title type:wenyuange-daxueshi,否,卷89 原衔串未建 E41；少保无授予或持有记录；cause：D4 已有手段，未建
+J089-U12,title,少保,lost,omission,,否,type:shaobao 仍只在分类树中，没有连到张璁；cause：可建授予少保的事件或卷89 原衔串，未建
+J089-U13,title,礼部尚书,kept_ext,,event:jj06-10-ruge mpv:conferred_title type:shangshu-rites-xian,否,1528 年仍持有：D5（头衔无退出事件）＋D12（礼部尚书至此尚未被同序列的吏部尚书取代）
+J089-U14,title,文渊阁大学士,kept_ext,,event:jj06-10-ruge mpv:conferred_title type:wenyuange-daxueshi,否,同上（文渊阁至此尚未被谨身殿取代）
+J089-U15,relation,礼部尚书兼文渊阁大学士,partial,limit,type:shangshu-rites-xian crm:P127_has_broader_term type:pinjie-jianxian ; type:wenyuange-daxueshi crm:P127_has_broader_term type:dian-ge-xian,否,分类树区分品阶兼衔与殿阁衔，但“兼”本身无三元组；cause：D4 不设“兼”类型；约定所致（D4）
+J089-U16,action,加,kept,,event:jj07-06-jiaen crm:P9_consists_of event:jj07-06-jiaen-1 ; event:jj07-06-jiaen-1 crm:P2_has_type type:action-jia ; event:jj07-06-jiaen-2 crm:P2_has_type type:action-jia,否,D13：子事件以 P2 标“加”；动作与头衔的对应依赖 mpv:conferred_title（D13 子事件）（Yang 审定 2026-10-24）
+J089-U17,title,少傅,kept_ext,,event:jj07-06-jiaen-1 mpv:conferred_title type:shaofu,否,
+J089-U18,title,太子太傅,kept_ext,,event:jj07-06-jiaen-2 mpv:conferred_title type:taizi-taifu,否,
+J089-U19,action,升,kept,,event:jj07-06-jiaen-3 crm:P2_has_type type:action-sheng ; event:jj07-06-jiaen-4 crm:P2_has_type type:action-sheng,否,D13：子事件以 P2 标“升”；动作与头衔的对应依赖 mpv:conferred_title（D13 子事件）（Yang 审定 2026-10-24）
+J089-U20,title,吏部尚书,kept_ext,,event:jj07-06-jiaen-3 mpv:conferred_title type:shangshu-personnel-xian,否,
+J089-U21,title,谨身殿大学士,kept_ext,,event:jj07-06-jiaen-4 mpv:conferred_title type:jinshendian-daxueshi,否,
+J089-U22,relation,四个新衔同出一次加恩,kept_ext,,event:jj07-06-jiaen crm:P9_consists_of event:jj07-06-jiaen-1 ; event:jj07-06-jiaen crm:P9_consists_of event:jj07-06-jiaen-2 ; event:jj07-06-jiaen crm:P9_consists_of event:jj07-06-jiaen-3 ; event:jj07-06-jiaen crm:P9_consists_of event:jj07-06-jiaen-4,否,四个子事件同属一个父事件（D13），头衔仍靠 mpv:conferred_title
+J089-U23,relation,原衔与新衔的先后,partial,omission,event:jj06-10-ruge crm:P4_has_time-span ts:jj06-10 ; event:jj07-06-jiaen crm:P4_has_time-span ts:jj07-06-01,否,少保未建模，少保→少傅一对无法推算；其余替换按 D12 可推（Yang 审定 2026-10-24）
+J089-U25,source,世宗實錄 卷89,kept,,doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-089 ; doc:shizong-shilu-089 crm:P70_documents event:jj07-06-jiaen,否,
+J136-U01,date,甲寅,kept,,ts:jj11-03-jiayin crm:P1_is_identified_by name:date-jj11-03-jiayin ; event:jj11-03-zhijing crm:P4_has_time-span ts:jj11-03-jiayin,否,现同时是“应召至京”事件的时间和 E13 ①的断言值；格里历 1532-04-20
+J136-U02,status,原任,kept_judgement,,event:jj10-07-zhishi rdf:type crm:E86_Leaving ; event:jj10-11-zhaohuan rdf:type crm:E85_Joining ; event:jj10-11-zhaohuan crm:P4_has_time-span ts:jj10-11-to-jj11-03,否,嘉靖十年致仕（E86）与召还入阁（E85，范围止于三月甲寅）之间即“原任”状态，按 D5 约定推出
+J136-U03,title_string,太傅兼太子太傅、吏部尚书、谨身殿大学士,partial,omission,event:jj07-06-jiaen-2 mpv:conferred_title type:taizi-taifu ; event:jj07-06-jiaen-3 mpv:conferred_title type:shangshu-personnel-xian ; event:jj07-06-jiaen-4 mpv:conferred_title type:jinshendian-daxueshi,否,卷136 原衔串仍未建 E41（卷132 的同类串已建，但不是本段）；太傅无对应；cause：未建
+J136-U04,title,太傅,lost,omission,,否,影像核实原文作“太傅”（清单 v1.1）；模型无 type:taifu；cause：可补建，未建
+J136-U05,title,太子太傅,kept_ext,,event:jj07-06-jiaen-2 mpv:conferred_title type:taizi-taifu,否,本次进太子太师前仍持有（D5＋D12）
+J136-U06,title,吏部尚书,kept_ext,,event:jj07-06-jiaen-3 mpv:conferred_title type:shangshu-personnel-xian,否,同上
+J136-U07,title,谨身殿大学士,kept_ext,,event:jj07-06-jiaen-4 mpv:conferred_title type:jinshendian-daxueshi,否,本次进华盖殿前仍持有（D5＋D12）
+J136-U08,relation,太傅兼太子太傅,lost,omission,,否,无“兼”的三元组，卷136 原衔串未建；且无太傅；cause：未建
+J136-U09,name_form,张孚敬,kept,,person:68266 crm:P1_is_identified_by name:zhang-fujing,否,
+J136-U10,event,应召至京,kept,,event:jj11-03-zhijing rdf:type crm:E7_Activity ; event:jj11-03-zhijing crm:P11_had_participant person:68266 ; doc:shizong-shilu-136 crm:P70_documents event:jj11-03-zhijing,否,第⑨块新增“应召至京”事件
+J136-U11,issuer,召；诏,kept_judgement,,event:jj10-11-zhao crm:P14_carried_out_by person:ming-shizong ; event:jj11-03-zhijing crm:P17_was_motivated_by event:jj10-11-zhao ; event:huagaidian-conferral crm:P14_carried_out_by person:ming-shizong,是,“召”“诏”的发出者都由建模者写为明世宗（隐含主语）
+J136-U12,action,进,kept,,event:huagaidian-conferral crm:P9_consists_of event:huagaidian-conferral-1 ; event:huagaidian-conferral-1 crm:P2_has_type type:action-jin ; event:huagaidian-conferral-2 crm:P2_has_type type:action-jin,否,D13：子事件以 P2 标“进”；动作与头衔的对应依赖 mpv:conferred_title（D13 子事件）（Yang 审定 2026-10-24）
+J136-U13,relation,兼,kept_judgement,,event:huagaidian-conferral-1 mpv:conferred_title type:taizi-taishi ; event:huagaidian-conferral-2 mpv:conferred_title type:huagaidian-daxueshi ; event:jj07-06-jiaen-1 mpv:conferred_title type:shaofu,否,新衔与不同序列的旧衔（少傅、吏部尚书）并存，按 D5＋D12 推出
+J136-U14,title,太子太师,kept_ext,,event:huagaidian-conferral-1 mpv:conferred_title type:taizi-taishi,否,时间以 E13 断言表达（第⑨块）
+J136-U15,title,华盖殿大学士,kept_ext,,event:huagaidian-conferral-2 mpv:conferred_title type:huagaidian-daxueshi,否,同上
+J136-U16,relation,余官如故,kept_judgement,,event:huagaidian-conferral-1 mpv:conferred_title type:taizi-taishi ; type:taizi-taishi crm:P127_has_broader_term type:donggong-sanshi ; type:taizi-taifu crm:P127_has_broader_term type:donggong-sanshi ; type:huagaidian-daxueshi crm:P127_has_broader_term type:dian-ge-xian ; type:jinshendian-daxueshi crm:P127_has_broader_term type:dian-ge-xian,否,D12：同序列后授取代先授，推出太子太傅→太子太师、谨身殿→华盖殿，其余旧衔如故；取代规则属建模者判断（Q7）
+J136-U17,name_form,孚敬,partial,omission,"name:zhang-fujing rdfs:label ""張孚敬""@zh-Hant",否,简称“孚敬”无单独 E41；cause：未建
+J136-U18,event,疏辞,not_modelled,scope,,否,辞免过程留待 3b
+J136-U19,issuer,上,not_modelled,scope,,否,辞免过程留待 3b
+J136-U21,motive,四郊督视，克尽勤诚，辅赞朕躬，多赖匡翊,lost,omission,,否,授衔事件仍无 P17；cause：可比照第⑤块，未建（若视为辞免答复则为 scope）
+J136-U22,event,兹加恩,kept,,event:huagaidian-conferral crm:P2_has_type type:jiaen,否,原文“兹加恩”
+J136-U24,event,其即承朕命，尽心供职，勿辞,not_modelled,scope,,否,辞免过程留待 3b
+J136-U25,source,世宗實錄 卷136,kept,,doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-136 ; doc:shizong-shilu-136 crm:P70_documents event:huagaidian-conferral,否,
+J149-U01,date,乙亥,kept,,ts:jj12-04-yihai crm:P1_is_identified_by name:date-jj12-04-yihai ; event:jj12-04-fuzhao crm:P4_has_time-span ts:jj12-04-yihai,否,格里历 1533-05-06；Yang 影像核实：本卷为嘉靖十二年四月（2026-10-22）
+J149-U02,status,致仕,kept_judgement,,"event:jj11-08-zhishi rdf:type crm:E86_Leaving ; doc:shizong-shilu-141 crm:P70_documents event:jj11-08-zhishi ; name:guanxian-jj12-04-zhang-fujing rdfs:label ""致仕少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬""@zh-Hant",否,致仕状态按 D5 推出（嘉靖十一年八月辛丑致仕，此后未建复任 E85）；“致仕”字样见原文串
+J149-U03,title_string,少傅兼太子太师、吏部尚书、华盖殿大学士,kept,,person:68266 crm:P1_is_identified_by name:guanxian-jj12-04-zhang-fujing ; doc:shizong-shilu-149 crm:P67_refers_to name:guanxian-jj12-04-zhang-fujing,否,
+J149-U04,title,少傅,kept_ext,,event:jj07-06-jiaen-1 mpv:conferred_title type:shaofu,否,嘉靖十二年仍持有（D5＋D12：三孤序列此后尚无新授）
+J149-U05,title,太子太师,kept_ext,,event:huagaidian-conferral-1 mpv:conferred_title type:taizi-taishi,否,
+J149-U06,title,吏部尚书,kept_ext,,event:jj07-06-jiaen-3 mpv:conferred_title type:shangshu-personnel-xian,否,
+J149-U07,title,华盖殿大学士,kept_ext,,event:huagaidian-conferral-2 mpv:conferred_title type:huagaidian-daxueshi,否,
+J149-U08,relation,少傅兼太子太师,partial,limit,type:shaofu crm:P127_has_broader_term type:sangu ; type:taizi-taishi crm:P127_has_broader_term type:donggong-sanshi,否,“兼”只在原文串中；cause：D4 不设“兼”类型；约定所致（D4）
+J149-U09,name_form,张孚敬,kept,,person:68266 crm:P1_is_identified_by name:zhang-fujing,否,
+J149-U10,event,赴台,kept_judgement,,"event:jj12-04-fuzhao rdfs:label ""張孚敬赴召至京""@zh-Hant",否,原文“赴台”，建模者读为“赴召”
+J149-U11,event,至京,kept,,event:jj12-04-fuzhao crm:P11_had_participant person:68266 ; doc:shizong-shilu-149 crm:P70_documents event:jj12-04-fuzhao,否,
+J149-U12,issuer,（召）,kept_judgement,,event:jj12-04-fuzhao crm:P17_was_motivated_by event:jj12-01-zhao ; event:jj12-01-zhao crm:P14_carried_out_by person:ming-shizong,是,隐含的召令发出者经 P17→召事件（卷146）的 P14 表达；成立的前提是 U10 读作“召”
+J149-U14,source,世宗實錄 卷149,kept,,doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-149 ; doc:shizong-shilu-149 crm:P70_documents event:jj12-04-fuzhao,否,

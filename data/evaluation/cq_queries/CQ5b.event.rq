@@ -1,0 +1,6 @@
+# 理由：原衔：取此前授予的头衔（E85 或子事件），以及卷89 指向的原文头衔串。
+SELECT DISTINCT ?kind ?value WHERE {
+  { BIND("此前授予" AS ?kind) ?g crm:P143_joined person:68266 ; mpv:conferred_title ?t ; crm:P4_has_time-span ?ts . ?ts crm:P82b_end_of_the_end ?e .
+    FILTER(?e < "1528-06-27T00:00:00"^^xsd:dateTime) ?t rdfs:label ?value . FILTER(LANG(?value)="zh-Hant") }
+  UNION { BIND("卷89 原文串" AS ?kind) doc:shizong-shilu-089 crm:P67_refers_to ?n . ?n rdfs:label ?value }
+} ORDER BY ?kind ?value

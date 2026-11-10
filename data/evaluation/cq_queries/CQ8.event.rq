@@ -1,0 +1,14 @@
+# 理由：按 D25、D26：差遣节点 P7 指向地点；经 P17 到父事件，经 P9 到 E85 和 PC144 得本官，到 E86 得原机构；另取原文串和差遣的上位类。
+SELECT DISTINCT ?personLabel ?dutyLabel ?dutyBroaderLabel ?placeLabel ?dutyOrgLabel ?begin ?benguanLabel ?joinedOrgLabel ?leftOrgLabel ?string WHERE {
+  ?n crm:P2_has_type ?duty ; crm:P14_carried_out_by ?person ; crm:P7_took_place_at ?place ; crm:P17_was_motivated_by ?p .
+  ?duty rdfs:label ?dutyLabel ; crm:P127_has_broader_term ?db . ?db rdfs:label ?dutyBroaderLabel .
+  FILTER(CONTAINS(STR(?dutyLabel), "提調學校") && LANG(?dutyBroaderLabel)="zh-Hans")
+  ?place rdfs:label ?placeLabel . FILTER(CONTAINS(STR(?placeLabel), "浙江") && LANG(?placeLabel)="zh-Hant")
+  ?person rdfs:label ?personLabel .
+  OPTIONAL { ?n crm:P11_had_participant ?dorg . ?dorg rdfs:label ?dutyOrgLabel . FILTER(LANG(?dutyOrgLabel)="zh-Hant") }
+  ?p crm:P4_has_time-span ?ts . ?ts crm:P82a_begin_of_the_begin ?begin . FILTER(YEAR(?begin)=1534)
+  ?p crm:P9_consists_of ?j . ?j crm:P144_joined_with ?jg . ?pc crm:P01_has_domain ?j ; crm:P144.1_kind_of_member ?bg . ?bg rdfs:label ?benguanLabel . ?jg rdfs:label ?joinedOrgLabel .
+  FILTER(LANG(?benguanLabel)="zh-Hant" && LANG(?joinedOrgLabel)="zh-Hant")
+  OPTIONAL { ?p crm:P9_consists_of ?l . ?l crm:P146_separated_from ?lg . ?lg rdfs:label ?leftOrgLabel . FILTER(LANG(?leftOrgLabel)="zh-Hant") }
+  OPTIONAL { ?person crm:P1_is_identified_by ?s . ?s crm:P2_has_type type:guanxian-chuan ; rdfs:label ?string . ?d crm:P70_documents ?p ; crm:P67_refers_to ?s }
+} ORDER BY ?string

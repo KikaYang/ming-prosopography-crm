@@ -1,0 +1,6 @@
+# 理由：判断列传年份要看实录中的在任提及：取含“華蓋殿”的原文头衔串及其出处，并带出同卷事件的日期。
+SELECT DISTINCT ?string ?sourceLabel ?eventLabel ?begin WHERE {
+  ?n crm:P2_has_type type:guanxian-chuan ; rdfs:label ?string . FILTER(CONTAINS(STR(?string), "華蓋殿"))
+  ?d crm:P67_refers_to ?n ; rdfs:label ?sourceLabel .
+  OPTIONAL { ?d crm:P70_documents ?e . ?e rdfs:label ?eventLabel ; crm:P4_has_time-span ?ts . ?ts crm:P82a_begin_of_the_begin ?begin }
+} ORDER BY ?begin ?string

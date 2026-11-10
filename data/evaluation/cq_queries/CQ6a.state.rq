@@ -1,0 +1,4 @@
+# 理由：先按问题本身从书出发找与之相连的一切，看能否走到人。
+SELECT DISTINCT ?s ?p WHERE {
+  ?book rdfs:label ?l . FILTER(CONTAINS(STR(?l), "祀儀成典")) ?s ?p ?book .
+} ORDER BY ?s ?p

@@ -1,0 +1,29 @@
+# Complete record of one APIS person in the CIDOC-CRM export.
+# Usage: sparql --data oebl_export_6_2020.trig --query person_record.rq --results=ttl
+# Change the IRI in VALUES to pick another person.
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+CONSTRUCT { ?s ?p ?o } WHERE {
+  VALUES ?person { <https://apis.acdh.oeaw.ac.at/entity/27527/> }
+  GRAPH ?g {
+    # 1. the person and its appellation (blank node)
+    { ?person ?p ?o . BIND(?person AS ?s) }
+    UNION { ?person crm:P1_is_identified_by ?s . ?s ?p ?o }
+    # 2. events pointing at the person: birth, death, joining, leaving
+    UNION { ?s ?x ?person . ?s ?p ?o }
+    # 3. nodes those events point to: time-spans, groups (not other persons)
+    UNION { ?e ?x ?person . ?e ?y ?s . ?s ?p ?o
+            FILTER(isIRI(?s) && ?s != ?person && ?y != rdf:type) }
+    # 4. PC144 property-class nodes qualifying the joinings, and their member-kind types
+    UNION { ?e crm:P143_joined ?person . ?s crm:P01_has_domain ?e . ?s ?p ?o }
+    UNION { ?e crm:P143_joined ?person . ?pc crm:P01_has_domain ?e .
+            ?pc crm:P144.1_kind_of_member ?s . ?s ?p ?o }
+    # 5. groups joined: reachable only through the PC144 node's P02_has_range
+    UNION { ?e crm:P143_joined ?person . ?pc crm:P01_has_domain ?e .
+            ?pc crm:P02_has_range ?s . ?s ?p ?o }
+    # 6. types of those groups (P2_has_type), whether reached by joining or leaving
+    UNION { { ?e crm:P143_joined ?person . ?pc crm:P01_has_domain ?e . ?pc crm:P02_has_range ?grp }
+            UNION { ?e crm:P145_seperated ?person . ?e crm:P146_seperated_from ?grp }
+            ?grp crm:P2_has_type ?s . ?s ?p ?o }
+  }
+}

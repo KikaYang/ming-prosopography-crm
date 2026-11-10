@@ -1,0 +1,16 @@
+﻿item,cbdb_SL12,cbdb_SL11,event_SL12,event_SL11,state_SL12,state_SL11
+n,58,62,58,62,58,62
+kept,21,8,18,28,9,13
+notes_only,2,2,0,0,0,0
+partial,8,20,7,25,6,13
+distorted,3,0,0,0,0,0
+lost,24,32,4,3,21,30
+unclear,0,0,0,0,0,0
+kept_ext,0,0,16,0,17,4
+kept_judgement,0,0,8,4,0,0
+not_modelled,0,0,5,2,5,2
+cause_limit,13,16,2,2,26,33
+cause_limit_convention,0,0,2,2,18,27
+cause_omission,19,16,8,21,1,5
+cause_scope,5,22,6,7,5,7
+implicit=是,3,8,3,8,3,8

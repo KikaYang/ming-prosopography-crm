@@ -1,0 +1,11 @@
+﻿unit_id,type,text,judgement,cause,ttl_evidence,implicit,note
+J161-U01,date,嘉靖十三年三月己卯,lost,limit,,否,state 版不带时间（D15 规则 2）；Yang 审定 2026-11-03：同意
+J161-U02,issuer,（未写）,lost,limit,,是,state 版不建事件（D15），因而无发令者；约定所致（D15）；Yang 审定 2026-11-03：同意
+J161-U03,action,升,lost,limit,,否,state 版不建事件（D15）；P107 无法带“升”；约定所致（D15）；Yang 审定 2026-11-03：同意
+J161-U04,title,湖广黄州府同知,kept,,group:huangzhou-fu crm:P107_has_current_or_former_member person:68547 ; pc:huangzhou-fu-member-68547 crm:P01_has_domain group:huangzhou-fu ; pc:huangzhou-fu-member-68547 crm:P02_has_range person:68547 ; pc:huangzhou-fu-member-68547 crm:P107.1_kind_of_member type:fu-tongzhi,否,核心单元。P107 + PC107，身份府同知（P107.1 type:fu-tongzhi）：PC107 能带身份，这是 state 版相对 event 版的不同（见 T4）；不带时间，“原官”之“原”（在佥事之前）推不出，见 J161-U07。v1.1 重评：第②块黄州府为评价后补入（5cf2a2a），v1 按现状判 partial / omission；Yang 审定 2026-11-03：同意
+J161-U05,name_form,徐阶,partial,omission,person:68547 crm:P1_is_identified_by name:guanxian-jj13-03-jimao-xu-jie-yuan,否,姓名只在原文串的文字和人物的 rdfs:label 中，无本名 E41；cause：徐阶为核心人物，可按 D6 建，未建（判法 1，同 J118-U50）；Yang 审定 2026-11-03：同意
+J161-U06,title,浙江按察司佥事,kept,,group:zhejiang-anchasi crm:P107_has_current_or_former_member person:68547 ; pc:zhejiang-anchasi-member-68547 crm:P01_has_domain group:zhejiang-anchasi ; pc:zhejiang-anchasi-member-68547 crm:P02_has_range person:68547 ; pc:zhejiang-anchasi-member-68547 crm:P107.1_kind_of_member type:anchasi-qianshi,否,核心单元。P107 + PC107（D22），身份按察司佥事；Yang 审定 2026-11-03：同意
+J161-U07,relation,升……为……,lost,limit,,是,核心单元。state 版不建事件（D15），“升”与离任无从表达；黄州府（同知）与浙江按察司（佥事）两段成员身份都已写出，但 P107 不带时间（D15 规则 2），推不出先后（属“连并存也推不出”）。约定所致（D15；先后顺序的时间部分属 CRM 本身）；v1.1 只按补入的黄州府改写 note 措辞，判定不变；Yang 审定 2026-11-03：同意
+J161-U08,title,提调学校,kept_ext,,person:68547 mpv:holds_title type:tidiao-xuexiao,否,核心单元。靠扩展属性 mpv:holds_title（D22）；地点浙江未表达；Yang 审定 2026-11-03：同意
+J161-U09,relation,浙江按察司佥事，提调学校,lost,limit,,否,核心单元。佥事（P107 + PC107）与提调学校（holds_title）是两条互不相连的陈述，都不带时间，推不出并存，更推不出“以佥事带提调学校”（属“连并存也推不出”）。D22 把无机构的差遣写成 holds_title；提调学校按 D25 有所属机构，仍写作 holds_title（Yang 编写），因而无法连到按察司。约定所致（D15、D22；同时性的时间部分属 CRM 本身）；Yang 审定 2026-11-03：同意
+J161-U10,source,世宗實錄 卷161,kept,,doc:shizong-shilu-161 rdf:type crm:E31_Document ; doc:shizong-shilu-161 crm:P67_refers_to name:guanxian-jj13-03-jimao-xu-jie-yuan,否,出处只连到原文串（无事件，故无 P70）；Yang 审定 2026-11-03：同意

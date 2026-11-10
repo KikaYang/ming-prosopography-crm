@@ -1,0 +1,411 @@
+# SL12 event 版。共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
+# 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
+# URI 方案见 docs/modelling/modelling_decisions.md D8。
+
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix mpv:    <https://kikayang.github.io/ming-prosopography-crm/vocab/> .   # 扩展属性与类
+@prefix person: <https://kikayang.github.io/ming-prosopography-crm/id/person/> .
+@prefix name:   <https://kikayang.github.io/ming-prosopography-crm/id/name/> .
+@prefix doc:    <https://kikayang.github.io/ming-prosopography-crm/id/doc/> .
+@prefix event:  <https://kikayang.github.io/ming-prosopography-crm/id/event/> .
+@prefix ts:     <https://kikayang.github.io/ming-prosopography-crm/id/ts/> .
+@prefix group:  <https://kikayang.github.io/ming-prosopography-crm/id/group/> .
+@prefix type:   <https://kikayang.github.io/ming-prosopography-crm/id/type/> .
+@prefix pc:     <https://kikayang.github.io/ming-prosopography-crm/id/pc/> .
+
+# W3C 标准前缀
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ① 人物与名称（决策 D6）
+
+# person:68266、name:zhang-cong、name:zhang-fujing 的定义见 vocab.ttl
+# type:benming、type:ciming 的定义见 vocab.ttl
+
+# ② 史料（决策 D7）
+# （定义已移至 vocab.ttl）
+
+# ③ 头衔分类（决策 D4）
+# （定义已移至 vocab.ttl）
+
+# ④ 扩展词汇（决策 D2、D10）
+
+mpv:conferred_title a rdf:Property ;
+    rdfs:label "conferred title"@en , "授衔"@zh-Hans ;
+    rdfs:domain crm:E7_Activity ;
+    rdfs:range  crm:E55_Type ;
+    rdfs:comment "一次授予活动所授予的头衔。CIDOC-CRM 7.1.3 中没有表达'授予某头衔'的属性：P2 has type 描述的是事件本身的类型，不是事件产出的头衔；P144/P107 要求一个 E74 机构，而加衔没有对应机构。"@zh-Hans .
+
+# 决策 D10：P177 的值域是 E55_Type。CRM 7.1.3 对 P177 的定义说明：
+# "properties defined by the CIDOC CRM also constitute instances of E55 Type themselves"。
+# RDFS 编码中属性只是 rdf:Property，因此在数据中显式声明被 P177 引用的属性同时为 E55_Type（第⑨块）。
+crm:P4_has_time-span a crm:E55_Type .
+
+# ⑤ 卷89：嘉靖七年六月加恩（决策 D1、D2、D3）
+
+event:jj07-06-jiaen a crm:E7_Activity ;
+    rdfs:label "嘉靖七年六月加恩纂述諸臣（張璁）"@zh-Hant ;
+    crm:P2_has_type type:jiaen ;
+    crm:P14_carried_out_by person:ming-shizong ;                       # 谁授予？
+    crm:P11_had_participant person:68266 ;                      # 谁受衔？
+    crm:P4_has_time-span ts:jj07-06-01 ;
+    crm:P17_was_motivated_by event:minglun-dadian-jincheng ;                     # 起因
+    crm:P9_consists_of event:jj07-06-jiaen-1 , event:jj07-06-jiaen-2 ,          
+                       event:jj07-06-jiaen-3 , event:jj07-06-jiaen-4 .
+
+event:jj07-06-jiaen-1 a crm:E7_Activity ;
+    rdfs:label "加少傅"@zh-Hant ;                 # 原文用词，所以用繁体（D9）
+    crm:P2_has_type type:action-jia ;
+    mpv:conferred_title type:shaofu .
+
+event:jj07-06-jiaen-2 a crm:E7_Activity ;
+    rdfs:label "加太子太傅"@zh-Hant ;
+    crm:P2_has_type type:action-jia ;                    
+    mpv:conferred_title type:taizi-taifu .
+
+event:jj07-06-jiaen-3 a crm:E7_Activity ;
+    rdfs:label "升吏部尚書"@zh-Hant ;
+    crm:P2_has_type type:action-sheng ;                    
+    mpv:conferred_title type:shangshu-personnel-xian .
+
+event:jj07-06-jiaen-4 a crm:E7_Activity ;
+    rdfs:label "升謹身殿大學士"@zh-Hant ;
+    crm:P2_has_type type:action-sheng ;                    
+    mpv:conferred_title type:jinshendian-daxueshi .
+
+# 动作类型 type:action-*（及上位类 type:shouxian-action）的定义见 vocab.ttl
+
+type:jiaen a crm:E55_Type ;
+    rdfs:label "加恩"@zh-Hans , "bestowal of honor"@en .
+
+# person:ming-shizong 的定义见 vocab.ttl
+
+event:minglun-dadian-jincheng a crm:E7_Activity ;
+    rdfs:label "明倫大典書成進呈"@zh-Hant ;
+    crm:P4_has_time-span ts:jj07-06-01 .                         # 和加恩同一天
+
+ts:jj07-06-01 a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj07-06-01 ;
+    crm:P82a_begin_of_the_begin "1528-06-27T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1528-06-27T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖七年六月辛丑朔（干支辛丑）；儒略历 1528-06-17；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj07-06-01 a crm:E41_Appellation ;
+    rdfs:label "嘉靖七年六月辛丑朔"@zh-Hant .
+
+# ⑥ 入阁（决策 D3）
+
+event:jj06-10-ruge a crm:E85_Joining ;                              # 什么类？加入
+    rdfs:label "張璁入閣"@zh-Hant ;
+    crm:P143_joined person:68266 ;                               # 谁加入？
+    crm:P144_joined_with group:neige ;
+    crm:P4_has_time-span ts:jj06-10 ;
+    mpv:conferred_title type:shangshu-rites-xian , type:wenyuange-daxueshi .                     # 入阁时授的两个头衔
+
+pc:jj06-10-ruge-neige a crm:PC144_joined_with ;
+    crm:P01_has_domain event:jj06-10-ruge ;                            # 这条边从哪里出发？
+    crm:P02_has_range  group:neige ;                            # 指向哪里？
+    crm:P144.1_kind_of_member type:daxueshi .
+
+# group:neige、type:daxueshi 的定义见 vocab.ttl
+
+ts:jj06-10 a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj06-10 ;
+    crm:P82a_begin_of_the_begin "1527-11-04T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1527-12-03T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖六年十月（只有年月，取整月；初一乙巳）；儒略历 1527-10-25 至 1527-11-23；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj06-10 a crm:E41_Appellation ;
+    rdfs:label "嘉靖六年十月"@zh-Hant .
+
+# ⑦ 卷149：嘉靖十二年四月在任提及（决策 D4、D5、D8、D9）
+# 本块由 agent 按 Yang 确认的逻辑编写（2026-10-16）。
+# 2026-10-24 改：嘉靖十一年的召还见第⑩块；嘉靖十二年复任不在 SL12 范围内。
+
+## (a) 赴召至京
+event:jj12-04-fuzhao a crm:E7_Activity ;
+    rdfs:label "張孚敬赴召至京"@zh-Hant ;
+    crm:P11_had_participant person:68266 ;
+    crm:P4_has_time-span ts:jj12-04-yihai ;
+    crm:P17_was_motivated_by event:jj12-01-zhao .                 # 2026-10-24 改：赴召由召引起；不加 P14（召令发出者在召事件上）
+
+## (a') 召（2026-10-24 新增）
+event:jj12-01-zhao a crm:E7_Activity ;
+    rdfs:label "遣鴻臚寺左少卿陳璋召張孚敬復任"@zh-Hant ;
+    crm:P2_has_type type:zhao ;
+    crm:P14_carried_out_by person:ming-shizong ;
+    crm:P11_had_participant person:68266 ;
+    crm:P4_has_time-span ts:jj12-01-bingchen ;
+    rdfs:comment "卷146 敕称“三命回已”“三召卿复任”，第一次罢召（嘉靖八年）不在 SL12 范围内"@zh-Hans .
+
+doc:shizong-shilu-146 crm:P70_documents event:jj12-01-zhao .
+
+ts:jj12-01-bingchen a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj12-01-bingchen ;
+    crm:P82a_begin_of_the_begin "1533-02-16T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1533-02-16T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十二年正月丙辰（干支丙辰，正月十三）；儒略历 1533-02-06；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj12-01-bingchen a crm:E41_Appellation ;
+    rdfs:label "嘉靖十二年正月丙辰"@zh-Hant .
+
+ts:jj12-04-yihai a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj12-04-yihai ;
+    crm:P82a_begin_of_the_begin "1533-05-06T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1533-05-06T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十二年四月乙亥（干支乙亥，四月初三）；儒略历 1533-04-26；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj12-04-yihai a crm:E41_Appellation ;
+    rdfs:label "嘉靖十二年四月乙亥"@zh-Hant .
+
+doc:shizong-shilu-149 crm:P70_documents event:jj12-04-fuzhao .
+
+## (b) 原文头衔串（决策 D4）
+name:guanxian-jj12-04-zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "致仕少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj12-04-zhang-fujing .
+
+doc:shizong-shilu-149 crm:P67_refers_to name:guanxian-jj12-04-zhang-fujing .
+
+# type:guanxian-chuan 的定义见 vocab.ttl
+
+## (c) 致仕（决策 D5）
+event:jj11-08-zhishi a crm:E86_Leaving ;
+    rdfs:label "張孚敬致仕"@zh-Hant ;
+    crm:P145_separated person:68266 ;
+    crm:P146_separated_from group:neige ;
+    crm:P2_has_type type:zhishi ;
+    crm:P14_carried_out_by person:ming-shizong ;                 # 2026-10-24 改：原文“令…致仕”，P14 记皇帝（D5）
+    crm:P4_has_time-span ts:jj11-08-xinchou .                     # 2026-10-24 改：日期改为八月辛丑（卷141）
+
+ts:jj11-08-xinchou a crm:E52_Time-Span ;                       # 2026-10-24 改：取代原 ts:jj11-08（只有年月）
+    crm:P1_is_identified_by name:date-jj11-08-xinchou ;
+    crm:P82a_begin_of_the_begin "1532-10-04T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1532-10-04T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十一年八月辛丑（干支辛丑，八月廿六）；儒略历 1532-09-24；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj11-08-xinchou a crm:E41_Appellation ;
+    rdfs:label "嘉靖十一年八月辛丑"@zh-Hant .
+
+doc:mingshi-110 crm:P70_documents event:jj11-08-zhishi .
+
+doc:shizong-shilu-141 crm:P70_documents event:jj11-08-zhishi .   # 2026-10-24 改：增卷141（保留年表）
+
+type:zhishi a crm:E55_Type ;
+    rdfs:label "致仕"@zh-Hans , "retirement from office"@en .
+
+# ⑧ 出处补全（决策 D7：所有事件都有 P70 出处）
+# 本块由 agent 按 Yang 审定的规则编写（2026-10-16）。
+
+doc:shizong-shilu-089 crm:P70_documents event:jj07-06-jiaen , event:minglun-dadian-jincheng .
+
+doc:mingshi-110 crm:P70_documents event:jj06-10-ruge .
+
+# ⑨ 华盖殿争议（决策 D7 方案 C）
+# 本块由 agent 按 Yang 确认的逻辑编写（2026-10-16）。授衔事件本身不写 P4；
+# 四个来源对时间的说法各用一个 E13 记录，P177 指向 crm:P4_has_time-span。
+# 英文名称以 Hucker 为准；Hucker 未收的用拼音，并在 comment 中注明
+
+## 授衔事件（时间有争议，不写 P4）
+event:huagaidian-conferral a crm:E7_Activity ;
+    rdfs:label "張孚敬進兼太子太師、華蓋殿大學士"@zh-Hant ;
+    crm:P2_has_type type:jiaen ;                    # 原文：兹加恩
+    crm:P14_carried_out_by person:ming-shizong ;
+    crm:P11_had_participant person:68266 ;
+    crm:P9_consists_of event:huagaidian-conferral-1 , event:huagaidian-conferral-2 .
+
+event:huagaidian-conferral-1 a crm:E7_Activity ;
+    rdfs:label "進兼太子太師"@zh-Hant ;
+    crm:P2_has_type type:action-jin ;
+    mpv:conferred_title type:taizi-taishi .
+
+event:huagaidian-conferral-2 a crm:E7_Activity ;
+    rdfs:label "華蓋殿大學士"@zh-Hant ;                  # "進華蓋殿大學士"
+    crm:P2_has_type type:action-jin ;
+    mpv:conferred_title type:huagaidian-daxueshi .
+
+doc:shizong-shilu-136 crm:P70_documents event:huagaidian-conferral .
+
+## 应召至京（2026-10-24 新增）：与第⑦块“赴召至京”同一写法，P17 指向第⑩块的召事件；
+## 不用 P17 把授衔连到召还——卷136 所述加恩理由是“四郊督视…辅赞朕躬”，不是召还
+event:jj11-03-zhijing a crm:E7_Activity ;
+    rdfs:label "張孚敬應召至京"@zh-Hant ;
+    crm:P11_had_participant person:68266 ;
+    crm:P4_has_time-span ts:jj11-03-jiayin ;                    # 与 E13 ①共用卷136 的同一日期节点
+    crm:P17_was_motivated_by event:jj10-11-zhao .
+
+doc:shizong-shilu-136 crm:P70_documents event:jj11-03-zhijing .
+
+## 解读者：person:yang 的定义见 vocab.ttl
+
+## 新增来源
+doc:mingshi-196 a crm:E31_Document ;
+    rdfs:label "明史 卷196 列傳第八十四"@zh-Hant .
+
+doc:cbdb-421880 a crm:E31_Document ;
+    rdfs:label "CBDB POSTED_TO_OFFICE_DATA posting_id 421880" ;
+    rdfs:comment "CBDB 标注出处为明史列传，但列传作嘉靖十三年，二者不符"@zh-Hans .
+
+## E13 ①：实录卷136
+event:huagaidian-claim-shilu-136 a crm:E13_Attribute_Assignment ;
+    rdfs:label "华盖殿授衔时间：世宗实录卷136"@zh-Hans ;
+    crm:P140_assigned_attribute_to event:huagaidian-conferral ;
+    crm:P177_assigned_property_of_type crm:P4_has_time-span ;
+    crm:P141_assigned ts:jj11-03-jiayin ;
+    crm:P16_used_specific_object doc:shizong-shilu-136 ;
+    crm:P14_carried_out_by person:yang .
+
+ts:jj11-03-jiayin a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj11-03-jiayin ;
+    crm:P82a_begin_of_the_begin "1532-04-20T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1532-04-20T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十一年三月甲寅（干支甲寅，三月初五）；儒略历 1532-04-10；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj11-03-jiayin a crm:E41_Appellation ;
+    rdfs:label "嘉靖十一年三月甲寅"@zh-Hant .
+
+## E13 ②：宰辅年表
+event:huagaidian-claim-mingshi-110 a crm:E13_Attribute_Assignment ;
+    rdfs:label "华盖殿授衔时间：明史卷110宰辅年表"@zh-Hans ;
+    crm:P140_assigned_attribute_to event:huagaidian-conferral ;
+    crm:P177_assigned_property_of_type crm:P4_has_time-span ;
+    crm:P141_assigned ts:jj11-03 ;
+    crm:P16_used_specific_object doc:mingshi-110 ;
+    crm:P14_carried_out_by person:yang .
+
+ts:jj11-03 a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj11-03 ;
+    crm:P82a_begin_of_the_begin "1532-04-16T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1532-05-14T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十一年三月（只有年月，取整月；初一庚戌）；儒略历 1532-04-06 至 1532-05-04；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj11-03 a crm:E41_Appellation ;
+    rdfs:label "嘉靖十一年三月"@zh-Hant .
+
+## E13 ③：明史列传
+event:huagaidian-claim-mingshi-196 a crm:E13_Attribute_Assignment ;
+    rdfs:label "华盖殿授衔时间：明史卷196列传"@zh-Hans ;
+    crm:P140_assigned_attribute_to event:huagaidian-conferral ;
+    crm:P177_assigned_property_of_type crm:P4_has_time-span ;
+    crm:P141_assigned ts:jj13 ;
+    crm:P16_used_specific_object doc:mingshi-196 ;
+    crm:P14_carried_out_by person:yang .
+
+ts:jj13 a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj13 ;
+    crm:P82a_begin_of_the_begin "1534-01-24T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1535-02-11T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十三年（只有年，取整个农历年，含闰二月）；儒略历 1534-01-14 至 1535-02-01；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj13 a crm:E41_Appellation ;
+    rdfs:label "嘉靖十三年"@zh-Hant .
+
+## E13 ④：CBDB
+event:huagaidian-claim-cbdb-421880 a crm:E13_Attribute_Assignment ;
+    rdfs:label "华盖殿授衔时间：CBDB posting 421880"@zh-Hans ;
+    crm:P140_assigned_attribute_to event:huagaidian-conferral ;
+    crm:P177_assigned_property_of_type crm:P4_has_time-span ;
+    crm:P141_assigned ts:cbdb-421880 ;
+    crm:P16_used_specific_object doc:cbdb-421880 ;
+    crm:P14_carried_out_by person:yang .
+
+ts:cbdb-421880 a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-cbdb-421880 ;
+    crm:P82a_begin_of_the_begin "1532-02-16T00:00:00"^^xsd:dateTime ;   # 2026-10-24 改：公历换算（D14）
+    crm:P82b_end_of_the_end     "1533-02-03T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：CBDB c_firstyear=1532，年号字段为嘉靖11年；按嘉靖十一年整个农历年换算；儒略历 1532-02-06 至 1533-01-24；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-cbdb-421880 a crm:E41_Appellation ;
+    rdfs:label "1532" ;
+    rdfs:comment "CBDB 原字段：c_firstyear=1532；c_fy_nh_code=650（嘉靖），c_fy_nh_year=11"@zh-Hans .
+
+# ⑩ 嘉靖十年致仕与召还（决策 D5、D14）
+# 本块由 agent 按 Yang 核对的实录原文编写（2026-10-24）。卷128 辛酉“命给驿回籍”不建模。
+
+## 致仕（卷128，嘉靖十年七月戊午：上谕“…著致仕去”）
+event:jj10-07-zhishi a crm:E86_Leaving ;
+    rdfs:label "張孚敬致仕（嘉靖十年）"@zh-Hant ;
+    crm:P145_separated person:68266 ;
+    crm:P146_separated_from group:neige ;
+    crm:P2_has_type type:zhishi ;
+    crm:P14_carried_out_by person:ming-shizong ;
+    crm:P4_has_time-span ts:jj10-07-wuwu .
+
+doc:shizong-shilu-128 crm:P70_documents event:jj10-07-zhishi .
+
+ts:jj10-07-wuwu a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj10-07-wuwu ;
+    crm:P82a_begin_of_the_begin "1531-08-28T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1531-08-28T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十年七月戊午（干支戊午，七月初七）；儒略历 1531-08-18；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj10-07-wuwu a crm:E41_Appellation ;
+    rdfs:label "嘉靖十年七月戊午"@zh-Hant .
+
+## 召（卷132，嘉靖十年十一月丁丑：遣行人周文烛赍敕召…张孚敬复任办事）
+event:jj10-11-zhao a crm:E7_Activity ;
+    rdfs:label "遣行人周文燭齎敕召張孚敬復任辦事"@zh-Hant ;
+    crm:P2_has_type type:zhao ;
+    crm:P14_carried_out_by person:ming-shizong ;
+    crm:P11_had_participant person:68266 ;
+    crm:P4_has_time-span ts:jj10-11-dingchou .
+
+doc:shizong-shilu-132 crm:P70_documents event:jj10-11-zhao .
+
+ts:jj10-11-dingchou a crm:E52_Time-Span ;
+    crm:P1_is_identified_by name:date-jj10-11-dingchou ;
+    crm:P82a_begin_of_the_begin "1532-01-14T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1532-01-14T23:59:59"^^xsd:dateTime ;
+    rdfs:comment "原文：嘉靖十年十一月丁丑（干支丁丑，十一月廿七）；儒略历 1532-01-04；已与中研院两千年中西历转换核对"@zh-Hans .
+
+name:date-jj10-11-dingchou a crm:E41_Appellation ;
+    rdfs:label "嘉靖十年十一月丁丑"@zh-Hant .
+
+type:zhao a crm:E55_Type ;
+    rdfs:label "召"@zh-Hans , "summons"@en .
+
+## 召还入阁（日期不确定，以范围表示）
+event:jj10-11-zhaohuan a crm:E85_Joining ;
+    rdfs:label "張孚敬召還入閣"@zh-Hant ;
+    crm:P143_joined person:68266 ;
+    crm:P144_joined_with group:neige ;
+    crm:P2_has_type type:zhaohuan ;
+    crm:P17_was_motivated_by event:jj10-11-zhao ;
+    crm:P4_has_time-span ts:jj10-11-to-jj11-03 .
+
+pc:jj10-zhaohuan-neige a crm:PC144_joined_with ;
+    crm:P01_has_domain event:jj10-11-zhaohuan ;
+    crm:P02_has_range  group:neige ;
+    crm:P144.1_kind_of_member type:daxueshi .
+
+doc:shizong-shilu-132 crm:P70_documents event:jj10-11-zhaohuan .
+doc:shizong-shilu-136 crm:P70_documents event:jj10-11-zhaohuan .
+doc:shizong-shilu-135 crm:P70_documents event:jj10-11-zhaohuan .   # 2026-10-24 改：卷135 二月己酉“奉命就道”
+
+ts:jj10-11-to-jj11-03 a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1532-01-14T00:00:00"^^xsd:dateTime ;   # 嘉靖十年十一月丁丑（召）
+    crm:P82b_end_of_the_end     "1532-04-20T23:59:59"^^xsd:dateTime ;   # 嘉靖十一年三月甲寅（至京）
+    rdfs:comment "原文无确切日期；卷135 二月己酉时已就道。范围自嘉靖十年十一月丁丑（儒略历 1532-01-04）至嘉靖十一年三月甲寅（儒略历 1532-04-10）；卷135 二月己酉为二月三十日（儒略历 1532-04-05，格里历 1532-04-15）；已与中研院两千年中西历转换核对"@zh-Hans .
+
+type:zhaohuan a crm:E55_Type ;
+    rdfs:label "召还"@zh-Hans , "recall to office"@en .
+
+## 原文头衔串（写法同第⑦(b)块）
+name:guanxian-jj10-11-zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "致仕少傅兼太子太傅、吏部尚書、謹身殿大學士張孚敬"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj10-11-zhang-fujing .
+
+doc:shizong-shilu-132 crm:P67_refers_to name:guanxian-jj10-11-zhang-fujing .
+
+name:guanxian-jj11-08-zhang-fujing a crm:E41_Appellation ;
+    rdfs:label "少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬"@zh-Hant ;
+    crm:P2_has_type type:guanxian-chuan .
+
+person:68266 crm:P1_is_identified_by name:guanxian-jj11-08-zhang-fujing .
+
+doc:shizong-shilu-141 crm:P67_refers_to name:guanxian-jj11-08-zhang-fujing .

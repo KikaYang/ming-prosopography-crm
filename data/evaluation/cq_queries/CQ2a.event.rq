@@ -1,0 +1,18 @@
+# 理由：按授予时间取嘉靖十一年四月初一（公历 1532-05-15，D14）之前所授的衔；时间可能在授予事件、父事件或 E13 上（D7），三处都取；再按 D12 去掉同一上位类中已被后授取代的。
+SELECT DISTINCT ?titleLabel ?broaderLabel ?d1 WHERE {
+  { ?g crm:P143_joined person:68266 ; crm:P4_has_time-span ?gts . ?g mpv:conferred_title ?t }
+  UNION { ?gp crm:P9_consists_of ?g ; crm:P11_had_participant person:68266 ; crm:P4_has_time-span ?gts . ?g mpv:conferred_title ?t }
+  UNION { ?gp crm:P9_consists_of ?g ; crm:P11_had_participant person:68266 . ?g mpv:conferred_title ?t . ?gc crm:P140_assigned_attribute_to ?gp ; crm:P141_assigned ?gts }
+  ?gts crm:P82a_begin_of_the_begin ?d1 .
+  FILTER(?d1 < "1532-05-15T00:00:00"^^xsd:dateTime)
+  ?t rdfs:label ?titleLabel ; crm:P127_has_broader_term ?b . ?b rdfs:label ?broaderLabel .
+  FILTER(LANG(?titleLabel)="zh-Hant" && LANG(?broaderLabel)!="en")
+  FILTER NOT EXISTS {
+    { ?h crm:P143_joined person:68266 ; crm:P4_has_time-span ?hts . ?h mpv:conferred_title ?t2 }
+  UNION { ?hp crm:P9_consists_of ?h ; crm:P11_had_participant person:68266 ; crm:P4_has_time-span ?hts . ?h mpv:conferred_title ?t2 }
+  UNION { ?hp crm:P9_consists_of ?h ; crm:P11_had_participant person:68266 . ?h mpv:conferred_title ?t2 . ?hc crm:P140_assigned_attribute_to ?hp ; crm:P141_assigned ?hts }
+  ?hts crm:P82a_begin_of_the_begin ?d2 .
+    ?t2 crm:P127_has_broader_term ?b .
+    FILTER(?t2 != ?t && ?d2 > ?d1 && ?d2 < "1532-05-15T00:00:00"^^xsd:dateTime)
+  }
+} ORDER BY ?titleLabel ?d1

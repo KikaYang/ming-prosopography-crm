@@ -1,0 +1,63 @@
+﻿unit_id,type,text,judgement,cause,cbdb_evidence,implicit,note
+J118-U01,date,嘉靖九年十月壬戌,lost,scope,,否,壬戌条只是在任提及（张璁所奏为储嗣，U04 不在范围）；CBDB 只收任官，不收在任提及，无可挂日期之处；cause：在任提及不在收录范围
+J118-U02,title_string,少傅兼太子太傅、吏部尚书,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421871 少傅 1528–1534 ; 421872 太子太傅 1528–1532 ; 421873 吏部尚書 1528–1532,否,三个头衔都在，年份覆盖 1530；原文头衔串未保留；cause：没有原文头衔串字段（同 J089-U11）；Yang 审定 2026-10-31：同意
+J118-U03,name_form,张璁,kept,,BIOG_MAIN c_personid 68266 c_name_chn=張璁,否,改名时间不记录（同 J089-U10）
+J118-U05,date,嘉靖九年十月辛未,partial,omission,POSTED_TO_OFFICE_DATA posting_id 421878 c_firstyear=1530,否,只到年；c_fy_month、c_fy_day、c_fy_day_gz 均空；cause：月、日、干支字段存在但未填（同 J089-U01）
+J118-U06,date,初,lost,scope,,否,初谕是皇帝的指示，CBDB 无事件记录（EVENTS_DATA 明代 0 条）；cause：与任官无直接关系的事件不在收录范围（同 J089-U02）
+J118-U07,issuer,上,lost,limit,,是,无事件，因而无发令者；cause：没有发令者字段；复查依据同 SL12（J089-U05/U06）：POSTED_TO_OFFICE_DATA 与 POSTING_DATA 无起因、授予者字段；Yang 审定 2026-10-31：同意
+J118-U08,motive,以更定郊制，欲纂辑成书，以垂永久,lost,limit,,否,无事件，因而无起因；cause：没有起因字段；复查依据同 SL12（J089-U05/U06）：POSTED_TO_OFFICE_DATA 与 POSTING_DATA 无起因、授予者字段；Yang 审定 2026-10-31：同意
+J118-U09,action,谕……命,lost,scope,,否,谕命议定体例不是任官，CBDB 无记录；cause：不在收录范围
+J118-U10,event,议定体例,lost,scope,,否,议定体例无记录；cause：不在收录范围
+J118-U11,title_string,大学士,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421874 謹身殿大學士 1528–1532,否,大学士身份由謹身殿大學士体现；原文只称“大学士”的写法未保留；cause：没有原文头衔串字段；Yang 审定 2026-10-31：同意
+J118-U12,relation,与……议定,lost,scope,,否,属“连并存也推不出”：张璁与李时共同受命议定，无任何记录（ASSOC_DATA 中二人之间无关系记录）；cause：议定体例不在收录范围
+J118-U13,title,礼部尚书,kept,,POSTED_TO_OFFICE_DATA posting_id 420663 c_office_id=70625 禮部尚書 1529–1532,否,c_notes 出处为世宗实录卷99，非卷118
+J118-U14,name_form,璁等,partial,scope,BIOG_MAIN c_personid 68266 c_name_chn=張璁,否,张璁可识别；“等”所指属于议定体例一事，无记录；cause：不在收录范围
+J118-U15,event,议录礼文、规制、器数、敕诰为书，不必杂以臣下之奏,lost,scope,,否,议定意见无记录；cause：不在收录范围
+J118-U16,issuer,上,lost,limit,,是,无事件，因而无发令者；cause：没有发令者字段；Yang 审定 2026-10-31：同意
+J118-U17,event,名曰祀仪成典,partial,limit,TEXT_CODES c_textid 13370 c_title_chn=祀儀成典,否,书名作为文本记录在；“由皇帝命名”无从表达；cause：TEXT_ROLE_CODES 12 种角色（撰著、編輯、編纂、校對等）中无命名者；Yang 审定 2026-10-31：同意
+J118-U19,date,俟十月吉,lost,scope,,否,预定行敕日期无记录；cause：不在收录范围
+J118-U20,event,降敕,lost,limit,,否,无“降敕”记录：张璁 421878、李时 420664 各为独立 posting，出处不同，彼此无关联；cause：CBDB 按人记录任官，没有“一道敕同时任命多人”的结构（POSTING_DATA 只按人分组；EVENTS_DATA 明代 0 条）；Yang 审定 2026-10-31：同意
+J118-U21,date,至是,partial,omission,POSTED_TO_OFFICE_DATA posting_id 421878 c_firstyear=1530,是,“至是”即十月辛未，只记到年；cause：月、日字段存在但未填
+J118-U22,motive,朕惟祭祀，国之大事。矧今郊祀已遵复我皇祖初制，其中事宜，不可无记，以垂将来,lost,limit,,否,无事件，因而无理由；cause：没有起因字段；Yang 审定 2026-10-31：同意
+J118-U23,motive,今大工告竣，祀期在迩,lost,limit,,否,无事件，因而无理由；cause：没有起因字段；Yang 审定 2026-10-31：同意
+J118-U24,action,特命,lost,limit,,否,421878 c_appt_code=0（未詳）；APPOINTMENT_CODES 中与“特”有关的只有特進(50)、特贈(109)，无“特命/特旨”；cause：无对应代码；Yang 审定 2026-10-31：同意
+J118-U25,title_string,知建造事总督工程官,lost,omission,,否,郭勛 130180 共 6 条任官（太保、提督、武定侯、總兵官、太子太傅、翊國公），无工程差遣；cause：可以记为 posting（CBDB 收录差遣，如總裁官），未记录
+J118-U26,name_form,卿勋,partial,scope,BIOG_MAIN c_personid 130180 c_name_chn=郭勛,是,人物在；敕中称呼“卿勋”及其在本敕中出现均无记录（本敕中郭勋无任何 CBDB 记录）；cause：称呼形式不在收录范围
+J118-U27,title_string,同知建造事，督视规制官,lost,omission,,否,李時 68140 无工程差遣（1530 年只有 420664 祀儀成典監修官）；cause：未记录
+J118-U28,name_form,卿时,partial,scope,BIOG_MAIN c_personid 68140 c_name_chn=李時,是,人物在；敕中称呼“卿时”不收录；cause：称呼形式不在收录范围
+J118-U29,title_string,监视巡察工程官,lost,omission,,否,汪鋐 127536 共 9 条任官均无年份，无工程差遣；cause：未记录
+J118-U30,name_form,卿𬭎,partial,scope,BIOG_MAIN c_personid 127536 c_name_chn=汪鋐,是,人物在；敕中称呼“卿𬭎”（字形与 CBDB“鋐”不同）不收录；cause：称呼形式不在收录范围
+J118-U31,title,监修官,partial,omission,POSTED_TO_OFFICE_DATA posting_id 420664 c_office_id=70876 祀儀成典監修官 1530–1531,否,三人中只有李时有记录（专用官职代码 70876，出处为國朝獻徵錄卷16，非卷118）；郭勋、汪鋐无；cause：未记录
+J118-U32,title_string,知建造事、总督工程官,lost,omission,,否,张璁无工程差遣记录；cause：未记录
+J118-U33,name_form,卿璁,partial,scope,BIOG_MAIN c_personid 68266 c_name_chn=張璁,否,人物在；敕中称呼“卿璁”不收录；cause：称呼形式不在收录范围
+J118-U34,title,总裁官,kept,,POSTED_TO_OFFICE_DATA posting_id 421878 c_office_id=71600 總裁官 c_firstyear=1530 ; BIOG_TEXT_DATA c_personid 68266 c_textid 13370 c_role_id=0,否,官职用通用代码 71600 總裁官，项目“祀儀成典”只在 c_notes；专用代码 70877 祀儀成典總裁官存在但全库未用（李时 420669 用 71600、c_notes 写“祀儀成典總裁官”）。另有 BIOG_TEXT_DATA 把张璁连到《祀儀成典》，角色为未詳(0)
+J118-U35,relation,知建造事、总督工程官卿璁为总裁官,lost,limit,,否,核心单元（D17）。CBDB 只有总裁官 421878，没有工程差遣；即使有，POSTED_TO_OFFICE_DATA 各行彼此独立，没有表达“以某差遣身份任另一差遣”的字段；cause：limit（工程差遣缺失另属 omission，见 U32）；Yang 审定 2026-10-31：同意
+J118-U36,title_string,内阁辅臣大学士,partial,limit,POSTED_TO_OFFICE_DATA posting_id 422139 武英殿大學士 1529–1531 ; 420605 文淵閣大學士 c_firstyear=1528,否,二人都有大学士记录：桂萼 1529–1531 覆盖 1530；翟銮无止年，1530 在任推不出；原文头衔串未保留；cause：没有原文头衔串字段；Yang 审定 2026-10-31：同意
+J118-U37,name_form,卿萼、卿鸾,partial,scope,BIOG_MAIN c_personid 68285 c_name_chn=桂萼 ; BIOG_MAIN c_personid 68136 c_name_chn=翟鑾,是,人物在；“卿萼、卿鸾”不收录，原文“鸾”与 CBDB“鑾”的异写也未记（ALTNAME_DATA 无）；cause：称呼形式不在收录范围
+J118-U38,title,副总裁官,lost,omission,,否,二人均无祀儀成典副總裁官记录；桂萼 422130 副總裁官(大禮全書) 是 1527 年另一项目；cause：未记录
+J118-U39,motive,首倡正议,lost,limit,,否,无升官起因；cause：没有起因字段；Yang 审定 2026-10-31：同意
+J118-U40,title_string,监视巡察工程官吏科都给事中,partial,omission,POSTED_TO_OFFICE_DATA posting_id 420818 吏科都給事中 1529–1530 ; 420822 吏科都給事中 1530–1531,否,本官在；差遣“監視巡察工程官”无记录；原文头衔串未保留；cause：差遣未记录（头衔串不保留另属 limit）
+J118-U41,name_form,夏言,kept,,BIOG_MAIN c_personid 68194 c_name_chn=夏言,否,
+J118-U42,action,升,lost,omission,,否,420820 c_appt_code=0（未詳）；cause：任命方式有“陞”(52)，未使用
+J118-U43,title,翰林院侍读学士,kept,,POSTED_TO_OFFICE_DATA posting_id 420820 c_office_id=70411 翰林院侍讀學士 1530–1531,否,c_notes 出处为世宗实录卷118（结构化出处 c_source=9602）
+J118-U44,relation,仍兼,notes_only,limit,POSTED_TO_OFFICE_DATA posting_id 420822 c_notes=吏科都給事中(兼),否,“兼”只见 420822 的 c_notes，c_appt_code=0；420820 与 420822 同为 1530–1531，可推出并存，但相兼对象未结构化；cause：“兼”(37) 可作任命方式，但无法指明与哪一官职相兼（同 J089-U15）；Yang 审定 2026-10-31：同意
+J118-U45,title,吏科都给事中,kept,,POSTED_TO_OFFICE_DATA posting_id 420822 c_office_id=70672 吏科都給事中 1530–1531,否,c_notes 出处为明史列传卷196
+J118-U46,status,不妨照旧掌科事,lost,omission,,否,核心单元（D19）。夏言 420822 编为吏科都給事中(70672)，“照旧掌科事”无记录。OFFICE_CODES 有 70677 吏科掌科事給事中（全库用 2 次），可表达掌科事；cause：有代码，未使用
+J118-U47,title,中允,lost,omission,,否,廖道南 132101 只有 1 条任官“學士”（c_notes 侍讲學士），无中允；cause：未记录
+J118-U48,name_form,廖道南,kept,,BIOG_MAIN c_personid 132101 c_name_chn=廖道南,否,同名另有 122619（无任何记录）
+J118-U49,title,编修,partial,omission,POSTED_TO_OFFICE_DATA posting_id 424197 翰林院編修 c_lastyear=1530 ; 333318 翰林編修 ; 2098044 翰林院編修,否,徐阶 424197 止于 1530；程文德 333318 无年份；张衮只在疑似重复记录 690197 下（2098044，无年份），130490 无；cause：年份、记录归属未填全
+J118-U50,name_form,张衮、徐阶、程文德,kept,,BIOG_MAIN c_personid 130490 c_name_chn=張袞 ; BIOG_MAIN c_personid 68547 c_name_chn=徐階 ; BIOG_MAIN c_personid 131629 c_name_chn=程文德,否,张衮另有疑似重复记录 690197（張衮），见 REPORT.md 第 5 节
+J118-U51,title,纂修官,partial,omission,BIOG_TEXT_DATA c_personid 690197 c_textid 13370 c_role_id=3,否,四人中只有张衮（且在疑似重复记录 690197 下）经 BIOG_TEXT_DATA 以“編纂者”(3) 连到《祀儀成典》，c_notes“纂修《祀仪成典》”；无纂修官任官记录；徐阶 424199 纂修官(1529) 出自卷100，是另一项目；cause：未记录
+J118-U52,name_form,卿勋暨卿璁等官,partial,scope,BIOG_MAIN c_personid 130180 c_name_chn=郭勛 ; BIOG_MAIN c_personid 68266 c_name_chn=張璁,否,人物可识别；“等官”这一群体称呼不收录；cause：不在收录范围
+J118-U53,event,遵照朕谕卿璁凡例条目，纂辑成书,partial,omission,BIOG_TEXT_DATA c_personid 68266 c_textid 13370 c_role_id=0 ; BIOG_TEXT_DATA c_personid 690197 c_textid 13370 c_role_id=3,否,修书活动本身无记录；只有人与书的连接：张璁（角色未詳）、张衮（690197，編纂者）；遵照凡例无从表达；cause：角色代码有編纂者(3)，张璁未用、其余人未连
+J118-U54,action,凡敕中未载应行，并朕前谕卿璁条目，逐一开具奏请区处,lost,scope,,否,奏请职责无记录；cause：不在收录范围
+J118-U55,relation,朕谕卿璁凡例条目；朕前谕卿璁条目,lost,scope,,否,皇帝前谕与本敕的回指关系无记录；cause：不在收录范围
+J118-U56,date,嘉靖九年十月癸酉,lost,scope,,否,癸酉条为召见与手扎，无任官，CBDB 无记录；cause：不在收录范围
+J118-U59,issuer,上,lost,limit,,是,无事件，因而无发令者；cause：没有发令者字段；Yang 审定 2026-10-31：同意
+J118-U60,action,仍召,lost,scope,,否,召见同视无记录；cause：不在收录范围
+J118-U61,title_string,辅臣,partial,limit,POSTED_TO_OFFICE_DATA posting_id 421874 謹身殿大學士 1528–1532,否,辅臣身份由謹身殿大學士体现；“辅臣”这一称呼未保留；cause：没有原文头衔串字段；Yang 审定 2026-10-31：同意
+J118-U62,name_form,璁,partial,scope,BIOG_MAIN c_personid 68266 c_name_chn=張璁,否,人物在；单名“璁”不收录（ALTNAME_DATA 无）；cause：称呼形式不在收录范围
+J118-U63,event,同视,lost,scope,,否,同视无记录；cause：不在收录范围
+J118-U64,action,复出手扎示璁,lost,scope,,否,手扎无记录；cause：不在收录范围
+J118-U65,event,手扎论郊坛诸工进度，令“卿可思处”,lost,scope,,否,手扎内容无记录；cause：不在收录范围
+J118-U66,source,世宗實錄 卷118,notes_only,omission,POSTED_TO_OFFICE_DATA posting_id 421878 c_notes=…(明實錄:世宗實錄;118卷) ; 420820 c_notes=…(明實錄:世宗實錄;118卷),否,卷号只在 c_notes；c_source 为 9602（人名權威資料）；cause：可用《世宗實錄》（TEXT_CODES 13593）作 c_source、卷号入 c_pages（同 J149-U14）
