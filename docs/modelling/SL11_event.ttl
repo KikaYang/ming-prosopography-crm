@@ -416,3 +416,35 @@ name:guanxian-jj09-10-guiyou-zhang-cong a crm:E41_Appellation ;
 
 person:68266 crm:P1_is_identified_by name:guanxian-jj09-10-guiyou-zhang-cong .
 doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-guiyou-zhang-cong .
+
+# 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
+event:chaiqian-127536-gongcheng rdfs:label "Duty assignment of Wang Hong as Jianshi xuncha gongcheng guan (inspector of the works)"@en .
+event:chaiqian-127536-jianxiu rdfs:label "Duty assignment of Wang Hong as Jianxiu guan (supervisor) for the Siyi chengdian (1530)"@en .
+event:chaiqian-130180-gongcheng rdfs:label "Duty assignment of Guo Xun as Zhi jianzao shi and Zongdu gongcheng guan (in charge of construction; general supervisor of the works)"@en .
+event:chaiqian-130180-jianxiu rdfs:label "Duty assignment of Guo Xun as Jianxiu guan (supervisor) for the Siyi chengdian (1530)"@en .
+event:chaiqian-130490-zuanxiu rdfs:label "Duty assignment of Zhang Gun as Compiler of the Siyi chengdian (1530)"@en .
+event:chaiqian-131629-zuanxiu rdfs:label "Duty assignment of Cheng Wende as Compiler of the Siyi chengdian (1530)"@en .
+event:chaiqian-132101-zuanxiu rdfs:label "Duty assignment of Liao Daonan as Compiler of the Siyi chengdian (1530)"@en .
+event:chaiqian-68136-fuzongcai rdfs:label "Duty assignment of Zhai Luan as Fu zongcai guan (deputy director-general) of the Siyi chengdian (1530)"@en .
+event:chaiqian-68140-gongcheng rdfs:label "Duty assignment of Li Shi as Tongzhi jianzao shi and Dushi guizhi guan (associate in charge of construction; supervisor of the building design)"@en .
+event:chaiqian-68140-jianxiu rdfs:label "Duty assignment of Li Shi as Jianxiu guan (supervisor) for the Siyi chengdian (1530)"@en .
+event:chaiqian-68194-gongcheng rdfs:label "Duty assignment of Xia Yan as Jianshi xuncha gongcheng guan (inspector of the works)"@en .
+event:chaiqian-68266-gongcheng rdfs:label "Duty assignment of Zhang Cong as Zhi jianzao shi and Zongdu gongcheng guan (in charge of construction; general supervisor of the works)"@en .
+event:chaiqian-68266-zongcai rdfs:label "Duty assignment of Zhang Cong as Zongcai guan (director-general) of the Siyi chengdian (1530)"@en .
+event:chaiqian-68285-fuzongcai rdfs:label "Duty assignment of Gui E as Fu zongcai guan (deputy director-general) of the Siyi chengdian (1530)"@en .
+event:chaiqian-68547-zuanxiu rdfs:label "Duty assignment of Xu Jie as Compiler of the Siyi chengdian (1530)"@en .
+event:jiaotan-jianzao rdfs:label "Construction of the suburban altar"@en .
+event:jiaozhi-gengding rdfs:label "Revision of the rules for the suburban sacrifices"@en .
+event:jj09-10-guiyou-shouzha rdfs:label "Handwritten note of the Jiajing Emperor shown to Zhang Cong (1530)"@en .
+event:jj09-10-guiyou-tongshi rdfs:label "Summons of Zhang Cong to inspect together with the Jiajing Emperor (1530)"@en .
+event:jj09-10-xiayan-sheng rdfs:label "Promotion of Xia Yan to Academician Reader-in-waiting of the Hanlin Academy (1530)"@en .
+event:jj09-10-xinwei-chi rdfs:label "Edict of the Jiajing Emperor on the compilation of the Siyi chengdian (1530)"@en .
+event:jj09-chuyu rdfs:label "Instruction of the Jiajing Emperor to Zhang Cong and Li Shi to settle the format of the book (1530)"@en .
+event:jj09-shangwei rdfs:label "Pronouncement of the Jiajing Emperor on the editorial principles (1530)"@en .
+event:jj09-xiayan-shouchang rdfs:label "First proposal of the correct ritual by Xia Yan"@en .
+event:jj09-yiding-tili rdfs:label "Settling of the format of the book by Zhang Cong and Li Shi"@en .
+event:siyi-chengdian-xiushu rdfs:label "Compilation of the Siyi chengdian"@en .
+event:zhangshi-68194-li-ke rdfs:label "Xia Yan in charge of the affairs of the Office of Scrutiny for Personnel (1530)"@en .
+pc:jj09-10-xiayan-hanlin rdfs:label "Membership of Xia Yan in the Hanlin Academy as Academician Reader-in-waiting"@en .
+work:siyi-chengdian rdfs:label "Siyi chengdian (compilation on the reformed state sacrifices, commissioned 1530)"@en .
+work:siyi-chengdian-fanli rdfs:label "Editorial principles of the Siyi chengdian"@en .

@@ -374,3 +374,30 @@ type:tidiao-xuexiao a crm:E55_Type ;
     rdfs:label "提調學校"@zh-Hant , "Supervisor of Education"@en ;
     rdfs:comment "Hucker 1985, #6469（提調學校官）。常设差遣（D25）；职责（D18）。同卷乙酉条称这类职任为“提学官”（J161-U08 note）"@zh-Hans ;
     crm:P127_has_broader_term type:chaiqian-zhize .
+
+# 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
+doc:mingshi-110 rdfs:label "Mingshi, juan 110 (Table of Grand Secretaries, part 2)"@en .
+doc:shizong-shilu rdfs:label "Ming Shizong shilu"@en .
+doc:shizong-shilu-089 rdfs:label "Ming Shizong shilu, juan 89"@en .
+doc:shizong-shilu-118 rdfs:label "Ming Shizong shilu, juan 118"@en .
+doc:shizong-shilu-128 rdfs:label "Ming Shizong shilu, juan 128"@en .
+doc:shizong-shilu-132 rdfs:label "Ming Shizong shilu, juan 132"@en .
+doc:shizong-shilu-135 rdfs:label "Ming Shizong shilu, juan 135"@en .
+doc:shizong-shilu-136 rdfs:label "Ming Shizong shilu, juan 136"@en .
+doc:shizong-shilu-141 rdfs:label "Ming Shizong shilu, juan 141"@en .
+doc:shizong-shilu-146 rdfs:label "Ming Shizong shilu, juan 146"@en .
+doc:shizong-shilu-149 rdfs:label "Ming Shizong shilu, juan 149"@en .
+doc:shizong-shilu-161 rdfs:label "Ming Shizong shilu, juan 161"@en .
+group:neige rdfs:label "Grand Secretariat"@en .
+person:127536 rdfs:label "Wang Hong"@en .
+person:130180 rdfs:label "Guo Xun"@en .
+person:130490 rdfs:label "Zhang Gun"@en .
+person:131629 rdfs:label "Cheng Wende"@en .
+person:132101 rdfs:label "Liao Daonan"@en .
+person:68136 rdfs:label "Zhai Luan"@en .
+person:68140 rdfs:label "Li Shi"@en .
+person:68194 rdfs:label "Xia Yan"@en .
+person:68266 rdfs:label "Zhang Cong (Zhang Fujing)"@en .
+person:68285 rdfs:label "Gui E"@en .
+person:68547 rdfs:label "Xu Jie"@en .
+person:ming-shizong rdfs:label "Jiajing Emperor (Ming Shizong, Zhu Houcong)"@en .

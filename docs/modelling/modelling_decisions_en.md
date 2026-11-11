@@ -336,6 +336,8 @@ This rule applies only to types defined in the project namespaces (type:, etc.);
 
 English names follow Hucker 1985, with the entry number noted; titles not in Hucker are given in pinyin, noted in the comment (at present Jinshendian and Huagaidian Daxueshi). (approved by the author, 2026-10-24)
 
+Supplement (2026-11-10): every instance node (except name nodes) also carries an @en label. Name nodes hold original title strings and dates and are labelled only in @zh-Hant.
+
 ---
 
 ## D10 The object type of P177 (approved by the author, 2026-10-16)

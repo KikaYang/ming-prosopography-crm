@@ -83,5 +83,19 @@ class TestCLI(unittest.TestCase):
             self.assertIn("类名与标签另查 v1.ttl、v2.ttl", src)
 
 
+class TestLangEn(unittest.TestCase):
+    def test_en_labels_preferred(self):
+        case = Graph().parse(data=CASE, format="turtle")
+        full = Graph()
+        full += case
+        full.parse(data=VOCAB, format="turtle")
+        src, _, _ = ttl_to_diagram.to_dot(full, list(case), ONTO, "t", lang="en")
+        self.assertIn("Junior Mentor", src)
+        self.assertNotIn("少傅", src)            # @zh label left out where an @en label exists
+        self.assertIn("授衔", src)               # node without @en keeps its labels
+        self.assertIn("Legend", src)
+        self.assertNotIn("图例", src)
+
+
 if __name__ == "__main__":
     unittest.main()

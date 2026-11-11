@@ -100,3 +100,10 @@ name:guanxian-jj13-03-jimao-xu-jie-xin a crm:E41_Appellation ;
 person:68547 crm:P1_is_identified_by name:guanxian-jj13-03-jimao-xu-jie-xin .
 
 doc:shizong-shilu-161 crm:P67_refers_to name:guanxian-jj13-03-jimao-xu-jie-yuan , name:guanxian-jj13-03-jimao-xu-jie-xin .
+
+# 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
+event:chaiqian-68547-tidiao-xuexiao rdfs:label "Duty assignment of Xu Jie as Supervisor of Education in Zhejiang (1534)"@en .
+event:jj13-03-jimao-sheng rdfs:label "Promotion of Xu Jie from Vice Prefect of Huangzhou to Assistant Surveillance Commissioner of Zhejiang and Supervisor of Education (1534)"@en .
+event:jj13-03-jimao-sheng-1 rdfs:label "Joining of the Zhejiang Provincial Surveillance Commission by Xu Jie (1534)"@en .
+event:jj13-03-jimao-sheng-2 rdfs:label "Leaving of Huangzhou Prefecture by Xu Jie (implicit, 1534)"@en .
+pc:jj13-03-jimao-sheng-1-anchasi rdfs:label "Membership of Xu Jie in the Zhejiang Provincial Surveillance Commission as Assistant Surveillance Commissioner"@en .

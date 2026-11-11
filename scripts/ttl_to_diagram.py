@@ -10,6 +10,9 @@ Usage (from the repo root, with .venv active):
                      at COMMIT, via git); nodes that already existed are drawn dashed
     --out DIR        output directory (default docs/modelling/diagrams/)
     --comments       also draw rdfs:comment literals (left out by default)
+    --lang en        English diagram: nodes show only their @en labels (all labels if a node has
+                     none, e.g. name nodes, which hold original Chinese text); English title and
+                     legend; output <name>_en.png / .dot
     --vocab FILE     shared vocabulary (e.g. docs/modelling/vocab.ttl), repeatable, as in
                      check_crm.py. Only nodes that occur in the case file's triples are drawn;
                      the vocabulary is used only to look up their classes and labels.
@@ -48,6 +51,10 @@ FAMILIES = [
 ]
 EXTENSION = ("扩展词汇 mpv:", "#c9daf8")
 OTHER = ("其他 / 无类型", "#ffffff")
+LEGEND_EN = {"时间段 E52": "Time-span E52", "名称 E41": "Appellation E41", "类型 E55": "Type E55",
+             "文献 E31/E73": "Document E31/E73", "人物 E21": "Person E21", "群体 E74": "Group E74",
+             "事件 E2": "Temporal entity E2", "PC 属性类": "PC property class",
+             "扩展词汇 mpv:": "Extension mpv:", "其他 / 无类型": "Other / untyped"}
 
 
 def git_exe():
@@ -100,9 +107,18 @@ def literal_text(lit: Literal, g):
     return text
 
 
-def to_dot(full: Graph, triples, onto, title, existing=frozenset(), comments=False):
+def node_labels(n, g, lang=None):
+    labels = sorted(g.objects(n, RDFS.label), key=str)
+    if lang:
+        chosen = [l for l in labels if getattr(l, "language", None) == lang]
+        labels = chosen or labels
+    return [str(l) for l in labels]
+
+
+def to_dot(full: Graph, triples, onto, title, existing=frozenset(), comments=False, lang=None):
     """`triples` decides what is drawn; `full` (case file + any vocabulary) is only used to
-    look up classes, labels and prefixes of the drawn nodes."""
+    look up classes, labels and prefixes of the drawn nodes. With lang="en", nodes show only
+    their @en labels where they have any, and the legend is in English."""
     skip = {RDF.type, RDFS.label} | (set() if comments else {RDFS.comment})
     edges = [(s, p, o) for s, p, o in triples if p not in skip]
     nodes = {s for s, _, _ in triples} | {o for _, _, o in edges if not isinstance(o, Literal)}
@@ -120,7 +136,7 @@ def to_dot(full: Graph, triples, onto, title, existing=frozenset(), comments=Fal
         types = sorted(short(t, full) for t in full.objects(n, RDF.type))
         if types:
             parts.append(" / ".join(types))
-        parts += [str(l) for l in sorted(full.objects(n, RDFS.label), key=str)]
+        parts += node_labels(n, full, lang)
         style = "rounded,filled,dashed" if n in existing else "rounded,filled"
         lines.append(f'  {nid} [label="{esc(chr(10).join(parts))}", fillcolor="{colour}", style="{style}"];')
     for k, (s, p, o) in enumerate(sorted(edges, key=lambda t: (short(t[0], full), short(t[1], full), str(t[2])))):
@@ -131,11 +147,12 @@ def to_dot(full: Graph, triples, onto, title, existing=frozenset(), comments=Fal
             lines.append(f'  {ids[s]} -> lit{k} [label="{label}", style=dotted];')
         else:
             lines.append(f'  {ids[s]} -> {ids[o]} [label="{label}"];')
-    legend = [f'<TR><TD BGCOLOR="{c}">{fam}</TD></TR>' for fam, c in used.items()]
+    en = lang == "en"
+    legend = [f'<TR><TD BGCOLOR="{c}">{LEGEND_EN.get(fam, fam) if en else fam}</TD></TR>' for fam, c in used.items()]
     if existing:
-        legend.append('<TR><TD>虚线框：此前已有的节点</TD></TR>')
+        legend.append('<TR><TD>Dashed: nodes that existed before</TD></TR>' if en else '<TR><TD>虚线框：此前已有的节点</TD></TR>')
     lines.append('  legend [shape=plaintext, fontsize=9, label=<<TABLE BORDER="0" CELLBORDER="1" '
-                 f'CELLSPACING="0" CELLPADDING="4"><TR><TD><B>图例</B></TD></TR>{"".join(legend)}</TABLE>>];')
+                 f'CELLSPACING="0" CELLPADDING="4"><TR><TD><B>{"Legend" if en else "图例"}</B></TD></TR>{"".join(legend)}</TABLE>>];')
     lines.append("}")
     return "\n".join(lines), len(edges), len(nodes)
 
@@ -146,6 +163,7 @@ def main(argv=None):
     ap.add_argument("--since", metavar="COMMIT")
     ap.add_argument("--out", type=Path, default=OUT_DIR)
     ap.add_argument("--comments", action="store_true")
+    ap.add_argument("--lang", choices=["en"], help="English diagram (prefer @en labels)")
     ap.add_argument("--vocab", action="append", default=[], metavar="VOCAB.ttl",
                     help="shared vocabulary used to look up classes and labels (repeatable)")
     args = ap.parse_args(argv)
@@ -161,20 +179,28 @@ def main(argv=None):
     for v in args.vocab:
         full.parse(v, format="turtle")
     onto = Ontology()
-    vocab_note = f"（类名与标签另查 {'、'.join(Path(v).name for v in args.vocab)}）" if args.vocab else ""
+    en = args.lang == "en"
+    if en:
+        vocab_note = f" (classes and labels also from {', '.join(Path(v).name for v in args.vocab)})" if args.vocab else ""
+    else:
+        vocab_note = f"（类名与标签另查 {'、'.join(Path(v).name for v in args.vocab)}）" if args.vocab else ""
     if args.since:
         old = graph_at(args.ttl, args.since)
         triples = [t for t in case if t not in old]
         existing = {n for t in triples for n in (t[0], t[2])
                     if not isinstance(n, Literal) and (n, None, None) in old}
         name = f"{args.ttl.stem}_since_{args.since[:7]}"
-        title = f"{args.ttl.name}：{args.since[:7]} 之后新增的 {len(triples)} 条三元组{vocab_note}"
+        title = (f"{args.ttl.name}: {len(triples)} triples added after {args.since[:7]}{vocab_note}" if en else
+                 f"{args.ttl.name}：{args.since[:7]} 之后新增的 {len(triples)} 条三元组{vocab_note}")
     else:
         triples, existing = list(case), set()
         name = args.ttl.stem
-        title = f"{args.ttl.name}：全部 {len(case)} 条三元组{vocab_note}"
+        title = (f"{args.ttl.name}: all {len(case)} triples{vocab_note}" if en else
+                 f"{args.ttl.name}：全部 {len(case)} 条三元组{vocab_note}")
+    if en:
+        name += "_en"
 
-    src, n_edges, n_nodes = to_dot(full, triples, onto, title, existing, args.comments)
+    src, n_edges, n_nodes = to_dot(full, triples, onto, title, existing, args.comments, args.lang)
     args.out.mkdir(parents=True, exist_ok=True)
     dot_path, png_path = args.out / f"{name}.dot", args.out / f"{name}.png"
     dot_path.write_text(src, encoding="utf-8")

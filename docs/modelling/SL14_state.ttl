@@ -62,3 +62,7 @@ pc:huangzhou-fu-member-68547 a crm:PC107_has_current_or_former_member ;
 
 ## 提调学校：holds_title
 person:68547 mpv:holds_title type:tidiao-xuexiao .
+
+# 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
+pc:huangzhou-fu-member-68547 rdfs:label "Membership of Xu Jie in Huangzhou Prefecture, Huguang, as Vice Prefect"@en .
+pc:zhejiang-anchasi-member-68547 rdfs:label "Membership of Xu Jie in the Zhejiang Provincial Surveillance Commission as Assistant Surveillance Commissioner"@en .

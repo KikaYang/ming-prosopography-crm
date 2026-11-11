@@ -1,0 +1,416 @@
+digraph G {
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL11_event.ttl: all 321 triples (classes and labels also from vocab.ttl)", nodesep=0.25, ranksep=0.6];
+  node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9, color="#555555"];
+  n0 [label="doc:shizong-shilu-118
+E31_Document
+Ming Shizong shilu, juan 118", fillcolor="#ead1dc", style="rounded,filled"];
+  n1 [label="event:chaiqian-127536-gongcheng
+E7_Activity
+Duty assignment of Wang Hong as Jianshi xuncha gongcheng guan (inspector of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+  n2 [label="event:chaiqian-127536-jianxiu
+E7_Activity
+Duty assignment of Wang Hong as Jianxiu guan (supervisor) for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n3 [label="event:chaiqian-130180-gongcheng
+E7_Activity
+Duty assignment of Guo Xun as Zhi jianzao shi and Zongdu gongcheng guan (in charge of construction; general supervisor of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+  n4 [label="event:chaiqian-130180-jianxiu
+E7_Activity
+Duty assignment of Guo Xun as Jianxiu guan (supervisor) for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n5 [label="event:chaiqian-130490-zuanxiu
+E7_Activity
+Duty assignment of Zhang Gun as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n6 [label="event:chaiqian-131629-zuanxiu
+E7_Activity
+Duty assignment of Cheng Wende as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n7 [label="event:chaiqian-132101-zuanxiu
+E7_Activity
+Duty assignment of Liao Daonan as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n8 [label="event:chaiqian-68136-fuzongcai
+E7_Activity
+Duty assignment of Zhai Luan as Fu zongcai guan (deputy director-general) of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n9 [label="event:chaiqian-68140-gongcheng
+E7_Activity
+Duty assignment of Li Shi as Tongzhi jianzao shi and Dushi guizhi guan (associate in charge of construction; supervisor of the building design)", fillcolor="#d9ead3", style="rounded,filled"];
+  n10 [label="event:chaiqian-68140-jianxiu
+E7_Activity
+Duty assignment of Li Shi as Jianxiu guan (supervisor) for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n11 [label="event:chaiqian-68194-gongcheng
+E7_Activity
+Duty assignment of Xia Yan as Jianshi xuncha gongcheng guan (inspector of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+  n12 [label="event:chaiqian-68266-gongcheng
+E7_Activity
+Duty assignment of Zhang Cong as Zhi jianzao shi and Zongdu gongcheng guan (in charge of construction; general supervisor of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+  n13 [label="event:chaiqian-68266-zongcai
+E7_Activity
+Duty assignment of Zhang Cong as Zongcai guan (director-general) of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n14 [label="event:chaiqian-68285-fuzongcai
+E7_Activity
+Duty assignment of Gui E as Fu zongcai guan (deputy director-general) of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n15 [label="event:chaiqian-68547-zuanxiu
+E7_Activity
+Duty assignment of Xu Jie as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n16 [label="event:jiaotan-jianzao
+E7_Activity
+Construction of the suburban altar", fillcolor="#d9ead3", style="rounded,filled"];
+  n17 [label="event:jiaozhi-gengding
+E7_Activity
+Revision of the rules for the suburban sacrifices", fillcolor="#d9ead3", style="rounded,filled"];
+  n18 [label="event:jj09-10-guiyou-shouzha
+E7_Activity
+Handwritten note of the Jiajing Emperor shown to Zhang Cong (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n19 [label="event:jj09-10-guiyou-tongshi
+E7_Activity
+Summons of Zhang Cong to inspect together with the Jiajing Emperor (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n20 [label="event:jj09-10-xiayan-sheng
+E85_Joining
+Promotion of Xia Yan to Academician Reader-in-waiting of the Hanlin Academy (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n21 [label="event:jj09-10-xinwei-chi
+E7_Activity
+Edict of the Jiajing Emperor on the compilation of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n22 [label="event:jj09-chuyu
+E7_Activity
+Instruction of the Jiajing Emperor to Zhang Cong and Li Shi to settle the format of the book (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n23 [label="event:jj09-shangwei
+E65_Creation
+Pronouncement of the Jiajing Emperor on the editorial principles (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n24 [label="event:jj09-xiayan-shouchang
+E7_Activity
+First proposal of the correct ritual by Xia Yan", fillcolor="#d9ead3", style="rounded,filled"];
+  n25 [label="event:jj09-yiding-tili
+E7_Activity
+Settling of the format of the book by Zhang Cong and Li Shi", fillcolor="#d9ead3", style="rounded,filled"];
+  n26 [label="event:siyi-chengdian-xiushu
+E7_Activity
+Compilation of the Siyi chengdian", fillcolor="#d9ead3", style="rounded,filled"];
+  n27 [label="event:zhangshi-68194-li-ke
+E7_Activity
+Xia Yan in charge of the affairs of the Office of Scrutiny for Personnel (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+  n28 [label="group:hanlinyuan
+E74_Group
+Hanlin Academy", fillcolor="#fce5cd", style="rounded,filled"];
+  n29 [label="group:li-ke
+E74_Group
+Office of Scrutiny for Personnel", fillcolor="#fce5cd", style="rounded,filled"];
+  n30 [label="name:date-jj09-10-guiyou
+E41_Appellation
+嘉靖九年十月癸酉", fillcolor="#cfe2f3", style="rounded,filled"];
+  n31 [label="name:date-jj09-10-xinwei
+E41_Appellation
+嘉靖九年十月辛未", fillcolor="#cfe2f3", style="rounded,filled"];
+  n32 [label="name:date-jj09-chuyu
+E41_Appellation
+初", fillcolor="#cfe2f3", style="rounded,filled"];
+  n33 [label="name:guanxian-jj09-10-guiyou-zhang-cong
+E41_Appellation
+輔臣璁", fillcolor="#cfe2f3", style="rounded,filled"];
+  n34 [label="name:guanxian-jj09-10-renxu-zhang-cong
+E41_Appellation
+少傅兼太子太傅、吏部尚書張璁", fillcolor="#cfe2f3", style="rounded,filled"];
+  n35 [label="name:guanxian-jj09-10-xinwei-gui-zhai
+E41_Appellation
+內閣輔臣大學士卿萼、卿鸞", fillcolor="#cfe2f3", style="rounded,filled"];
+  n36 [label="name:guanxian-jj09-10-xinwei-guo-xun
+E41_Appellation
+知建造事總督工程官卿勛", fillcolor="#cfe2f3", style="rounded,filled"];
+  n37 [label="name:guanxian-jj09-10-xinwei-li-shi
+E41_Appellation
+同知建造事，督視規制官卿時", fillcolor="#cfe2f3", style="rounded,filled"];
+  n38 [label="name:guanxian-jj09-10-xinwei-wang-hong
+E41_Appellation
+監視巡察工程官卿𬭎", fillcolor="#cfe2f3", style="rounded,filled"];
+  n39 [label="name:guanxian-jj09-10-xinwei-xia-yan
+E41_Appellation
+監視巡察工程官吏科都給事中夏言", fillcolor="#cfe2f3", style="rounded,filled"];
+  n40 [label="name:guanxian-jj09-10-xinwei-zhang-cong
+E41_Appellation
+知建造事、總督工程官卿璁", fillcolor="#cfe2f3", style="rounded,filled"];
+  n41 [label="name:guanxian-jj09-10-xu-jie
+E41_Appellation
+編修徐階", fillcolor="#cfe2f3", style="rounded,filled"];
+  n42 [label="name:guanxian-jj09-chuyu-zhang-cong
+E41_Appellation
+大學士", fillcolor="#cfe2f3", style="rounded,filled"];
+  n43 [label="name:title-siyi-chengdian
+E35_Title
+祀儀成典", fillcolor="#cfe2f3", style="rounded,filled"];
+  n44 [label="pc:jj09-10-xiayan-hanlin
+PC144_joined_with
+Membership of Xia Yan in the Hanlin Academy as Academician Reader-in-waiting", fillcolor="#d9d2e9", style="rounded,filled"];
+  n45 [label="person:127536
+E21_Person
+Wang Hong", fillcolor="#f4cccc", style="rounded,filled"];
+  n46 [label="person:130180
+E21_Person
+Guo Xun", fillcolor="#f4cccc", style="rounded,filled"];
+  n47 [label="person:130490
+E21_Person
+Zhang Gun", fillcolor="#f4cccc", style="rounded,filled"];
+  n48 [label="person:131629
+E21_Person
+Cheng Wende", fillcolor="#f4cccc", style="rounded,filled"];
+  n49 [label="person:132101
+E21_Person
+Liao Daonan", fillcolor="#f4cccc", style="rounded,filled"];
+  n50 [label="person:68136
+E21_Person
+Zhai Luan", fillcolor="#f4cccc", style="rounded,filled"];
+  n51 [label="person:68140
+E21_Person
+Li Shi", fillcolor="#f4cccc", style="rounded,filled"];
+  n52 [label="person:68194
+E21_Person
+Xia Yan", fillcolor="#f4cccc", style="rounded,filled"];
+  n53 [label="person:68266
+E21_Person
+Zhang Cong (Zhang Fujing)", fillcolor="#f4cccc", style="rounded,filled"];
+  n54 [label="person:68285
+E21_Person
+Gui E", fillcolor="#f4cccc", style="rounded,filled"];
+  n55 [label="person:68547
+E21_Person
+Xu Jie", fillcolor="#f4cccc", style="rounded,filled"];
+  n56 [label="person:ming-shizong
+E21_Person
+Jiajing Emperor (Ming Shizong, Zhu Houcong)", fillcolor="#f4cccc", style="rounded,filled"];
+  n57 [label="ts:jj09-10-guiyou
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n58 [label="ts:jj09-10-xinwei
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n59 [label="ts:jj09-chuyu
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n60 [label="ts:jj09-shangwei
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n61 [label="type:action-sheng
+E55_Type
+promote", fillcolor="#eeeeee", style="rounded,filled"];
+  n62 [label="type:dushi-guizhi-guan
+E55_Type
+Dushi guizhi guan", fillcolor="#eeeeee", style="rounded,filled"];
+  n63 [label="type:fu-zongcai-guan
+E55_Type
+Fu zongcai guan", fillcolor="#eeeeee", style="rounded,filled"];
+  n64 [label="type:guanxian-chuan
+E55_Type
+official title string", fillcolor="#eeeeee", style="rounded,filled"];
+  n65 [label="type:hanlin-shidu-xueshi
+E55_Type
+Academician Reader-in-waiting", fillcolor="#eeeeee", style="rounded,filled"];
+  n66 [label="type:jianshi-xuncha-gongcheng-guan
+E55_Type
+Jianshi xuncha gongcheng guan", fillcolor="#eeeeee", style="rounded,filled"];
+  n67 [label="type:jianxiu-guan
+E55_Type
+Jianxiu guan", fillcolor="#eeeeee", style="rounded,filled"];
+  n68 [label="type:tongzhi-jianzao-shi
+E55_Type
+Tongzhi jianzao shi", fillcolor="#eeeeee", style="rounded,filled"];
+  n69 [label="type:zhangshi
+E55_Type
+in charge of the affairs of an office", fillcolor="#eeeeee", style="rounded,filled"];
+  n70 [label="type:zhi-jianzao-shi
+E55_Type
+Zhi jianzao shi", fillcolor="#eeeeee", style="rounded,filled"];
+  n71 [label="type:zongcai-guan
+E55_Type
+Director-general", fillcolor="#eeeeee", style="rounded,filled"];
+  n72 [label="type:zongdu-gongcheng-guan
+E55_Type
+Zongdu gongcheng guan", fillcolor="#eeeeee", style="rounded,filled"];
+  n73 [label="type:zuanxiu-guan
+E55_Type
+Compiler", fillcolor="#eeeeee", style="rounded,filled"];
+  n74 [label="work:siyi-chengdian
+E73_Information_Object
+Siyi chengdian (compilation on the reformed state sacrifices, commissioned 1530)", fillcolor="#ead1dc", style="rounded,filled"];
+  n75 [label="work:siyi-chengdian-fanli
+E29_Design_or_Procedure
+Editorial principles of the Siyi chengdian", fillcolor="#ead1dc", style="rounded,filled"];
+  n0 -> n33 [label="P67_refers_to"];
+  n0 -> n34 [label="P67_refers_to"];
+  n0 -> n35 [label="P67_refers_to"];
+  n0 -> n36 [label="P67_refers_to"];
+  n0 -> n37 [label="P67_refers_to"];
+  n0 -> n38 [label="P67_refers_to"];
+  n0 -> n39 [label="P67_refers_to"];
+  n0 -> n40 [label="P67_refers_to"];
+  n0 -> n41 [label="P67_refers_to"];
+  n0 -> n42 [label="P67_refers_to"];
+  n0 -> n1 [label="P70_documents"];
+  n0 -> n2 [label="P70_documents"];
+  n0 -> n3 [label="P70_documents"];
+  n0 -> n4 [label="P70_documents"];
+  n0 -> n5 [label="P70_documents"];
+  n0 -> n6 [label="P70_documents"];
+  n0 -> n7 [label="P70_documents"];
+  n0 -> n8 [label="P70_documents"];
+  n0 -> n9 [label="P70_documents"];
+  n0 -> n10 [label="P70_documents"];
+  n0 -> n11 [label="P70_documents"];
+  n0 -> n12 [label="P70_documents"];
+  n0 -> n13 [label="P70_documents"];
+  n0 -> n14 [label="P70_documents"];
+  n0 -> n15 [label="P70_documents"];
+  n0 -> n16 [label="P70_documents"];
+  n0 -> n17 [label="P70_documents"];
+  n0 -> n18 [label="P70_documents"];
+  n0 -> n19 [label="P70_documents"];
+  n0 -> n20 [label="P70_documents"];
+  n0 -> n21 [label="P70_documents"];
+  n0 -> n22 [label="P70_documents"];
+  n0 -> n23 [label="P70_documents"];
+  n0 -> n24 [label="P70_documents"];
+  n0 -> n25 [label="P70_documents"];
+  n0 -> n26 [label="P70_documents"];
+  n0 -> n27 [label="P70_documents"];
+  n1 -> n45 [label="P14_carried_out_by"];
+  n1 -> n66 [label="P2_has_type"];
+  n1 -> n16 [label="P9i_forms_part_of"];
+  n2 -> n45 [label="P14_carried_out_by"];
+  n2 -> n1 [label="P15_was_influenced_by"];
+  n2 -> n21 [label="P17_was_motivated_by"];
+  n2 -> n67 [label="P2_has_type"];
+  n2 -> n26 [label="P9i_forms_part_of"];
+  n3 -> n46 [label="P14_carried_out_by"];
+  n3 -> n70 [label="P2_has_type"];
+  n3 -> n72 [label="P2_has_type"];
+  n3 -> n16 [label="P9i_forms_part_of"];
+  n4 -> n46 [label="P14_carried_out_by"];
+  n4 -> n3 [label="P15_was_influenced_by"];
+  n4 -> n21 [label="P17_was_motivated_by"];
+  n4 -> n67 [label="P2_has_type"];
+  n4 -> n26 [label="P9i_forms_part_of"];
+  n5 -> n47 [label="P14_carried_out_by"];
+  n5 -> n21 [label="P17_was_motivated_by"];
+  n5 -> n73 [label="P2_has_type"];
+  n5 -> n26 [label="P9i_forms_part_of"];
+  n6 -> n48 [label="P14_carried_out_by"];
+  n6 -> n21 [label="P17_was_motivated_by"];
+  n6 -> n73 [label="P2_has_type"];
+  n6 -> n26 [label="P9i_forms_part_of"];
+  n7 -> n49 [label="P14_carried_out_by"];
+  n7 -> n21 [label="P17_was_motivated_by"];
+  n7 -> n73 [label="P2_has_type"];
+  n7 -> n26 [label="P9i_forms_part_of"];
+  n8 -> n50 [label="P14_carried_out_by"];
+  n8 -> n21 [label="P17_was_motivated_by"];
+  n8 -> n63 [label="P2_has_type"];
+  n8 -> n26 [label="P9i_forms_part_of"];
+  n9 -> n51 [label="P14_carried_out_by"];
+  n9 -> n62 [label="P2_has_type"];
+  n9 -> n68 [label="P2_has_type"];
+  n9 -> n16 [label="P9i_forms_part_of"];
+  n10 -> n51 [label="P14_carried_out_by"];
+  n10 -> n9 [label="P15_was_influenced_by"];
+  n10 -> n21 [label="P17_was_motivated_by"];
+  n10 -> n67 [label="P2_has_type"];
+  n10 -> n26 [label="P9i_forms_part_of"];
+  n11 -> n52 [label="P14_carried_out_by"];
+  n11 -> n66 [label="P2_has_type"];
+  n11 -> n16 [label="P9i_forms_part_of"];
+  n12 -> n53 [label="P14_carried_out_by"];
+  n12 -> n70 [label="P2_has_type"];
+  n12 -> n72 [label="P2_has_type"];
+  n12 -> n16 [label="P9i_forms_part_of"];
+  n13 -> n53 [label="P14_carried_out_by"];
+  n13 -> n12 [label="P15_was_influenced_by"];
+  n13 -> n21 [label="P17_was_motivated_by"];
+  n13 -> n71 [label="P2_has_type"];
+  n13 -> n26 [label="P9i_forms_part_of"];
+  n14 -> n54 [label="P14_carried_out_by"];
+  n14 -> n21 [label="P17_was_motivated_by"];
+  n14 -> n63 [label="P2_has_type"];
+  n14 -> n26 [label="P9i_forms_part_of"];
+  n15 -> n55 [label="P14_carried_out_by"];
+  n15 -> n21 [label="P17_was_motivated_by"];
+  n15 -> n73 [label="P2_has_type"];
+  n15 -> n26 [label="P9i_forms_part_of"];
+  n18 -> n53 [label="P11_had_participant"];
+  n18 -> n56 [label="P14_carried_out_by"];
+  n18 -> n57 [label="P4_has_time-span"];
+  n19 -> n53 [label="P11_had_participant"];
+  n19 -> n56 [label="P14_carried_out_by"];
+  n19 -> n57 [label="P4_has_time-span"];
+  n20 -> n52 [label="P143_joined"];
+  n20 -> n28 [label="P144_joined_with"];
+  n20 -> n56 [label="P14_carried_out_by"];
+  n20 -> n24 [label="P17_was_motivated_by"];
+  n20 -> n61 [label="P2_has_type"];
+  n20 -> n58 [label="P4_has_time-span"];
+  n20 -> n21 [label="P9i_forms_part_of"];
+  n21 -> n56 [label="P14_carried_out_by"];
+  n21 -> n16 [label="P17_was_motivated_by"];
+  n21 -> n17 [label="P17_was_motivated_by"];
+  n21 -> n58 [label="P4_has_time-span"];
+  n22 -> n51 [label="P11_had_participant"];
+  n22 -> n53 [label="P11_had_participant"];
+  n22 -> n56 [label="P14_carried_out_by"];
+  n22 -> n17 [label="P17_was_motivated_by"];
+  n22 -> n59 [label="P4_has_time-span"];
+  n23 -> n56 [label="P14_carried_out_by"];
+  n23 -> n60 [label="P4_has_time-span"];
+  n23 -> n75 [label="P94_has_created"];
+  n24 -> n52 [label="P14_carried_out_by"];
+  n25 -> n51 [label="P14_carried_out_by"];
+  n25 -> n53 [label="P14_carried_out_by"];
+  n25 -> n22 [label="P17_was_motivated_by"];
+  n26 -> n75 [label="P33_used_specific_technique"];
+  n27 -> n29 [label="P11_had_participant"];
+  n27 -> n52 [label="P14_carried_out_by"];
+  n27 -> n21 [label="P17_was_motivated_by"];
+  n27 -> n69 [label="P2_has_type"];
+  n33 -> n64 [label="P2_has_type"];
+  n34 -> n64 [label="P2_has_type"];
+  n35 -> n64 [label="P2_has_type"];
+  n36 -> n64 [label="P2_has_type"];
+  n37 -> n64 [label="P2_has_type"];
+  n38 -> n64 [label="P2_has_type"];
+  n39 -> n64 [label="P2_has_type"];
+  n40 -> n64 [label="P2_has_type"];
+  n41 -> n64 [label="P2_has_type"];
+  n42 -> n64 [label="P2_has_type"];
+  n44 -> n20 [label="P01_has_domain"];
+  n44 -> n28 [label="P02_has_range"];
+  n44 -> n65 [label="P144.1_kind_of_member"];
+  n45 -> n38 [label="P1_is_identified_by"];
+  n46 -> n36 [label="P1_is_identified_by"];
+  n50 -> n35 [label="P1_is_identified_by"];
+  n51 -> n37 [label="P1_is_identified_by"];
+  n52 -> n39 [label="P1_is_identified_by"];
+  n53 -> n33 [label="P1_is_identified_by"];
+  n53 -> n34 [label="P1_is_identified_by"];
+  n53 -> n40 [label="P1_is_identified_by"];
+  n53 -> n42 [label="P1_is_identified_by"];
+  n54 -> n35 [label="P1_is_identified_by"];
+  n55 -> n41 [label="P1_is_identified_by"];
+  n57 -> n30 [label="P1_is_identified_by"];
+  lit158 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-11-16T00:00:00
+^^xsd:dateTime"];
+  n57 -> lit158 [label="P82a_begin_of_the_begin", style=dotted];
+  lit159 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-11-16T23:59:59
+^^xsd:dateTime"];
+  n57 -> lit159 [label="P82b_end_of_the_end", style=dotted];
+  n58 -> n31 [label="P1_is_identified_by"];
+  lit161 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-11-14T00:00:00
+^^xsd:dateTime"];
+  n58 -> lit161 [label="P82a_begin_of_the_begin", style=dotted];
+  lit162 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-11-14T23:59:59
+^^xsd:dateTime"];
+  n58 -> lit162 [label="P82b_end_of_the_end", style=dotted];
+  n59 -> n32 [label="P1_is_identified_by"];
+  lit164 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-02-08T00:00:00
+^^xsd:dateTime"];
+  n59 -> lit164 [label="P82a_begin_of_the_begin", style=dotted];
+  lit165 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-11-13T23:59:59
+^^xsd:dateTime"];
+  n59 -> lit165 [label="P82b_end_of_the_end", style=dotted];
+  lit166 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-02-08T00:00:00
+^^xsd:dateTime"];
+  n60 -> lit166 [label="P82a_begin_of_the_begin", style=dotted];
+  lit167 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1530-11-13T23:59:59
+^^xsd:dateTime"];
+  n60 -> lit167 [label="P82b_end_of_the_end", style=dotted];
+  n74 -> n43 [label="P102_has_title"];
+  n75 -> n74 [label="P67_refers_to"];
+  legend [shape=plaintext, fontsize=9, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD><B>Legend</B></TD></TR><TR><TD BGCOLOR="#ead1dc">Document E31/E73</TD></TR><TR><TD BGCOLOR="#d9ead3">Temporal entity E2</TD></TR><TR><TD BGCOLOR="#fce5cd">Group E74</TD></TR><TR><TD BGCOLOR="#cfe2f3">Appellation E41</TD></TR><TR><TD BGCOLOR="#d9d2e9">PC property class</TD></TR><TR><TD BGCOLOR="#f4cccc">Person E21</TD></TR><TR><TD BGCOLOR="#fff2cc">Time-span E52</TD></TR><TR><TD BGCOLOR="#eeeeee">Type E55</TD></TR></TABLE>>];
+}

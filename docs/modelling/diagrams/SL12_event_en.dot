@@ -1,0 +1,439 @@
+digraph G {
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl: all 292 triples (classes and labels also from vocab.ttl)", nodesep=0.25, ranksep=0.6];
+  node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9, color="#555555"];
+  n0 [label="E55_Type", fillcolor="#ffffff", style="rounded,filled"];
+  n1 [label="E7_Activity", fillcolor="#ffffff", style="rounded,filled"];
+  n2 [label="P4_has_time-span
+E55_Type", fillcolor="#eeeeee", style="rounded,filled"];
+  n3 [label="doc:cbdb-421880
+E31_Document
+CBDB POSTED_TO_OFFICE_DATA, posting_id 421880", fillcolor="#ead1dc", style="rounded,filled"];
+  n4 [label="doc:mingshi-110
+E31_Document
+Mingshi, juan 110 (Table of Grand Secretaries, part 2)", fillcolor="#ead1dc", style="rounded,filled"];
+  n5 [label="doc:mingshi-196
+E31_Document
+Mingshi, juan 196 (biography of Zhang Cong)", fillcolor="#ead1dc", style="rounded,filled"];
+  n6 [label="doc:shizong-shilu-089
+E31_Document
+Ming Shizong shilu, juan 89", fillcolor="#ead1dc", style="rounded,filled"];
+  n7 [label="doc:shizong-shilu-128
+E31_Document
+Ming Shizong shilu, juan 128", fillcolor="#ead1dc", style="rounded,filled"];
+  n8 [label="doc:shizong-shilu-132
+E31_Document
+Ming Shizong shilu, juan 132", fillcolor="#ead1dc", style="rounded,filled"];
+  n9 [label="doc:shizong-shilu-135
+E31_Document
+Ming Shizong shilu, juan 135", fillcolor="#ead1dc", style="rounded,filled"];
+  n10 [label="doc:shizong-shilu-136
+E31_Document
+Ming Shizong shilu, juan 136", fillcolor="#ead1dc", style="rounded,filled"];
+  n11 [label="doc:shizong-shilu-141
+E31_Document
+Ming Shizong shilu, juan 141", fillcolor="#ead1dc", style="rounded,filled"];
+  n12 [label="doc:shizong-shilu-146
+E31_Document
+Ming Shizong shilu, juan 146", fillcolor="#ead1dc", style="rounded,filled"];
+  n13 [label="doc:shizong-shilu-149
+E31_Document
+Ming Shizong shilu, juan 149", fillcolor="#ead1dc", style="rounded,filled"];
+  n14 [label="event:huagaidian-claim-cbdb-421880
+E13_Attribute_Assignment
+Date of the Huagaidian conferral according to CBDB posting 421880", fillcolor="#d9ead3", style="rounded,filled"];
+  n15 [label="event:huagaidian-claim-mingshi-110
+E13_Attribute_Assignment
+Date of the Huagaidian conferral according to Mingshi, juan 110", fillcolor="#d9ead3", style="rounded,filled"];
+  n16 [label="event:huagaidian-claim-mingshi-196
+E13_Attribute_Assignment
+Date of the Huagaidian conferral according to Mingshi, juan 196", fillcolor="#d9ead3", style="rounded,filled"];
+  n17 [label="event:huagaidian-claim-shilu-136
+E13_Attribute_Assignment
+Date of the Huagaidian conferral according to Ming Shizong shilu, juan 136", fillcolor="#d9ead3", style="rounded,filled"];
+  n18 [label="event:huagaidian-conferral
+E7_Activity
+Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent and Huagaidian Daxueshi (Grand Secretary of the Huagai Hall; date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
+  n19 [label="event:huagaidian-conferral-1
+E7_Activity
+Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent (date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
+  n20 [label="event:huagaidian-conferral-2
+E7_Activity
+Advancement of Zhang Fujing to Huagaidian Daxueshi (Grand Secretary of the Huagai Hall; date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
+  n21 [label="event:jj06-10-ruge
+E85_Joining
+Entry of Zhang Cong into the Grand Secretariat (1527)", fillcolor="#d9ead3", style="rounded,filled"];
+  n22 [label="event:jj07-06-jiaen
+E7_Activity
+Bestowal of honours on Zhang Cong for the compilation of the Minglun dadian (official compilation on the Great Rites Controversy, presented 1528)", fillcolor="#d9ead3", style="rounded,filled"];
+  n23 [label="event:jj07-06-jiaen-1
+E7_Activity
+Addition of Junior Mentor to Zhang Cong (1528)", fillcolor="#d9ead3", style="rounded,filled"];
+  n24 [label="event:jj07-06-jiaen-2
+E7_Activity
+Addition of Grand Mentor of the Heir Apparent to Zhang Cong (1528)", fillcolor="#d9ead3", style="rounded,filled"];
+  n25 [label="event:jj07-06-jiaen-3
+E7_Activity
+Promotion of Zhang Cong to Minister of Personnel (1528)", fillcolor="#d9ead3", style="rounded,filled"];
+  n26 [label="event:jj07-06-jiaen-4
+E7_Activity
+Promotion of Zhang Cong to Jinshendian Daxueshi (Grand Secretary of the Jinshen Hall; 1528)", fillcolor="#d9ead3", style="rounded,filled"];
+  n27 [label="event:jj10-07-zhishi
+E86_Leaving
+Retirement of Zhang Fujing from the Grand Secretariat (1531)", fillcolor="#d9ead3", style="rounded,filled"];
+  n28 [label="event:jj10-11-zhao
+E7_Activity
+Summons of Zhang Fujing back to office, delivered by the Messenger Zhou Wenzhu (1532)", fillcolor="#d9ead3", style="rounded,filled"];
+  n29 [label="event:jj10-11-zhaohuan
+E85_Joining
+Recall of Zhang Fujing to the Grand Secretariat (1532)", fillcolor="#d9ead3", style="rounded,filled"];
+  n30 [label="event:jj11-03-zhijing
+E7_Activity
+Arrival of Zhang Fujing in the capital in answer to the summons (1532)", fillcolor="#d9ead3", style="rounded,filled"];
+  n31 [label="event:jj11-08-zhishi
+E86_Leaving
+Retirement of Zhang Fujing from the Grand Secretariat (1532)", fillcolor="#d9ead3", style="rounded,filled"];
+  n32 [label="event:jj12-01-zhao
+E7_Activity
+Summons of Zhang Fujing back to office, delivered by Chen Zhang, Left Vice Minister of the Court of State Ceremonial (1533)", fillcolor="#d9ead3", style="rounded,filled"];
+  n33 [label="event:jj12-04-fuzhao
+E7_Activity
+Arrival of Zhang Fujing in the capital in answer to the summons (1533)", fillcolor="#d9ead3", style="rounded,filled"];
+  n34 [label="event:minglun-dadian-jincheng
+E7_Activity
+Completion and presentation of the Minglun dadian (official compilation on the Great Rites Controversy, presented 1528)", fillcolor="#d9ead3", style="rounded,filled"];
+  n35 [label="group:neige
+E74_Group
+Grand Secretariat", fillcolor="#fce5cd", style="rounded,filled"];
+  n36 [label="mpv:conferred_title
+rdf:Property
+conferred title", fillcolor="#c9daf8", style="rounded,filled"];
+  n37 [label="name:date-cbdb-421880
+E41_Appellation
+1532", fillcolor="#cfe2f3", style="rounded,filled"];
+  n38 [label="name:date-jj06-10
+E41_Appellation
+嘉靖六年十月", fillcolor="#cfe2f3", style="rounded,filled"];
+  n39 [label="name:date-jj07-06-01
+E41_Appellation
+嘉靖七年六月辛丑朔", fillcolor="#cfe2f3", style="rounded,filled"];
+  n40 [label="name:date-jj10-07-wuwu
+E41_Appellation
+嘉靖十年七月戊午", fillcolor="#cfe2f3", style="rounded,filled"];
+  n41 [label="name:date-jj10-11-dingchou
+E41_Appellation
+嘉靖十年十一月丁丑", fillcolor="#cfe2f3", style="rounded,filled"];
+  n42 [label="name:date-jj11-03
+E41_Appellation
+嘉靖十一年三月", fillcolor="#cfe2f3", style="rounded,filled"];
+  n43 [label="name:date-jj11-03-jiayin
+E41_Appellation
+嘉靖十一年三月甲寅", fillcolor="#cfe2f3", style="rounded,filled"];
+  n44 [label="name:date-jj11-08-xinchou
+E41_Appellation
+嘉靖十一年八月辛丑", fillcolor="#cfe2f3", style="rounded,filled"];
+  n45 [label="name:date-jj12-01-bingchen
+E41_Appellation
+嘉靖十二年正月丙辰", fillcolor="#cfe2f3", style="rounded,filled"];
+  n46 [label="name:date-jj12-04-yihai
+E41_Appellation
+嘉靖十二年四月乙亥", fillcolor="#cfe2f3", style="rounded,filled"];
+  n47 [label="name:date-jj13
+E41_Appellation
+嘉靖十三年", fillcolor="#cfe2f3", style="rounded,filled"];
+  n48 [label="name:guanxian-jj10-11-zhang-fujing
+E41_Appellation
+致仕少傅兼太子太傅、吏部尚書、謹身殿大學士張孚敬", fillcolor="#cfe2f3", style="rounded,filled"];
+  n49 [label="name:guanxian-jj11-08-zhang-fujing
+E41_Appellation
+少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬", fillcolor="#cfe2f3", style="rounded,filled"];
+  n50 [label="name:guanxian-jj12-04-zhang-fujing
+E41_Appellation
+致仕少傅兼太子太師、吏部尚書、華蓋殿大學士張孚敬", fillcolor="#cfe2f3", style="rounded,filled"];
+  n51 [label="pc:jj06-10-ruge-neige
+PC144_joined_with
+Membership of Zhang Cong in the Grand Secretariat as Grand Secretary", fillcolor="#d9d2e9", style="rounded,filled"];
+  n52 [label="pc:jj10-zhaohuan-neige
+PC144_joined_with
+Membership of Zhang Fujing in the Grand Secretariat as Grand Secretary", fillcolor="#d9d2e9", style="rounded,filled"];
+  n53 [label="person:68266
+E21_Person
+Zhang Cong (Zhang Fujing)", fillcolor="#f4cccc", style="rounded,filled"];
+  n54 [label="person:ming-shizong
+E21_Person
+Jiajing Emperor (Ming Shizong, Zhu Houcong)", fillcolor="#f4cccc", style="rounded,filled"];
+  n55 [label="person:yang
+E21_Person
+Yang Tianchi (modeller)", fillcolor="#f4cccc", style="rounded,filled"];
+  n56 [label="ts:cbdb-421880
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n57 [label="ts:jj06-10
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n58 [label="ts:jj07-06-01
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n59 [label="ts:jj10-07-wuwu
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n60 [label="ts:jj10-11-dingchou
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n61 [label="ts:jj10-11-to-jj11-03
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n62 [label="ts:jj11-03
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n63 [label="ts:jj11-03-jiayin
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n64 [label="ts:jj11-08-xinchou
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n65 [label="ts:jj12-01-bingchen
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n66 [label="ts:jj12-04-yihai
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n67 [label="ts:jj13
+E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
+  n68 [label="type:action-jia
+E55_Type
+add (title)", fillcolor="#eeeeee", style="rounded,filled"];
+  n69 [label="type:action-jin
+E55_Type
+advance", fillcolor="#eeeeee", style="rounded,filled"];
+  n70 [label="type:action-sheng
+E55_Type
+promote", fillcolor="#eeeeee", style="rounded,filled"];
+  n71 [label="type:daxueshi
+E55_Type
+Grand Secretary", fillcolor="#eeeeee", style="rounded,filled"];
+  n72 [label="type:guanxian-chuan
+E55_Type
+official title string", fillcolor="#eeeeee", style="rounded,filled"];
+  n73 [label="type:huagaidian-daxueshi
+E55_Type
+Huagaidian Daxueshi", fillcolor="#eeeeee", style="rounded,filled"];
+  n74 [label="type:jiaen
+E55_Type
+bestowal of honor", fillcolor="#eeeeee", style="rounded,filled"];
+  n75 [label="type:jinshendian-daxueshi
+E55_Type
+Jinshendian Daxueshi", fillcolor="#eeeeee", style="rounded,filled"];
+  n76 [label="type:shangshu-personnel-xian
+E55_Type
+Minister of Personnel (concurrent nominal title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];
+  n77 [label="type:shangshu-rites-xian
+E55_Type
+Minister of Rites (concurrent nominal title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];
+  n78 [label="type:shaofu
+E55_Type
+Junior Mentor", fillcolor="#eeeeee", style="rounded,filled"];
+  n79 [label="type:taizi-taifu
+E55_Type
+Grand Mentor of the Heir Apparent", fillcolor="#eeeeee", style="rounded,filled"];
+  n80 [label="type:taizi-taishi
+E55_Type
+Grand Preceptor of the Heir Apparent", fillcolor="#eeeeee", style="rounded,filled"];
+  n81 [label="type:wenyuange-daxueshi
+E55_Type
+Grand Secretary of the Hall of Literary Profundity", fillcolor="#eeeeee", style="rounded,filled"];
+  n82 [label="type:zhao
+E55_Type
+summons", fillcolor="#eeeeee", style="rounded,filled"];
+  n83 [label="type:zhaohuan
+E55_Type
+recall to office", fillcolor="#eeeeee", style="rounded,filled"];
+  n84 [label="type:zhishi
+E55_Type
+retirement from office", fillcolor="#eeeeee", style="rounded,filled"];
+  n4 -> n21 [label="P70_documents"];
+  n4 -> n31 [label="P70_documents"];
+  n6 -> n22 [label="P70_documents"];
+  n6 -> n34 [label="P70_documents"];
+  n7 -> n27 [label="P70_documents"];
+  n8 -> n48 [label="P67_refers_to"];
+  n8 -> n28 [label="P70_documents"];
+  n8 -> n29 [label="P70_documents"];
+  n9 -> n29 [label="P70_documents"];
+  n10 -> n18 [label="P70_documents"];
+  n10 -> n29 [label="P70_documents"];
+  n10 -> n30 [label="P70_documents"];
+  n11 -> n49 [label="P67_refers_to"];
+  n11 -> n31 [label="P70_documents"];
+  n12 -> n32 [label="P70_documents"];
+  n13 -> n50 [label="P67_refers_to"];
+  n13 -> n33 [label="P70_documents"];
+  n14 -> n18 [label="P140_assigned_attribute_to"];
+  n14 -> n56 [label="P141_assigned"];
+  n14 -> n55 [label="P14_carried_out_by"];
+  n14 -> n3 [label="P16_used_specific_object"];
+  n14 -> n2 [label="P177_assigned_property_of_type"];
+  n15 -> n18 [label="P140_assigned_attribute_to"];
+  n15 -> n62 [label="P141_assigned"];
+  n15 -> n55 [label="P14_carried_out_by"];
+  n15 -> n4 [label="P16_used_specific_object"];
+  n15 -> n2 [label="P177_assigned_property_of_type"];
+  n16 -> n18 [label="P140_assigned_attribute_to"];
+  n16 -> n67 [label="P141_assigned"];
+  n16 -> n55 [label="P14_carried_out_by"];
+  n16 -> n5 [label="P16_used_specific_object"];
+  n16 -> n2 [label="P177_assigned_property_of_type"];
+  n17 -> n18 [label="P140_assigned_attribute_to"];
+  n17 -> n63 [label="P141_assigned"];
+  n17 -> n55 [label="P14_carried_out_by"];
+  n17 -> n10 [label="P16_used_specific_object"];
+  n17 -> n2 [label="P177_assigned_property_of_type"];
+  n18 -> n53 [label="P11_had_participant"];
+  n18 -> n54 [label="P14_carried_out_by"];
+  n18 -> n74 [label="P2_has_type"];
+  n18 -> n19 [label="P9_consists_of"];
+  n18 -> n20 [label="P9_consists_of"];
+  n19 -> n69 [label="P2_has_type"];
+  n19 -> n80 [label="mpv:conferred_title"];
+  n20 -> n69 [label="P2_has_type"];
+  n20 -> n73 [label="mpv:conferred_title"];
+  n21 -> n53 [label="P143_joined"];
+  n21 -> n35 [label="P144_joined_with"];
+  n21 -> n57 [label="P4_has_time-span"];
+  n21 -> n77 [label="mpv:conferred_title"];
+  n21 -> n81 [label="mpv:conferred_title"];
+  n22 -> n53 [label="P11_had_participant"];
+  n22 -> n54 [label="P14_carried_out_by"];
+  n22 -> n34 [label="P17_was_motivated_by"];
+  n22 -> n74 [label="P2_has_type"];
+  n22 -> n58 [label="P4_has_time-span"];
+  n22 -> n23 [label="P9_consists_of"];
+  n22 -> n24 [label="P9_consists_of"];
+  n22 -> n25 [label="P9_consists_of"];
+  n22 -> n26 [label="P9_consists_of"];
+  n23 -> n68 [label="P2_has_type"];
+  n23 -> n78 [label="mpv:conferred_title"];
+  n24 -> n68 [label="P2_has_type"];
+  n24 -> n79 [label="mpv:conferred_title"];
+  n25 -> n70 [label="P2_has_type"];
+  n25 -> n76 [label="mpv:conferred_title"];
+  n26 -> n70 [label="P2_has_type"];
+  n26 -> n75 [label="mpv:conferred_title"];
+  n27 -> n53 [label="P145_separated"];
+  n27 -> n35 [label="P146_separated_from"];
+  n27 -> n54 [label="P14_carried_out_by"];
+  n27 -> n84 [label="P2_has_type"];
+  n27 -> n59 [label="P4_has_time-span"];
+  n28 -> n53 [label="P11_had_participant"];
+  n28 -> n54 [label="P14_carried_out_by"];
+  n28 -> n82 [label="P2_has_type"];
+  n28 -> n60 [label="P4_has_time-span"];
+  n29 -> n53 [label="P143_joined"];
+  n29 -> n35 [label="P144_joined_with"];
+  n29 -> n28 [label="P17_was_motivated_by"];
+  n29 -> n83 [label="P2_has_type"];
+  n29 -> n61 [label="P4_has_time-span"];
+  n30 -> n53 [label="P11_had_participant"];
+  n30 -> n28 [label="P17_was_motivated_by"];
+  n30 -> n63 [label="P4_has_time-span"];
+  n31 -> n53 [label="P145_separated"];
+  n31 -> n35 [label="P146_separated_from"];
+  n31 -> n54 [label="P14_carried_out_by"];
+  n31 -> n84 [label="P2_has_type"];
+  n31 -> n64 [label="P4_has_time-span"];
+  n32 -> n53 [label="P11_had_participant"];
+  n32 -> n54 [label="P14_carried_out_by"];
+  n32 -> n82 [label="P2_has_type"];
+  n32 -> n65 [label="P4_has_time-span"];
+  n33 -> n53 [label="P11_had_participant"];
+  n33 -> n32 [label="P17_was_motivated_by"];
+  n33 -> n66 [label="P4_has_time-span"];
+  n34 -> n58 [label="P4_has_time-span"];
+  n36 -> n1 [label="rdfs:domain"];
+  n36 -> n0 [label="rdfs:range"];
+  n48 -> n72 [label="P2_has_type"];
+  n49 -> n72 [label="P2_has_type"];
+  n50 -> n72 [label="P2_has_type"];
+  n51 -> n21 [label="P01_has_domain"];
+  n51 -> n35 [label="P02_has_range"];
+  n51 -> n71 [label="P144.1_kind_of_member"];
+  n52 -> n29 [label="P01_has_domain"];
+  n52 -> n35 [label="P02_has_range"];
+  n52 -> n71 [label="P144.1_kind_of_member"];
+  n53 -> n48 [label="P1_is_identified_by"];
+  n53 -> n49 [label="P1_is_identified_by"];
+  n53 -> n50 [label="P1_is_identified_by"];
+  n56 -> n37 [label="P1_is_identified_by"];
+  lit113 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-02-16T00:00:00
+^^xsd:dateTime"];
+  n56 -> lit113 [label="P82a_begin_of_the_begin", style=dotted];
+  lit114 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1533-02-03T23:59:59
+^^xsd:dateTime"];
+  n56 -> lit114 [label="P82b_end_of_the_end", style=dotted];
+  n57 -> n38 [label="P1_is_identified_by"];
+  lit116 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1527-11-04T00:00:00
+^^xsd:dateTime"];
+  n57 -> lit116 [label="P82a_begin_of_the_begin", style=dotted];
+  lit117 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1527-12-03T23:59:59
+^^xsd:dateTime"];
+  n57 -> lit117 [label="P82b_end_of_the_end", style=dotted];
+  n58 -> n39 [label="P1_is_identified_by"];
+  lit119 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1528-06-27T00:00:00
+^^xsd:dateTime"];
+  n58 -> lit119 [label="P82a_begin_of_the_begin", style=dotted];
+  lit120 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1528-06-27T23:59:59
+^^xsd:dateTime"];
+  n58 -> lit120 [label="P82b_end_of_the_end", style=dotted];
+  n59 -> n40 [label="P1_is_identified_by"];
+  lit122 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1531-08-28T00:00:00
+^^xsd:dateTime"];
+  n59 -> lit122 [label="P82a_begin_of_the_begin", style=dotted];
+  lit123 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1531-08-28T23:59:59
+^^xsd:dateTime"];
+  n59 -> lit123 [label="P82b_end_of_the_end", style=dotted];
+  n60 -> n41 [label="P1_is_identified_by"];
+  lit125 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-01-14T00:00:00
+^^xsd:dateTime"];
+  n60 -> lit125 [label="P82a_begin_of_the_begin", style=dotted];
+  lit126 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-01-14T23:59:59
+^^xsd:dateTime"];
+  n60 -> lit126 [label="P82b_end_of_the_end", style=dotted];
+  lit127 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-01-14T00:00:00
+^^xsd:dateTime"];
+  n61 -> lit127 [label="P82a_begin_of_the_begin", style=dotted];
+  lit128 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-04-20T23:59:59
+^^xsd:dateTime"];
+  n61 -> lit128 [label="P82b_end_of_the_end", style=dotted];
+  n62 -> n42 [label="P1_is_identified_by"];
+  lit130 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-04-16T00:00:00
+^^xsd:dateTime"];
+  n62 -> lit130 [label="P82a_begin_of_the_begin", style=dotted];
+  lit131 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-05-14T23:59:59
+^^xsd:dateTime"];
+  n62 -> lit131 [label="P82b_end_of_the_end", style=dotted];
+  n63 -> n43 [label="P1_is_identified_by"];
+  lit133 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-04-20T00:00:00
+^^xsd:dateTime"];
+  n63 -> lit133 [label="P82a_begin_of_the_begin", style=dotted];
+  lit134 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-04-20T23:59:59
+^^xsd:dateTime"];
+  n63 -> lit134 [label="P82b_end_of_the_end", style=dotted];
+  n64 -> n44 [label="P1_is_identified_by"];
+  lit136 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-10-04T00:00:00
+^^xsd:dateTime"];
+  n64 -> lit136 [label="P82a_begin_of_the_begin", style=dotted];
+  lit137 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1532-10-04T23:59:59
+^^xsd:dateTime"];
+  n64 -> lit137 [label="P82b_end_of_the_end", style=dotted];
+  n65 -> n45 [label="P1_is_identified_by"];
+  lit139 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1533-02-16T00:00:00
+^^xsd:dateTime"];
+  n65 -> lit139 [label="P82a_begin_of_the_begin", style=dotted];
+  lit140 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1533-02-16T23:59:59
+^^xsd:dateTime"];
+  n65 -> lit140 [label="P82b_end_of_the_end", style=dotted];
+  n66 -> n46 [label="P1_is_identified_by"];
+  lit142 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1533-05-06T00:00:00
+^^xsd:dateTime"];
+  n66 -> lit142 [label="P82a_begin_of_the_begin", style=dotted];
+  lit143 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1533-05-06T23:59:59
+^^xsd:dateTime"];
+  n66 -> lit143 [label="P82b_end_of_the_end", style=dotted];
+  n67 -> n47 [label="P1_is_identified_by"];
+  lit145 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-01-24T00:00:00
+^^xsd:dateTime"];
+  n67 -> lit145 [label="P82a_begin_of_the_begin", style=dotted];
+  lit146 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1535-02-11T23:59:59
+^^xsd:dateTime"];
+  n67 -> lit146 [label="P82b_end_of_the_end", style=dotted];
+  legend [shape=plaintext, fontsize=9, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD><B>Legend</B></TD></TR><TR><TD BGCOLOR="#ffffff">Other / untyped</TD></TR><TR><TD BGCOLOR="#eeeeee">Type E55</TD></TR><TR><TD BGCOLOR="#ead1dc">Document E31/E73</TD></TR><TR><TD BGCOLOR="#d9ead3">Temporal entity E2</TD></TR><TR><TD BGCOLOR="#fce5cd">Group E74</TD></TR><TR><TD BGCOLOR="#c9daf8">Extension mpv:</TD></TR><TR><TD BGCOLOR="#cfe2f3">Appellation E41</TD></TR><TR><TD BGCOLOR="#d9d2e9">PC property class</TD></TR><TR><TD BGCOLOR="#f4cccc">Person E21</TD></TR><TR><TD BGCOLOR="#fff2cc">Time-span E52</TD></TR></TABLE>>];
+}

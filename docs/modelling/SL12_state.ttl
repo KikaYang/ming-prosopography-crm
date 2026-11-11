@@ -119,3 +119,8 @@ event:taifu-claim-shilu-132 a crm:E13_Attribute_Assignment ;
     crm:P141_assigned type:shaofu ;               
     crm:P16_used_specific_object doc:shizong-shilu-132 ;    
     crm:P14_carried_out_by person:yang .
+
+# 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
+event:taifu-claim-shilu-132 rdfs:label "Former title of Zhang Fujing according to Ming Shizong shilu, juan 132 (Junior Mentor)"@en .
+event:taifu-claim-shilu-136 rdfs:label "Former title of Zhang Fujing according to Ming Shizong shilu, juan 136 (Grand Mentor)"@en .
+pc:neige-member-68266 rdfs:label "Membership of Zhang Cong in the Grand Secretariat as Grand Secretary"@en .

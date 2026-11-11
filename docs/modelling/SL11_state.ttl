@@ -182,3 +182,9 @@ pc:li-ke-member-68194 a crm:PC107_has_current_or_former_member ;
     crm:P01_has_domain group:li-ke ;
     crm:P02_has_range  person:68194 ;
     crm:P107.1_kind_of_member type:li-ke-du-jishizhong .
+
+# 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
+pc:hanlinyuan-member-68194 rdfs:label "Membership of Xia Yan in the Hanlin Academy as Academician Reader-in-waiting"@en .
+pc:li-ke-member-68194 rdfs:label "Membership of Xia Yan in the Office of Scrutiny for Personnel as Chief Supervising Secretary"@en .
+work:siyi-chengdian rdfs:label "Siyi chengdian (compilation on the reformed state sacrifices, commissioned 1530)"@en .
+work:siyi-chengdian-fanli rdfs:label "Editorial principles of the Siyi chengdian"@en .

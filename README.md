@@ -8,6 +8,7 @@ This is a snapshot of November 2026 of work in progress.
 
 1. Two worked examples, provided separately from this repository. Read them first.
 2. `docs/modelling/modelling_decisions_en.md`: the modelling decisions (D1–D26), the open questions (Q1–Q7, T1–T4) and a code reference.
+   `docs/modelling/naming_en.md` explains how identifiers are formed and lists every identifier with its Chinese and English labels.
 3. `data/evaluation/README_en.md`: the evaluation method, rules and versions.
 4. The models (`docs/modelling/*.ttl`) and the evaluation tables (`data/evaluation/*_vs_units*.csv`, `cases_summary.csv`, `cq_results.csv`).
 
@@ -15,14 +16,14 @@ This is a snapshot of November 2026 of work in progress.
 
 | Path | Contents |
 |---|---|
-| `docs/modelling/` | CIDOC-CRM models in Turtle: `SL12_event.ttl`, `SL12_state.ttl`, `SL11_*.ttl`, `SL14_*.ttl`, the shared vocabulary `vocab.ttl` and `prefixes.ttl`; diagrams of the event versions; the modelling decision log |
+| `docs/modelling/` | CIDOC-CRM models in Turtle: `SL12_event.ttl`, `SL12_state.ttl`, `SL11_*.ttl`, `SL14_*.ttl`, the shared vocabulary `vocab.ttl` and `prefixes.ttl`; diagrams of the event versions (Chinese labels, and English labels in `*_en.png`); the modelling decision log; `naming_en.md`, the identifier rules with a table of all labels |
 | `data/evaluation/` | Information units (`info_units.csv`), evaluation tables and summaries, competency questions with their queries (`cq_queries/`), raw results (`cq_raw/`) and judgements (`cq_results.csv`); evaluation notes (`README_en.md`) |
 | `evaluated_versions/` | Verbatim copies of the model files as they stood at each evaluation (see below) |
 | `data/deep_cases/` | Multi-source factoid tables for the three core persons (Zhang Cong, Xia Yan, Xu Jie) |
 | `data/mingshi_zaifu/` | Grand secretaries of the *Mingshi* tables (juan 109–110) and their matching to CBDB |
 | `coverage_ming_grand_secretaries.csv`, `coverage_check.py` | CBDB coverage of the Jiajing and Longqing grand secretaries, and the script that produces it |
 | `data/apis/` | A record from the Austrian APIS prosopography, for comparison |
-| `scripts/` | `check_crm.py` (checks Turtle against CIDOC-CRM), `ttl_to_diagram.py`, `match_mingshi_cbdb.py`; `scripts/eval/` generates the evaluation tables and runs the competency questions |
+| `scripts/` | `check_crm.py` (checks Turtle against CIDOC-CRM), `ttl_to_diagram.py` (with `--lang en` for English diagrams), `naming_table.py` (regenerates the label table in `naming_en.md`), `match_mingshi_cbdb.py`; `scripts/eval/` generates the evaluation tables and runs the competency questions |
 | `tests/` | Unit and regression tests |
 | `ontologies/` | CIDOC-CRM 7.1.3 RDFS files |
 
