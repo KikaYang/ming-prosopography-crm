@@ -1,0 +1,49 @@
+identifier,label_basis,explanation_basis
+type:action-jia,contextual translation,contextual
+type:action-sheng,contextual translation,contextual
+type:action-jin,contextual translation,contextual (SL12)
+type:shouxian-action,contextual translation,contextual (modelling category)
+type:anchasi-qianshi,Hucker 1985 #9,Mingshi 75; Hucker 1985 #9
+type:benming,contextual translation,contextual
+type:ciming,contextual translation,Mingshi 196
+type:chaiqian,Hucker 1985 #67,Hucker 1985 #67
+type:chaiqian-weici,contextual translation,contextual (modelling decision D18)
+type:chaiqian-zhize,contextual translation,contextual (modelling decision D18)
+type:zhi-jianzao-shi,contextual translation (not in Hucker 1985; cf. #67 on 知 as the prefix of an actual function),contextual
+type:tongzhi-jianzao-shi,contextual translation (not in Hucker 1985),contextual
+type:zongdu-gongcheng-guan,contextual translation (not in Hucker 1985; #7158 總督 'Supreme Commander' is a military post and does not apply),contextual
+type:dushi-guizhi-guan,contextual translation (not in Hucker 1985),contextual
+type:jianshi-xuncha-gongcheng-guan,contextual translation (not in Hucker 1985),contextual
+type:zongcai-guan,Hucker 1985 #7156,Hucker 1985 #7156; Mingshi 72
+type:fu-zongcai-guan,after Hucker 1985 #7156 (總裁 Director-general); 副 'deputy',Hucker 1985 #7156; contextual
+type:jianxiu-guan,"contextual translation (Hucker 1985 has only #829 監修國史, Song to Jin, 'Chief Compiler of the Dynastic History')",contextual
+type:zuanxiu-guan,"Hucker 1985 #7058, entry marked Qing",Hucker 1985 #7058; Mingshi 73
+type:tidiao-xuexiao,Hucker 1985 #6469,Hucker 1985 #6469; Mingshi 75
+type:zhangshi,"contextual translation; modelling type, decision D19",contextual (modelling decision D19); Mingshi 74
+type:jiaxian,contextual translation,Mingshi 72
+type:sangong,Hucker 1985 #4871,Hucker 1985 #4871; Mingshi 72
+type:taifu,Hucker 1985 #6158,Hucker 1985 #6158; Mingshi 72
+type:sangu,Hucker 1985 #4864,Hucker 1985 #4864; Mingshi 72
+type:shaobao,Hucker 1985 #5110,Hucker 1985 #5110; Mingshi 72
+type:shaofu,Hucker 1985 #5096,Hucker 1985 #5096; Mingshi 72
+type:donggong-sanshi,"Hucker 1985 #7445, #6249",Hucker 1985 #6249; Mingshi 72
+type:taizi-taifu,Hucker 1985 #6256,Hucker 1985 #6256; Mingshi 72
+type:taizi-taishi,Hucker 1985 #6258,Hucker 1985 #6258; Mingshi 72
+type:daxueshi,Hucker 1985 #4199,"Mingshi 72; Hucker 1958, pp. 29-30"
+type:dian-ge-xian,contextual translation,"Mingshi 72; Hucker 1958, p. 29"
+type:huagaidian-daxueshi,"hall name in pinyin; form after Hucker 1985 (#7729, #7840)","Mingshi 72; Hucker 1958, p. 29"
+type:jinshendian-daxueshi,"hall name in pinyin; form after Hucker 1985 (#7729, #7840)","Mingshi 72; Hucker 1958, p. 29"
+type:wenyuange-daxueshi,Hucker 1985 #7729,Hucker 1985 #7729; Mingshi 72
+type:pinjie-jianxian,"modelling category (D1); the wording 'nominal' is a known defect (CQ1), to be revised in v3",Mingshi 112; modelling decision D1
+type:shangshu-personnel-xian,"Hucker 1985 #3630, #5042; the wording 'nominal' is a known defect (CQ1), to be revised in v3",Mingshi 112; modelling decision D1
+type:shangshu-rites-xian,"Hucker 1985 #3631, #5042; the wording 'nominal' is a known defect (CQ1), to be revised in v3",Mingshi 112; modelling decision D1
+type:hanlin-shidu-xueshi,Hucker 1985 #5326,Hucker 1985 #5326; Mingshi 73
+type:li-ke-du-jishizhong,Hucker 1985 #7189,Hucker 1985 #7189; Mingshi 74
+type:fu-tongzhi,Hucker 1985 #7471 (2),Hucker 1985 #7471; Mingshi 75
+type:jiaen,contextual translation,contextual
+type:zhishi,Hucker 1985 #1052,Hucker 1985 #1052
+type:zhao,contextual translation,contextual
+type:zhaohuan,contextual translation,contextual
+type:guanxian-chuan,contextual translation,contextual (modelling decision D9)
+mpv:holds_title,,contextual (modelling decision D15)
+mpv:conferred_title,,contextual (modelling decision)

@@ -413,19 +413,19 @@ doc:shizong-shilu-141 crm:P67_refers_to name:guanxian-jj11-08-zhang-fujing .
 # 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
 doc:cbdb-421880 rdfs:label "CBDB POSTED_TO_OFFICE_DATA, posting_id 421880"@en .
 doc:mingshi-196 rdfs:label "Mingshi, juan 196 (biography of Zhang Cong)"@en .
-event:huagaidian-claim-cbdb-421880 rdfs:label "Date of the Huagaidian conferral according to CBDB posting 421880"@en .
-event:huagaidian-claim-mingshi-110 rdfs:label "Date of the Huagaidian conferral according to Mingshi, juan 110"@en .
-event:huagaidian-claim-mingshi-196 rdfs:label "Date of the Huagaidian conferral according to Mingshi, juan 196"@en .
-event:huagaidian-claim-shilu-136 rdfs:label "Date of the Huagaidian conferral according to Ming Shizong shilu, juan 136"@en .
-event:huagaidian-conferral rdfs:label "Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent and Huagaidian Daxueshi (Grand Secretary of the Huagai Hall; date disputed)"@en .
+event:huagaidian-claim-cbdb-421880 rdfs:label "Date of the conferral of the Huagai Hall title according to CBDB posting 421880"@en .
+event:huagaidian-claim-mingshi-110 rdfs:label "Date of the conferral of the Huagai Hall title according to Mingshi, juan 110"@en .
+event:huagaidian-claim-mingshi-196 rdfs:label "Date of the conferral of the Huagai Hall title according to Mingshi, juan 196"@en .
+event:huagaidian-claim-shilu-136 rdfs:label "Date of the conferral of the Huagai Hall title according to Ming Shizong shilu, juan 136"@en .
+event:huagaidian-conferral rdfs:label "Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent and Grand Secretary of the Huagai Hall (date disputed)"@en .
 event:huagaidian-conferral-1 rdfs:label "Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent (date disputed)"@en .
-event:huagaidian-conferral-2 rdfs:label "Advancement of Zhang Fujing to Huagaidian Daxueshi (Grand Secretary of the Huagai Hall; date disputed)"@en .
+event:huagaidian-conferral-2 rdfs:label "Advancement of Zhang Fujing to Grand Secretary of the Huagai Hall (date disputed)"@en .
 event:jj06-10-ruge rdfs:label "Entry of Zhang Cong into the Grand Secretariat (1527)"@en .
 event:jj07-06-jiaen rdfs:label "Bestowal of honours on Zhang Cong for the compilation of the Minglun dadian (official compilation on the Great Rites Controversy, presented 1528)"@en .
 event:jj07-06-jiaen-1 rdfs:label "Addition of Junior Mentor to Zhang Cong (1528)"@en .
 event:jj07-06-jiaen-2 rdfs:label "Addition of Grand Mentor of the Heir Apparent to Zhang Cong (1528)"@en .
 event:jj07-06-jiaen-3 rdfs:label "Promotion of Zhang Cong to Minister of Personnel (1528)"@en .
-event:jj07-06-jiaen-4 rdfs:label "Promotion of Zhang Cong to Jinshendian Daxueshi (Grand Secretary of the Jinshen Hall; 1528)"@en .
+event:jj07-06-jiaen-4 rdfs:label "Promotion of Zhang Cong to Grand Secretary of the Jinshen Hall (1528)"@en .
 event:jj10-07-zhishi rdfs:label "Retirement of Zhang Fujing from the Grand Secretariat (1531)"@en .
 event:jj10-11-zhao rdfs:label "Summons of Zhang Fujing back to office, delivered by the Messenger Zhou Wenzhu (1532)"@en .
 event:jj10-11-zhaohuan rdfs:label "Recall of Zhang Fujing to the Grand Secretariat (1532)"@en .
@@ -436,3 +436,10 @@ event:jj12-04-fuzhao rdfs:label "Arrival of Zhang Fujing in the capital in answe
 event:minglun-dadian-jincheng rdfs:label "Completion and presentation of the Minglun dadian (official compilation on the Great Rites Controversy, presented 1528)"@en .
 pc:jj06-10-ruge-neige rdfs:label "Membership of Zhang Cong in the Grand Secretariat as Grand Secretary"@en .
 pc:jj10-zhaohuan-neige rdfs:label "Membership of Zhang Fujing in the Grand Secretariat as Grand Secretary"@en .
+
+# 英文释义（D9 补充，2026-11-12）：类型节点只新增 rdfs:comment @en，面向不了解明代制度的读者
+type:jiaen rdfs:comment "Category for an imperial act that rewards an official with several titles or promotions at once. Here: the rewards of 1528 to Zhang Cong for the Minglun dadian."@en .
+type:zhishi rdfs:comment "Retirement from office, normally for age or illness; the official kept his titles and could be recalled. Zhang Cong retired in 1531 and 1532 and was recalled both times."@en .
+type:zhao rdfs:comment "A summons from the emperor ordering an official, here a retired one, to come to the capital."@en .
+type:zhaohuan rdfs:comment "Recall of a retired or dismissed official to office."@en .
+mpv:conferred_title rdfs:comment "Property: the title conferred by an act of conferral. Defined because CIDOC-CRM 7.1.3 has no property for the title an activity confers."@en .

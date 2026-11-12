@@ -1,7 +1,7 @@
 # Modelling decision log (from SL12 onwards)
 
 > English version of the author's modelling decision log.
-> Translation notes: office titles follow Hucker (1985), *A Dictionary of Official Titles in Imperial China*, and match the English labels in `docs/modelling/vocab.ttl`; titles for which Hucker has no entry are given in pinyin with the Chinese characters. Quotations from historical sources are kept in Chinese, with an English gloss where helpful. Turtle code blocks are reproduced unchanged.
+> Translation notes: office titles follow Hucker (1985), *A Dictionary of Official Titles in Imperial China*, and match the English labels in `docs/modelling/vocab.ttl`; titles not in Hucker are translated into English (basis given in the glossary); hall names are kept in pinyin. Quotations from historical sources are kept in Chinese, with an English gloss where helpful. Turtle code blocks are reproduced unchanged.
 
 > Decisions and rationale: Yang. Drafting and alternative options: AI agent (Claude Code).
 > Version: 2026-10-12. All classes and properties have been checked against CIDOC-CRM 7.1.3 (including the PC extension).
@@ -119,6 +119,11 @@ Conclusion: the Minister of Personnel conferred on Zhang Cong in Jiajing 7, sixt
 Treatment: deferred to v3 — the label of type:shangshu-personnel-xian in the vocabulary is to be made neutral,
 and "not in charge of the ministry" is to be restated as an E13 assertion with juan 112 as its source; the gold-standard answer to CQ1 will be updated with the new version,
 and eval-cq-v1.x remains unchanged.
+
+Supplement (2026-11-12): whether a grand secretary actually ran a ministry is decided on the basis of (1) an explicit statement in the sources, such as "in charge of the ministry's affairs" (掌部事); or (2) his name appearing in the ministry's column of a table of office holders, such as the Table of the Seven Chief Ministers in the *Mingshi*. Wording that merely confers a post, such as "promoted to Minister of …", is not sufficient, because grand secretaries often held a ministerial title as a rank (for example, in the same decree of Jiajing 7, sixth month, Yang Yiqing already held the title of Minister of Personnel and Zhang Cong was promoted to Minister of Personnel, while the Personnel column of the Table of the Seven Chief Ministers lists Gui E). Where neither applies, the title is treated as a concurrent rank title.
+Check: *Mingshi*, juan 112, does not mention Zhang Cong or Zhang Fujing anywhere. From Jiajing 9, ninth month, to Jiajing 10, twelfth month, no one is listed in the Personnel column; according to the biography of Fang Xianfu in *Mingshi*, juan 196, Fang Xianfu asked for leave on grounds of illness, and "帝即报允，然犹虚位以俟" (the emperor at once granted it, but still kept the post vacant to await him): the post was kept vacant for Fang Xianfu, and the ministry was not run by anyone else.
+Conclusion: the titles Minister of Personnel and Minister of Rites that Zhang Cong held while a grand secretary (Jiajing 6 to 14) were both concurrent rank titles; he was not in charge of either ministry.
+The conclusion of the check of 2026-11-08 is accordingly extended to this whole period.
 
 ---
 
@@ -337,6 +342,8 @@ This rule applies only to types defined in the project namespaces (type:, etc.);
 English names follow Hucker 1985, with the entry number noted; titles not in Hucker are given in pinyin, noted in the comment (at present Jinshendian and Huagaidian Daxueshi). (approved by the author, 2026-10-24)
 
 Supplement (2026-11-10): every instance node (except name nodes) also carries an @en label. Name nodes hold original title strings and dates and are labelled only in @zh-Hant.
+
+Supplement (2026-11-12): office titles not in Hucker are translated into English; the basis, or "contextual translation", is given in the glossary. Hall names stay in pinyin. Type nodes also carry an rdfs:comment @en explanation, written for readers unfamiliar with Ming institutions. name:date-cbdb-421880 is a CBDB field value and carries no language tag; it is the only exception.
 
 ---
 

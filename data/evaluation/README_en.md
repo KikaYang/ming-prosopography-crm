@@ -68,6 +68,7 @@ vocab.ttl only grows and is never reduced; after moving or adding vocabulary, th
 - Test: `tests/test_vocab_superset.py` checks the whole history from the tag vocab-rule-start (the last commit changing vocab.ttl before the rule took effect), and also the working tree if vocab.ttl has uncommitted changes.
 - First application: 015fb5f, moving shared persons into vocab (approved by the author, 2026-11-02). The merged graphs are strictly isomorphic only for case files that use all the moved vocabulary; for other files the only additions are vocabulary they do not use, which this rule accepts.
 - The rule covers only moves and additions in vocab. Changes to the case files themselves (blocks written by Yang) are not restricted by it, but should not be placed in the same commit as changes to vocab, or the check will report a violation.
+- Supplement (2026-11-12): English labels and English explanations may be revised, and revisions are recorded in the change log; structural triples still only grow and are never removed.
 
 ## Evaluation rules
 

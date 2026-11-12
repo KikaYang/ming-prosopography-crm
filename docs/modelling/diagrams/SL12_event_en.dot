@@ -1,5 +1,5 @@
 digraph G {
-  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl: all 292 triples (classes and labels also from vocab.ttl)", nodesep=0.25, ranksep=0.6];
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl: all 297 triples (classes and labels also from vocab.ttl)", nodesep=0.25, ranksep=0.6];
   node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
   edge [fontname="Helvetica", fontsize=9, color="#555555"];
   n0 [label="E55_Type", fillcolor="#ffffff", style="rounded,filled"];
@@ -41,25 +41,25 @@ E31_Document
 Ming Shizong shilu, juan 149", fillcolor="#ead1dc", style="rounded,filled"];
   n14 [label="event:huagaidian-claim-cbdb-421880
 E13_Attribute_Assignment
-Date of the Huagaidian conferral according to CBDB posting 421880", fillcolor="#d9ead3", style="rounded,filled"];
+Date of the conferral of the Huagai Hall title according to CBDB posting 421880", fillcolor="#d9ead3", style="rounded,filled"];
   n15 [label="event:huagaidian-claim-mingshi-110
 E13_Attribute_Assignment
-Date of the Huagaidian conferral according to Mingshi, juan 110", fillcolor="#d9ead3", style="rounded,filled"];
+Date of the conferral of the Huagai Hall title according to Mingshi, juan 110", fillcolor="#d9ead3", style="rounded,filled"];
   n16 [label="event:huagaidian-claim-mingshi-196
 E13_Attribute_Assignment
-Date of the Huagaidian conferral according to Mingshi, juan 196", fillcolor="#d9ead3", style="rounded,filled"];
+Date of the conferral of the Huagai Hall title according to Mingshi, juan 196", fillcolor="#d9ead3", style="rounded,filled"];
   n17 [label="event:huagaidian-claim-shilu-136
 E13_Attribute_Assignment
-Date of the Huagaidian conferral according to Ming Shizong shilu, juan 136", fillcolor="#d9ead3", style="rounded,filled"];
+Date of the conferral of the Huagai Hall title according to Ming Shizong shilu, juan 136", fillcolor="#d9ead3", style="rounded,filled"];
   n18 [label="event:huagaidian-conferral
 E7_Activity
-Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent and Huagaidian Daxueshi (Grand Secretary of the Huagai Hall; date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
+Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent and Grand Secretary of the Huagai Hall (date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
   n19 [label="event:huagaidian-conferral-1
 E7_Activity
 Advancement of Zhang Fujing to Grand Preceptor of the Heir Apparent (date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
   n20 [label="event:huagaidian-conferral-2
 E7_Activity
-Advancement of Zhang Fujing to Huagaidian Daxueshi (Grand Secretary of the Huagai Hall; date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
+Advancement of Zhang Fujing to Grand Secretary of the Huagai Hall (date disputed)", fillcolor="#d9ead3", style="rounded,filled"];
   n21 [label="event:jj06-10-ruge
 E85_Joining
 Entry of Zhang Cong into the Grand Secretariat (1527)", fillcolor="#d9ead3", style="rounded,filled"];
@@ -77,7 +77,7 @@ E7_Activity
 Promotion of Zhang Cong to Minister of Personnel (1528)", fillcolor="#d9ead3", style="rounded,filled"];
   n26 [label="event:jj07-06-jiaen-4
 E7_Activity
-Promotion of Zhang Cong to Jinshendian Daxueshi (Grand Secretary of the Jinshen Hall; 1528)", fillcolor="#d9ead3", style="rounded,filled"];
+Promotion of Zhang Cong to Grand Secretary of the Jinshen Hall (1528)", fillcolor="#d9ead3", style="rounded,filled"];
   n27 [label="event:jj10-07-zhishi
 E86_Leaving
 Retirement of Zhang Fujing from the Grand Secretariat (1531)", fillcolor="#d9ead3", style="rounded,filled"];
@@ -206,13 +206,13 @@ E55_Type
 official title string", fillcolor="#eeeeee", style="rounded,filled"];
   n73 [label="type:huagaidian-daxueshi
 E55_Type
-Huagaidian Daxueshi", fillcolor="#eeeeee", style="rounded,filled"];
+Grand Secretary of the Huagai Hall", fillcolor="#eeeeee", style="rounded,filled"];
   n74 [label="type:jiaen
 E55_Type
 bestowal of honor", fillcolor="#eeeeee", style="rounded,filled"];
   n75 [label="type:jinshendian-daxueshi
 E55_Type
-Jinshendian Daxueshi", fillcolor="#eeeeee", style="rounded,filled"];
+Grand Secretary of the Jinshen Hall", fillcolor="#eeeeee", style="rounded,filled"];
   n76 [label="type:shangshu-personnel-xian
 E55_Type
 Minister of Personnel (concurrent nominal title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];

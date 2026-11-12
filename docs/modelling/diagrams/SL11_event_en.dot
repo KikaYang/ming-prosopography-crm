@@ -7,16 +7,16 @@ E31_Document
 Ming Shizong shilu, juan 118", fillcolor="#ead1dc", style="rounded,filled"];
   n1 [label="event:chaiqian-127536-gongcheng
 E7_Activity
-Duty assignment of Wang Hong as Jianshi xuncha gongcheng guan (inspector of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Wang Hong as Inspector of the Works", fillcolor="#d9ead3", style="rounded,filled"];
   n2 [label="event:chaiqian-127536-jianxiu
 E7_Activity
-Duty assignment of Wang Hong as Jianxiu guan (supervisor) for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Wang Hong as Supervisor of the Compilation for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n3 [label="event:chaiqian-130180-gongcheng
 E7_Activity
-Duty assignment of Guo Xun as Zhi jianzao shi and Zongdu gongcheng guan (in charge of construction; general supervisor of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Guo Xun as Superintendent of Construction and General Supervisor of the Works", fillcolor="#d9ead3", style="rounded,filled"];
   n4 [label="event:chaiqian-130180-jianxiu
 E7_Activity
-Duty assignment of Guo Xun as Jianxiu guan (supervisor) for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Guo Xun as Supervisor of the Compilation for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n5 [label="event:chaiqian-130490-zuanxiu
 E7_Activity
 Duty assignment of Zhang Gun as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
@@ -28,25 +28,25 @@ E7_Activity
 Duty assignment of Liao Daonan as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n8 [label="event:chaiqian-68136-fuzongcai
 E7_Activity
-Duty assignment of Zhai Luan as Fu zongcai guan (deputy director-general) of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Zhai Luan as Deputy Director-general of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n9 [label="event:chaiqian-68140-gongcheng
 E7_Activity
-Duty assignment of Li Shi as Tongzhi jianzao shi and Dushi guizhi guan (associate in charge of construction; supervisor of the building design)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Li Shi as Associate Superintendent of Construction and Supervisor of the Building Design", fillcolor="#d9ead3", style="rounded,filled"];
   n10 [label="event:chaiqian-68140-jianxiu
 E7_Activity
-Duty assignment of Li Shi as Jianxiu guan (supervisor) for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Li Shi as Supervisor of the Compilation for the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n11 [label="event:chaiqian-68194-gongcheng
 E7_Activity
-Duty assignment of Xia Yan as Jianshi xuncha gongcheng guan (inspector of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Xia Yan as Inspector of the Works", fillcolor="#d9ead3", style="rounded,filled"];
   n12 [label="event:chaiqian-68266-gongcheng
 E7_Activity
-Duty assignment of Zhang Cong as Zhi jianzao shi and Zongdu gongcheng guan (in charge of construction; general supervisor of the works)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Zhang Cong as Superintendent of Construction and General Supervisor of the Works", fillcolor="#d9ead3", style="rounded,filled"];
   n13 [label="event:chaiqian-68266-zongcai
 E7_Activity
-Duty assignment of Zhang Cong as Zongcai guan (director-general) of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Zhang Cong as Director-general of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n14 [label="event:chaiqian-68285-fuzongcai
 E7_Activity
-Duty assignment of Gui E as Fu zongcai guan (deputy director-general) of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
+Duty assignment of Gui E as Deputy Director-general of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
   n15 [label="event:chaiqian-68547-zuanxiu
 E7_Activity
 Duty assignment of Xu Jie as Compiler of the Siyi chengdian (1530)", fillcolor="#d9ead3", style="rounded,filled"];
@@ -186,10 +186,10 @@ E55_Type
 promote", fillcolor="#eeeeee", style="rounded,filled"];
   n62 [label="type:dushi-guizhi-guan
 E55_Type
-Dushi guizhi guan", fillcolor="#eeeeee", style="rounded,filled"];
+Supervisor of the Building Design", fillcolor="#eeeeee", style="rounded,filled"];
   n63 [label="type:fu-zongcai-guan
 E55_Type
-Fu zongcai guan", fillcolor="#eeeeee", style="rounded,filled"];
+Deputy Director-general", fillcolor="#eeeeee", style="rounded,filled"];
   n64 [label="type:guanxian-chuan
 E55_Type
 official title string", fillcolor="#eeeeee", style="rounded,filled"];
@@ -198,25 +198,25 @@ E55_Type
 Academician Reader-in-waiting", fillcolor="#eeeeee", style="rounded,filled"];
   n66 [label="type:jianshi-xuncha-gongcheng-guan
 E55_Type
-Jianshi xuncha gongcheng guan", fillcolor="#eeeeee", style="rounded,filled"];
+Inspector of the Works", fillcolor="#eeeeee", style="rounded,filled"];
   n67 [label="type:jianxiu-guan
 E55_Type
-Jianxiu guan", fillcolor="#eeeeee", style="rounded,filled"];
+Supervisor of the Compilation", fillcolor="#eeeeee", style="rounded,filled"];
   n68 [label="type:tongzhi-jianzao-shi
 E55_Type
-Tongzhi jianzao shi", fillcolor="#eeeeee", style="rounded,filled"];
+Associate Superintendent of Construction", fillcolor="#eeeeee", style="rounded,filled"];
   n69 [label="type:zhangshi
 E55_Type
 in charge of the affairs of an office", fillcolor="#eeeeee", style="rounded,filled"];
   n70 [label="type:zhi-jianzao-shi
 E55_Type
-Zhi jianzao shi", fillcolor="#eeeeee", style="rounded,filled"];
+Superintendent of Construction", fillcolor="#eeeeee", style="rounded,filled"];
   n71 [label="type:zongcai-guan
 E55_Type
 Director-general", fillcolor="#eeeeee", style="rounded,filled"];
   n72 [label="type:zongdu-gongcheng-guan
 E55_Type
-Zongdu gongcheng guan", fillcolor="#eeeeee", style="rounded,filled"];
+General Supervisor of the Works", fillcolor="#eeeeee", style="rounded,filled"];
   n73 [label="type:zuanxiu-guan
 E55_Type
 Compiler", fillcolor="#eeeeee", style="rounded,filled"];
