@@ -75,7 +75,7 @@ type:jiaxian a crm:E55_Type ;
     rdfs:label "加衔"@zh-Hans , "honorary title"@en .
 
 type:pinjie-jianxian a crm:E55_Type ;
-    rdfs:label "品阶兼衔"@zh-Hans , "concurrent nominal title"@en .
+    rdfs:label "品阶兼衔"@zh-Hans , "concurrent rank title"@en .
 
 type:dian-ge-xian a crm:E55_Type ;
     rdfs:label "殿阁衔"@zh-Hans , "grand secretary hall title"@en .
@@ -115,12 +115,12 @@ type:taizi-taishi a crm:E55_Type ;
 
 ## 底层：尚书（阁臣兼衔，决策 D1）
 type:shangshu-personnel-xian a crm:E55_Type ;
-    rdfs:label "吏部尚書"@zh-Hant , "Minister of Personnel (concurrent nominal title held by a Grand Secretary)"@en ;
+    rdfs:label "吏部尚書"@zh-Hant , "Minister of Personnel (concurrent rank title held by a Grand Secretary)"@en ;
     rdfs:comment "阁臣兼衔，非掌部事（决策 D1）"@zh-Hans , "Hucker 1985, #3630, #5042" ;
     crm:P127_has_broader_term type:pinjie-jianxian .
 
 type:shangshu-rites-xian a crm:E55_Type ;
-    rdfs:label "禮部尚書"@zh-Hant , "Minister of Rites (concurrent nominal title held by a Grand Secretary)"@en ;
+    rdfs:label "禮部尚書"@zh-Hant , "Minister of Rites (concurrent rank title held by a Grand Secretary)"@en ;
     rdfs:comment "阁臣兼衔，非掌部事（决策 D1）"@zh-Hans , "Hucker 1985, #3631, #5042" ;
     crm:P127_has_broader_term type:pinjie-jianxian . 
 
@@ -410,39 +410,39 @@ type:shouxian-action rdfs:comment "Category grouping the verbs that sources use 
 type:anchasi-qianshi rdfs:comment "Assistant Surveillance Commissioner: a mid-ranking official (rank 5a) of the provincial Surveillance Commission, the body that oversaw the conduct of local officials and justice; such officials were often sent out to circuits with a special task, e.g. education. Xu Jie was promoted to this post in Zhejiang in 1534."@en .
 type:benming rdfs:comment "The personal name a person bore before any name granted by the emperor. Here: Zhang Cong, used in the sources until 1531."@en .
 type:ciming rdfs:comment "A new personal name granted by the emperor as a mark of favour, which the holder then used officially. Zhang Cong asked for a new name because his own resembled the emperor's, and received the name Zhang Fujing in 1531 (Jiajing 10, 2nd month); later sources call him by it."@en .
-type:chaiqian rdfs:comment "A duty assignment: a task given to an official on top of, or instead of, the work of the post formally held; it did not change the official's rank. In this project the general category for the construction and compilation duties of juan 118 and the education duty of juan 161."@en .
+type:chaiqian rdfs:comment "A duty assignment: a task given to an official outside the post formally held (Hucker 1985 #67). In this project the general category for the construction and compilation duties of juan 118 and the education duty of juan 161."@en .
 type:chaiqian-weici rdfs:comment "Category for the part of a duty title that states the holder's rank within the assignment, e.g. in overall charge or second-in-charge (decision D18)."@en .
 type:chaiqian-zhize rdfs:comment "Category for the part of a duty title that states the task itself, e.g. supervising the works (decision D18)."@en .
-type:zhi-jianzao-shi rdfs:comment "Official placed in overall charge of building the new altars for the suburban sacrifices in 1530; a temporary assignment that ended with the construction. Held by Zhang Cong and Guo Xun."@en .
-type:tongzhi-jianzao-shi rdfs:comment "Second-in-charge of the same construction, under the officials in overall charge. Held by Li Shi."@en .
-type:zongdu-gongcheng-guan rdfs:comment "Oversaw the progress of the building works. Combined with Superintendent of Construction in one title: the first part gives the rank within the assignment, the second the task (decision D18)."@en .
-type:dushi-guizhi-guan rdfs:comment "Checked that the buildings followed the prescribed ritual design. Combined with Associate Superintendent of Construction in Li Shi's title."@en .
-type:jianshi-xuncha-gongcheng-guan rdfs:comment "Inspected the building sites on behalf of the court. Held by Wang Hong and by Xia Yan, then Chief Supervising Secretary of the Office of Scrutiny for Personnel."@en .
-type:zongcai-guan rdfs:comment "Head of an official compilation project, responsible for the content of the finished book (here, the Siyi chengdian). Usually held by a Grand Secretary; Mingshi 72 lists heading the compilation of Veritable Records and histories among the Grand Secretaries' duties."@en .
-type:fu-zongcai-guan rdfs:comment "Deputy head of the compilation project. Held by the Grand Secretaries Gui E and Zhai Luan."@en .
-type:jianxiu-guan rdfs:comment "Oversaw the compilation for the court, without writing it. In this case held by Guo Xun (a hereditary noble), Li Shi and Wang Hong."@en .
-type:zuanxiu-guan rdfs:comment "Wrote and edited the text of the book. Held by junior members of the Hanlin Academy, among them Xu Jie."@en .
+type:zhi-jianzao-shi rdfs:comment "Superintendent of Construction: the title placing its holders in overall charge of building the new altars for the suburban sacrifices in 1530, a temporary assignment. The source does not state what the holders did. Held by Zhang Cong and Guo Xun."@en .
+type:tongzhi-jianzao-shi rdfs:comment "Associate Superintendent of Construction: the title ranking below Superintendent of Construction in the same assignment. Held by Li Shi."@en .
+type:zongdu-gongcheng-guan rdfs:comment "General Supervisor of the Works: a title in the construction assignment of 1530, literally \"in general charge of the works\". Combined with Superintendent of Construction in one title: the first part gives the rank within the assignment, the second the task (decision D18). The source does not state what the holders did."@en .
+type:dushi-guizhi-guan rdfs:comment "Supervisor of the Building Design: a title in the construction assignment of 1530, literally \"supervising the prescribed design\". The source does not state what the holder did. Combined with Associate Superintendent of Construction in Li Shi's title."@en .
+type:jianshi-xuncha-gongcheng-guan rdfs:comment "Inspector of the Works: a title in the construction assignment of 1530, literally \"watching and inspecting the works\". Held by Wang Hong and by Xia Yan, then Chief Supervising Secretary of the Office of Scrutiny for Personnel."@en .
+type:zongcai-guan rdfs:comment "Director-general: title of the head of an official compilation project (Hucker 1985 #7156); Mingshi 72 lists it among the posts that Grand Secretaries filled. The title does not state what part its holder took in the work; here the source names Zhang Cong Director-general of the Siyi chengdian."@en .
+type:fu-zongcai-guan rdfs:comment "Deputy Director-general: the title ranking next to the Director-general in an official compilation project. Held by the Grand Secretaries Gui E and Zhai Luan for the Siyi chengdian; the source does not state what part they took in the work."@en .
+type:jianxiu-guan rdfs:comment "Supervisor of the Compilation: a title in an official compilation project. The source does not state what the holders did; in this case it was held by Guo Xun (a hereditary noble), Li Shi and Wang Hong."@en .
+type:zuanxiu-guan rdfs:comment "Compiler: title of the members of a compilation project charged with writing and editing the text (Hucker 1985 #7058). Held here by junior members of the Hanlin Academy, among them Xu Jie."@en .
 type:tidiao-xuexiao rdfs:comment "Supervision of schools and of student examinations in one province; a duty given to an official of the provincial Surveillance Commission, not a separate office. Xu Jie received it in Zhejiang together with his new post in 1534."@en .
 type:zhangshi rdfs:comment "Actually running the business of an office, as opposed to only holding its title. Used for Xia Yan, who ran the Office of Scrutiny for Personnel in 1530."@en .
-type:jiaxian rdfs:comment "Category for honorary titles added to an official's post: they give rank and prestige but no duties. Includes the Three Solitaries and the titles of the heir apparent's household; Mingshi 72 calls them 'empty titles' (虛銜) for this period."@en .
-type:sangu rdfs:comment "Three Solitaries: Junior Preceptor, Junior Mentor and Junior Guardian (rank 1b). Honorary titles without duties, given to mark high rank and imperial favour."@en .
-type:shaobao rdfs:comment "Junior Guardian: one of the Three Solitaries, an honorary title without duties. Zhang Cong held it in 1528 before the further rewards of that year."@en .
-type:shaofu rdfs:comment "Junior Mentor: one of the Three Solitaries, an honorary title without duties. Added to Zhang Cong's titles in 1528."@en .
-type:donggong-sanshi rdfs:comment "Three Preceptors of the Heir Apparent (Grand Preceptor, Grand Mentor, Grand Guardian of the Heir Apparent). Originally tutors of the heir apparent; in this period honorary titles without duties."@en .
-type:taizi-taifu rdfs:comment "Grand Mentor of the Heir Apparent: one of the Three Preceptors of the Heir Apparent, an honorary title without duties. Added to Zhang Cong's titles in 1528."@en .
-type:taizi-taishi rdfs:comment "Grand Preceptor of the Heir Apparent: the highest of the Three Preceptors of the Heir Apparent, an honorary title without duties. Conferred on Zhang Fujing together with the Huagai Hall title; the sources disagree on the date."@en .
-type:daxueshi rdfs:comment "Grand Secretary: one of the emperor's closest advisers, who drafted his decisions and reviewed memorials; formally rank 5a, but in this period usually holding higher concurrent titles. Mingshi 72 lists their duties."@en .
+type:jiaxian rdfs:comment "Category for honorary titles added to an official's post: they give rank and prestige but no duties (Mingshi 72: 虛銜). Includes the Three Solitaries and the titles of the heir apparent's household."@en .
+type:sangu rdfs:comment "Three Solitaries: Junior Preceptor, Junior Mentor and Junior Guardian (rank 1b). Honorary titles without duties (Mingshi 72: 虛銜), given to mark high rank and imperial favour."@en .
+type:shaobao rdfs:comment "Junior Guardian: one of the Three Solitaries, an honorary title without duties (Mingshi 72: 虛銜). Zhang Cong held it in 1528 before the further rewards of that year."@en .
+type:shaofu rdfs:comment "Junior Mentor: one of the Three Solitaries, an honorary title without duties (Mingshi 72: 虛銜). Added to Zhang Cong's titles in 1528."@en .
+type:donggong-sanshi rdfs:comment "Three Preceptors of the Heir Apparent (Grand Preceptor, Grand Mentor, Grand Guardian of the Heir Apparent). Originally tutors of the heir apparent; in this period honorary titles without duties (Mingshi 72: 虛銜)."@en .
+type:taizi-taifu rdfs:comment "Grand Mentor of the Heir Apparent: one of the Three Preceptors of the Heir Apparent, an honorary title without duties (Mingshi 72: 虛銜). Added to Zhang Cong's titles in 1528."@en .
+type:taizi-taishi rdfs:comment "Grand Preceptor of the Heir Apparent: the highest of the Three Preceptors of the Heir Apparent, an honorary title without duties (Mingshi 72: 虛銜). Conferred on Zhang Fujing together with the Huagai Hall title; the sources disagree on the date."@en .
+type:daxueshi rdfs:comment "Grand Secretary: title of the officials assigned to the Grand Secretariat (formally rank 5a; Mingshi 72 lists their duties, such as drafting the emperor's rescripts). The title also appears in the style of retired officials (e.g. Zhang Fujing in 1533), so whether a holder was serving in the Grand Secretariat at a given time is judged from the sources for each case."@en .
 type:dian-ge-xian rdfs:comment "Category for the name of the palace hall added to a Grand Secretary's title. Mingshi 72 lists six such titles in a fixed order."@en .
 type:huagaidian-daxueshi rdfs:comment "Grand Secretary with the title of the Huagai Hall, one of the great halls of the palace (later renamed Zhongji Hall); the first of the six hall titles in Mingshi 72. The sources disagree on when Zhang Fujing received it (case SL12)."@en .
 type:jinshendian-daxueshi rdfs:comment "Grand Secretary with the title of the Jinshen Hall, one of the great halls of the palace (later renamed Jianji Hall); the second of the six hall titles in Mingshi 72. Zhang Cong received it in 1528."@en .
 type:wenyuange-daxueshi rdfs:comment "Grand Secretary with the title of the Hall of Literary Profundity, one of the six hall titles in Mingshi 72. Zhang Cong held it before 1528."@en .
-type:hanlin-shidu-xueshi rdfs:comment "Senior member of the Hanlin Academy, the body of scholars that drafted official texts and compiled histories; this title involved reading and explaining texts to the emperor. Xia Yan was promoted to it in 1530."@en .
-type:li-ke-du-jishizhong rdfs:comment "Head of the office that reviewed documents and appointments concerning personnel, and could object to them. Held by Xia Yan in 1530."@en .
+type:hanlin-shidu-xueshi rdfs:comment "Academician Reader-in-waiting: a post in the Hanlin Academy (rank 5b; Mingshi 73), the body of scholars that drafted official texts and compiled histories. Whether a holder actually served in the Academy is judged from the sources for each case; Xia Yan received the title in 1530, and the same source states that he continued to run the Office of Scrutiny for Personnel."@en .
+type:li-ke-du-jishizhong rdfs:comment "Chief Supervising Secretary of the Office of Scrutiny for Personnel (rank 7a; Mingshi 74), the office that reviewed documents and appointments concerning personnel and could return them with objections. Whether a holder actually ran the office is judged from the sources for each case; in 1530 the source states that Xia Yan continued to run it (掌科事)."@en .
 type:fu-tongzhi rdfs:comment "Vice Prefect: deputy to the head of a prefecture, a local administrative unit, usually in charge of particular matters such as grain or policing. Xu Jie held it in Huangzhou before 1534."@en .
 type:guanxian-chuan rdfs:comment "Category for a name node that records, word for word, the string of titles by which a source refers to a person at one moment (decision D9)."@en .
 mpv:holds_title rdfs:comment "Property (also typed E55): a person holds a title, without a date (decision D15, rule 2). Defined because CIDOC-CRM 7.1.3 has no property for holding a title that belongs to no institution."@en .
 
 # 英文释义（D1 补充，2026-11-12）：三条尚书衔类型只新增 rdfs:comment @en；@en 标签不动，留待 v3
-type:pinjie-jianxian rdfs:comment "Category for a ministerial title held by a Grand Secretary as a rank only, without running the ministry. Under decision D1, a Grand Secretary who did run a ministry, as shown by a statement such as 掌部事 or by his name in the ministry's column of the table of the seven chief ministers (Mingshi, juan 112), is modelled instead as joining the ministry."@en .
-type:shangshu-personnel-xian rdfs:comment "The title Minister of Personnel held by a Grand Secretary as a rank only, without running the ministry; see 'concurrent rank title' and decision D1. Zhang Cong held it from 1528; the ministry was run by Gui E, Fang Xianfu, Wang Qiong and Wang Hong in turn (Mingshi, juan 112)."@en .
-type:shangshu-rites-xian rdfs:comment "The title Minister of Rites held by a Grand Secretary as a rank only, without running the ministry; see 'concurrent rank title' and decision D1. Zhang Cong held it from 1527 to 1528, when the ministry was run by Gui E and then Fang Xianfu (Mingshi, juan 112)."@en .
+type:pinjie-jianxian rdfs:comment "Category of version v2 for a ministerial title held by a Grand Secretary as a rank only, without running the ministry. The category builds a judgement about the holder into the type. Under decision D27 it is to be replaced in v3: title types stay neutral; whether a holder ran a ministry is recorded for each case, as joining the ministry or being in charge of it where the sources give positive evidence, and otherwise as an attribute assignment (E13) with its source."@en .
+type:shangshu-personnel-xian rdfs:comment "Minister of Personnel: head of the Ministry of Personnel, a substantive post (rank 2a). In the Ming the title was also conferred on Grand Secretaries, who might or might not run the ministry. In this version (v2) the type classifies the title of a Grand Secretary as a rank title, which builds a judgement into the type; under decision D27 it is to be replaced in v3 by a neutral title type, with the question whether a holder ran the ministry recorded for each case from the sources."@en .
+type:shangshu-rites-xian rdfs:comment "Minister of Rites: head of the Ministry of Rites, a substantive post (rank 2a). In the Ming the title was also conferred on Grand Secretaries, who might or might not run the ministry. In this version (v2) the type classifies the title of a Grand Secretary as a rank title, which builds a judgement into the type; under decision D27 it is to be replaced in v3 by a neutral title type, with the question whether a holder ran the ministry recorded for each case from the sources."@en .

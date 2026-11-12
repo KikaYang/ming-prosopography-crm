@@ -439,7 +439,7 @@ pc:jj10-zhaohuan-neige rdfs:label "Membership of Zhang Fujing in the Grand Secre
 
 # 英文释义（D9 补充，2026-11-12）：类型节点只新增 rdfs:comment @en，面向不了解明代制度的读者
 type:jiaen rdfs:comment "Category for an imperial act that rewards an official with several titles or promotions at once. Here: the rewards of 1528 to Zhang Cong for the Minglun dadian."@en .
-type:zhishi rdfs:comment "Retirement from office, normally for age or illness; the official kept his titles and could be recalled. Zhang Cong retired in 1531 and 1532 and was recalled both times."@en .
+type:zhishi rdfs:comment "Retirement from office (Hucker 1985 #1052). In this case the sources continue to style Zhang Fujing with his titles after his retirements of 1531 and 1532, and he was recalled both times."@en .
 type:zhao rdfs:comment "A summons from the emperor ordering an official, here a retired one, to come to the capital."@en .
 type:zhaohuan rdfs:comment "Recall of a retired or dismissed official to office."@en .
 mpv:conferred_title rdfs:comment "Property: the title conferred by an act of conferral. Defined because CIDOC-CRM 7.1.3 has no property for the title an activity confers."@en .

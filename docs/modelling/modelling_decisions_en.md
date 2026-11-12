@@ -13,11 +13,11 @@
 
 (Added 2026-11-08. Each description summarises the original entry, which prevails; each status is taken from the entry itself. Q items have three statuses: resolved / provisionally handled, awaiting confirmation / open. T items have two statuses: open / reviewed (see "Review of 2026-11-09").)
 
-### Modelling decisions D1–D26
+### Modelling decisions D1–D27
 
 | Code | Description | Status |
 |---|---|---|
-| D1 | A grand secretary's "Minister of X" is a concurrent rank title; an E85 is created only when the source states that he was in charge of the ministry | In force |
+| D1 | A grand secretary's "Minister of X" is a concurrent rank title; an E85 is created only when the source states that he was in charge of the ministry | In force (the rule on ministerial titles as concurrent-rank types is superseded by D27, to be applied in v3) |
 | D2 | A title conferral is an E7, linked to the title by mpv:conferred_title | In force |
 | D3 | The Grand Secretariat is an E74; entry uses E85 + PC144; hall names are types | In force |
 | D4 | No type for *jian* 兼; a title classification tree plus the original title string | In force |
@@ -43,6 +43,7 @@
 | D24 | Where "promoted from A to B" does not state the departure, an implicit E86 is added | In force |
 | D25 | A standing assignment invents no "undertaking"; P7 to a place, P11 to the institution | In force |
 | D26 | The substantive office's E85 and the assignment node are linked through the same parent event | In force |
+| D27 | A type stands only for the title; actual service or being in charge requires positive evidence; negative or disputed judgements are E13 | Approved, to be applied in v3 |
 
 ### Questions awaiting historical confirmation Q1–Q7
 
@@ -56,7 +57,7 @@
 | Q6 | Whether the 1533 reinstatement dates from the decree (first month) or the arrival in the capital (fourth month) | Resolved (within the scope of SL12) |
 | Q7 | Whether a promotion within the same series always replaces the earlier title | Provisionally handled, awaiting confirmation |
 
-### CRM limitations and questions for testing T1–T4
+### CRM limitations and questions for testing T1–T5
 
 | Code | Description | Status |
 |---|---|---|
@@ -64,6 +65,7 @@
 | T2 | "In the capacity of": the type of capacity can be expressed with PC14 + P14.1; pointing to a specific assignment requires P17/P134 (partly expressible) | Reviewed (2026-11-09) |
 | T3 | "In charge of affairs": P11 carries no sense of direction; an E7 carried out by the institution + P14/P14.1 would be preferable (a choice of pattern) | Reviewed (2026-11-09) |
 | T4 | Capacity on departure: expressible if, as in the CRM examples, the office itself is an E74; the gap comes from the D3 convention | Reviewed (2026-11-09) |
+| T5 | In the state version a holds_title triple has no node that an E13 could point to, so whether holding a title meant actual service cannot be asserted with a source | Open |
 
 ### Cases and competency questions
 
@@ -110,6 +112,7 @@ Zhang Cong's promotion to Minister of Personnel (concurrent title) is in juan 89
 
 **Known defect** (approved by the author, 2026-11-04)
 Known defect: the label of type:shangshu-personnel-xian does not agree with D1; see CQ1. Not changed for now; to be revised together with other changes.
+Supplement (2026-11-12): until 12 November 2026 the English labels of type:pinjie-jianxian, type:shangshu-personnel-xian and type:shangshu-rites-xian read 'concurrent nominal title'; they now read 'concurrent rank title'. The frozen evaluation of CQ1 refers to the earlier wording. Under decision D27 the three types are to be replaced in v3 by neutral title types.
 
 Check of 2026-11-08: *Mingshi*, juan 112, Table of the Seven Chief Ministers 2, column for Minister of Personnel:
 from Jiajing 6, eleventh month, to Jiajing 8, second month, the minister was Gui E; in Jiajing 8, second month, Gui E entered the Grand Secretariat and was succeeded by Fang Xianfu; Zhang Cong does not appear in this column.
@@ -124,6 +127,8 @@ Supplement (2026-11-12): whether a grand secretary actually ran a ministry is de
 Check: *Mingshi*, juan 112, does not mention Zhang Cong or Zhang Fujing anywhere. From Jiajing 9, ninth month, to Jiajing 10, twelfth month, no one is listed in the Personnel column; according to the biography of Fang Xianfu in *Mingshi*, juan 196, Fang Xianfu asked for leave on grounds of illness, and "帝即报允，然犹虚位以俟" (the emperor at once granted it, but still kept the post vacant to await him): the post was kept vacant for Fang Xianfu, and the ministry was not run by anyone else.
 Conclusion: the titles Minister of Personnel and Minister of Rites that Zhang Cong held while a grand secretary (Jiajing 6 to 14) were both concurrent rank titles; he was not in charge of either ministry.
 The conclusion of the check of 2026-11-08 is accordingly extended to this whole period.
+
+Correction (2026-11-12): in the supplement of 2026-11-12, the sentence "Where neither applies, the title is treated as a concurrent rank title" is withdrawn; see D27. The conclusion that Zhang Cong was not in charge of the ministry stands; in v3 it is recorded as an E13 with *Mingshi*, juan 112 and juan 196, as its sources.
 
 ---
 
@@ -490,6 +495,26 @@ Supplement (drafted by AI agent (Claude Code); approved by the author, 2026-11-0
 
 ---
 
+## D27 Titles kept apart from functions (approved by the author, 2026-11-12; to be applied in v3)
+
+**Decision**
+- A type (E55) stands only for the title itself. Its explanation stays neutral: what the office is, the institution it belongs to and its rank. Where the same title may be a substantive post, a rank, an honorary title or the name of a duty assignment, the explanation states that "whether a holder actually served or was in charge is judged from the sources for each case", and draws no conclusion about the holder.
+- Holding a title: a conferral event with mpv:conferred_title (event version) or mpv:holds_title (state version). A record in the sources that the title was conferred or used is sufficient.
+- Actually serving: an E85 Joining of the institution (P144.1 kind of member); actually being in charge: a *zhangshi* node (D19). Both require positive evidence, such as an explicit statement "in charge of the ministry's affairs" (掌部事), or the person's name in the institution's column of a table of office holders such as the Table of the Seven Chief Ministers.
+- What counts as positive evidence: for an ordinary office, a record of appointment ("promoted to / appointed / transferred to office X") is itself evidence of service. For titles that institutionally could be held as a rank (such as the ministerial titles of grand secretaries, as shown by *Mingshi*, juan 72, "加至三孤，兼尚書衔" (raised to the Three Solitaries, with concurrent ministerial titles), and also prestige titles, honorary titles, and the Censorate titles carried by supreme commanders and grand coordinators), the wording of the appointment is not sufficient to prove service or being in charge; further evidence is required: an explicit statement that the person was in charge, the person's name in the institution's column of a table of office holders such as the Table of the Seven Chief Ministers, or a record of the person performing duties in the institution.
+- Where there is evidence that a holder did not serve or was not in charge, or where the sources disagree, the judgement is recorded as an E13 with its source and the person who made it, not built into the type.
+- The principle applies to all titles (ministers, censors-in-chief, Hanlin posts, etc.), not only to the ministerial titles of grand secretaries.
+
+**Relation to D1**
+The rule in D1 that the ministerial title of a grand secretary is treated as a concurrent-rank type is superseded by this decision and will be applied in v3. The frozen evaluations (eval-v2, eval-SL11-v1.2, eval-SL14-v1.1, cq-v1 / eval-cq-v1.x) remain unchanged.
+
+**Rationale**
+- *Mingshi*, juan 72: each ministry has "one minister, rank 2a" (尚書一人，正二品); several people could hold the same ministerial title at the same time, so title and function cannot be inferred from the type.
+- Building "not in charge of the ministry" into the type fixes a single judgement about the sources as a classification; if the judgement changes, every triple using the type becomes wrong. This is why CQ1 was answered wrongly.
+- An E13 records the judgement with its source and author, and can be overridden by another set of rules.
+
+---
+
 ## Open questions (awaiting external advice)
 
 Parallel to the "questions awaiting historical confirmation" (Q1–Q7): Q items are questions of historical fact, T items are questions of modelling and standards. (Compiled 2026-11-02)
@@ -500,6 +525,7 @@ Parallel to the "questions awaiting historical confirmation" (Q1–Q7): Q items 
 | T2 | D17 | Holding an assignment "in the capacity of" another: should the use of P15 be reported as a semantic gap in CRM, or should an extension property (`mpv:in_capacity_of`) be added and evaluated as a fourth variant? | P15 is used; no extension added |
 | T3 | D19 | "Directing the affairs of an office" uses P11, whose meaning is broad ("participation" rather than "direction"). Treatment as for T2: report a semantic gap, or add an extension property and evaluate it as a variant? | P11 is used |
 | T4 | D24 | CRM can express that someone once held a post (an additional E85 + PC144 of unknown date, with P144.1 giving the capacity), but not the capacity in which he left (P146 has no .1 property, and there is no PC146). Is this worth putting forward as a suggestion for CRM? (Narrowed 2026-11-03; approved by the author) | The earlier capacity is kept only in the original string (E41); the E85 + PC144 of unknown date is not created (judged omission for J161-U04 in the SL14 evaluation) |
+| T5 | D27 | The state version expresses holding a title with mpv:holds_title; that triple has no node for an E13 to point to, so no assertion with a source can be made on whether holding a title meant actual service; an E13 can only point to the person node and explain this in a comment. (2026-11-12) | In v3, recorded in this way and reported as a limitation of the state pattern |
 
 ### Review of 2026-11-09: T2–T4 and the CRM scope notes
 

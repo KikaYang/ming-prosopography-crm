@@ -215,10 +215,10 @@ E55_Type
 Grand Secretary of the Jinshen Hall", fillcolor="#eeeeee", style="rounded,filled"];
   n76 [label="type:shangshu-personnel-xian
 E55_Type
-Minister of Personnel (concurrent nominal title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];
+Minister of Personnel (concurrent rank title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];
   n77 [label="type:shangshu-rites-xian
 E55_Type
-Minister of Rites (concurrent nominal title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];
+Minister of Rites (concurrent rank title held by a Grand Secretary)", fillcolor="#eeeeee", style="rounded,filled"];
   n78 [label="type:shaofu
 E55_Type
 Junior Mentor", fillcolor="#eeeeee", style="rounded,filled"];

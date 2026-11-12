@@ -126,5 +126,5 @@ event:taifu-claim-shilu-136 rdfs:label "Former title of Zhang Fujing according t
 pc:neige-member-68266 rdfs:label "Membership of Zhang Cong in the Grand Secretariat as Grand Secretary"@en .
 
 # 英文释义（D9 补充，2026-11-12）：类型节点只新增 rdfs:comment @en，面向不了解明代制度的读者
-type:sangong rdfs:comment "Three Dukes: Grand Preceptor, Grand Mentor and Grand Guardian, the highest honorary titles (rank 1a) and without duties in this period. Mingshi 72 notes that civil officials received them in life only exceptionally. Used here only to record the reading 'Grand Mentor' in juan 136."@en .
-type:taifu rdfs:comment "Grand Mentor: one of the Three Dukes. Appears only in juan 136 as Zhang Fujing's former title, where juan 132 has Junior Mentor; Mingshi 72 records that Yang Tinghe declined this title in 1523 and that later only Zhang Juzheng received it in life."@en .
+type:sangong rdfs:comment "Three Dukes: Grand Preceptor, Grand Mentor and Grand Guardian, the highest honorary titles (rank 1a) and without duties in this period (Mingshi 72: 虛銜). Mingshi 72 notes that civil officials received them in life only exceptionally. Used here only to record the reading 'Grand Mentor' in juan 136."@en .
+type:taifu rdfs:comment "Grand Mentor: one of the Three Dukes, an honorary title without duties in this period (Mingshi 72: 虛銜). Appears only in juan 136 as Zhang Fujing's former title, where juan 132 has Junior Mentor; Mingshi 72 records that Yang Tinghe declined this title in 1523 and that later only Zhang Juzheng received it in life."@en .
