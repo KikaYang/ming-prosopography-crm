@@ -207,7 +207,7 @@ doc:mingshi-110 crm:P70_documents event:jj06-10-ruge .
 # ⑨ 华盖殿争议（决策 D7 方案 C）
 # 本块编写：AI agent（Claude Code），按作者确认的逻辑（2026-10-16）。授衔事件本身不写 P4；
 # 四个来源对时间的说法各用一个 E13 记录，P177 指向 crm:P4_has_time-span。
-# 英文名称以 Hucker 为准；Hucker 未收的用拼音，并在 comment 中注明
+# 英文名称依 Hucker；Hucker 未收的官名译为英文（依据见术语表），殿名保留拼音
 
 ## 授衔事件（时间有争议，不写 P4）
 event:huagaidian-conferral a crm:E7_Activity ;

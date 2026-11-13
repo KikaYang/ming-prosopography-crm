@@ -1,90 +1,118 @@
 digraph G {
-  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL11_event.ttl：全部 291 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL11_event.ttl：全部 321 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
   node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
   edge [fontname="Helvetica", fontsize=9, color="#555555"];
   n0 [label="doc:shizong-shilu-118
 E31_Document
+Ming Shizong shilu, juan 118
 世宗實錄 卷118", fillcolor="#ead1dc", style="rounded,filled"];
   n1 [label="event:chaiqian-127536-gongcheng
 E7_Activity
+Duty assignment of Wang Hong as Inspector of the Works
 監視巡察工程官（汪鋐）", fillcolor="#d9ead3", style="rounded,filled"];
   n2 [label="event:chaiqian-127536-jianxiu
 E7_Activity
+Duty assignment of Wang Hong as Supervisor of the Compilation for the Siyi chengdian (1530)
 監修官（汪鋐）", fillcolor="#d9ead3", style="rounded,filled"];
   n3 [label="event:chaiqian-130180-gongcheng
 E7_Activity
+Duty assignment of Guo Xun as Superintendent of Construction and General Supervisor of the Works
 知建造事總督工程官（郭勛）", fillcolor="#d9ead3", style="rounded,filled"];
   n4 [label="event:chaiqian-130180-jianxiu
 E7_Activity
+Duty assignment of Guo Xun as Supervisor of the Compilation for the Siyi chengdian (1530)
 監修官（郭勛）", fillcolor="#d9ead3", style="rounded,filled"];
   n5 [label="event:chaiqian-130490-zuanxiu
 E7_Activity
+Duty assignment of Zhang Gun as Compiler of the Siyi chengdian (1530)
 纂修官（張袞）", fillcolor="#d9ead3", style="rounded,filled"];
   n6 [label="event:chaiqian-131629-zuanxiu
 E7_Activity
+Duty assignment of Cheng Wende as Compiler of the Siyi chengdian (1530)
 纂修官（程文德）", fillcolor="#d9ead3", style="rounded,filled"];
   n7 [label="event:chaiqian-132101-zuanxiu
 E7_Activity
+Duty assignment of Liao Daonan as Compiler of the Siyi chengdian (1530)
 纂修官（廖道南）", fillcolor="#d9ead3", style="rounded,filled"];
   n8 [label="event:chaiqian-68136-fuzongcai
 E7_Activity
+Duty assignment of Zhai Luan as Deputy Director-general of the Siyi chengdian (1530)
 副總裁官（翟鑾）", fillcolor="#d9ead3", style="rounded,filled"];
   n9 [label="event:chaiqian-68140-gongcheng
 E7_Activity
+Duty assignment of Li Shi as Associate Superintendent of Construction and Supervisor of the Building Design
 同知建造事，督視規制官（李時）", fillcolor="#d9ead3", style="rounded,filled"];
   n10 [label="event:chaiqian-68140-jianxiu
 E7_Activity
+Duty assignment of Li Shi as Supervisor of the Compilation for the Siyi chengdian (1530)
 監修官（李時）", fillcolor="#d9ead3", style="rounded,filled"];
   n11 [label="event:chaiqian-68194-gongcheng
 E7_Activity
+Duty assignment of Xia Yan as Inspector of the Works
 監視巡察工程官（夏言）", fillcolor="#d9ead3", style="rounded,filled"];
   n12 [label="event:chaiqian-68266-gongcheng
 E7_Activity
+Duty assignment of Zhang Cong as Superintendent of Construction and General Supervisor of the Works
 知建造事、總督工程官（張璁）", fillcolor="#d9ead3", style="rounded,filled"];
   n13 [label="event:chaiqian-68266-zongcai
 E7_Activity
+Duty assignment of Zhang Cong as Director-general of the Siyi chengdian (1530)
 總裁官（張璁）", fillcolor="#d9ead3", style="rounded,filled"];
   n14 [label="event:chaiqian-68285-fuzongcai
 E7_Activity
+Duty assignment of Gui E as Deputy Director-general of the Siyi chengdian (1530)
 副總裁官（桂萼）", fillcolor="#d9ead3", style="rounded,filled"];
   n15 [label="event:chaiqian-68547-zuanxiu
 E7_Activity
+Duty assignment of Xu Jie as Compiler of the Siyi chengdian (1530)
 纂修官（徐階）", fillcolor="#d9ead3", style="rounded,filled"];
   n16 [label="event:jiaotan-jianzao
 E7_Activity
+Construction of the suburban altar
 郊坛建造", fillcolor="#d9ead3", style="rounded,filled"];
   n17 [label="event:jiaozhi-gengding
 E7_Activity
+Revision of the rules for the suburban sacrifices
 更定郊制", fillcolor="#d9ead3", style="rounded,filled"];
   n18 [label="event:jj09-10-guiyou-shouzha
 E7_Activity
+Handwritten note of the Jiajing Emperor shown to Zhang Cong (1530)
 復出手扎示璁", fillcolor="#d9ead3", style="rounded,filled"];
   n19 [label="event:jj09-10-guiyou-tongshi
 E7_Activity
+Summons of Zhang Cong to inspect together with the Jiajing Emperor (1530)
 仍召輔臣璁同視", fillcolor="#d9ead3", style="rounded,filled"];
   n20 [label="event:jj09-10-xiayan-sheng
 E85_Joining
+Promotion of Xia Yan to Academician Reader-in-waiting of the Hanlin Academy (1530)
 升翰林院侍讀學士（夏言）", fillcolor="#d9ead3", style="rounded,filled"];
   n21 [label="event:jj09-10-xinwei-chi
 E7_Activity
+Edict of the Jiajing Emperor on the compilation of the Siyi chengdian (1530)
 降敕", fillcolor="#d9ead3", style="rounded,filled"];
   n22 [label="event:jj09-chuyu
 E7_Activity
+Instruction of the Jiajing Emperor to Zhang Cong and Li Shi to settle the format of the book (1530)
 諭……命（張璁與李時議定體例）", fillcolor="#d9ead3", style="rounded,filled"];
   n23 [label="event:jj09-shangwei
 E65_Creation
+Pronouncement of the Jiajing Emperor on the editorial principles (1530)
 上謂（凡例條目）", fillcolor="#d9ead3", style="rounded,filled"];
   n24 [label="event:jj09-xiayan-shouchang
 E7_Activity
+First proposal of the correct ritual by Xia Yan
 首倡正議", fillcolor="#d9ead3", style="rounded,filled"];
   n25 [label="event:jj09-yiding-tili
 E7_Activity
+Settling of the format of the book by Zhang Cong and Li Shi
 議定體例", fillcolor="#d9ead3", style="rounded,filled"];
   n26 [label="event:siyi-chengdian-xiushu
 E7_Activity
+Compilation of the Siyi chengdian
 纂辑祀仪成典", fillcolor="#d9ead3", style="rounded,filled"];
   n27 [label="event:zhangshi-68194-li-ke
 E7_Activity
+Xia Yan in charge of the affairs of the Office of Scrutiny for Personnel (1530)
 掌吏科事（夏言）", fillcolor="#d9ead3", style="rounded,filled"];
   n28 [label="group:hanlinyuan
 E74_Group
@@ -137,42 +165,55 @@ E41_Appellation
 E35_Title
 祀儀成典", fillcolor="#cfe2f3", style="rounded,filled"];
   n44 [label="pc:jj09-10-xiayan-hanlin
-PC144_joined_with", fillcolor="#d9d2e9", style="rounded,filled"];
+PC144_joined_with
+Membership of Xia Yan in the Hanlin Academy as Academician Reader-in-waiting", fillcolor="#d9d2e9", style="rounded,filled"];
   n45 [label="person:127536
 E21_Person
+Wang Hong
 汪鋐", fillcolor="#f4cccc", style="rounded,filled"];
   n46 [label="person:130180
 E21_Person
+Guo Xun
 郭勛", fillcolor="#f4cccc", style="rounded,filled"];
   n47 [label="person:130490
 E21_Person
+Zhang Gun
 張袞", fillcolor="#f4cccc", style="rounded,filled"];
   n48 [label="person:131629
 E21_Person
+Cheng Wende
 程文德", fillcolor="#f4cccc", style="rounded,filled"];
   n49 [label="person:132101
 E21_Person
+Liao Daonan
 廖道南", fillcolor="#f4cccc", style="rounded,filled"];
   n50 [label="person:68136
 E21_Person
+Zhai Luan
 翟鑾", fillcolor="#f4cccc", style="rounded,filled"];
   n51 [label="person:68140
 E21_Person
+Li Shi
 李時", fillcolor="#f4cccc", style="rounded,filled"];
   n52 [label="person:68194
 E21_Person
+Xia Yan
 夏言", fillcolor="#f4cccc", style="rounded,filled"];
   n53 [label="person:68266
 E21_Person
+Zhang Cong (Zhang Fujing)
 張璁", fillcolor="#f4cccc", style="rounded,filled"];
   n54 [label="person:68285
 E21_Person
+Gui E
 桂萼", fillcolor="#f4cccc", style="rounded,filled"];
   n55 [label="person:68547
 E21_Person
+Xu Jie
 徐階", fillcolor="#f4cccc", style="rounded,filled"];
   n56 [label="person:ming-shizong
 E21_Person
+Jiajing Emperor (Ming Shizong, Zhu Houcong)
 明世宗
 朱厚熜", fillcolor="#f4cccc", style="rounded,filled"];
   n57 [label="ts:jj09-10-guiyou
@@ -189,11 +230,11 @@ promote
 升", fillcolor="#eeeeee", style="rounded,filled"];
   n62 [label="type:dushi-guizhi-guan
 E55_Type
-Dushi guizhi guan
+Supervisor of the Building Design
 督視規制官", fillcolor="#eeeeee", style="rounded,filled"];
   n63 [label="type:fu-zongcai-guan
 E55_Type
-Fu zongcai guan
+Deputy Director-general
 副總裁官", fillcolor="#eeeeee", style="rounded,filled"];
   n64 [label="type:guanxian-chuan
 E55_Type
@@ -205,15 +246,15 @@ Academician Reader-in-waiting
 翰林院侍讀學士", fillcolor="#eeeeee", style="rounded,filled"];
   n66 [label="type:jianshi-xuncha-gongcheng-guan
 E55_Type
-Jianshi xuncha gongcheng guan
+Inspector of the Works
 監視巡察工程官", fillcolor="#eeeeee", style="rounded,filled"];
   n67 [label="type:jianxiu-guan
 E55_Type
-Jianxiu guan
+Supervisor of the Compilation
 監修官", fillcolor="#eeeeee", style="rounded,filled"];
   n68 [label="type:tongzhi-jianzao-shi
 E55_Type
-Tongzhi jianzao shi
+Associate Superintendent of Construction
 同知建造事", fillcolor="#eeeeee", style="rounded,filled"];
   n69 [label="type:zhangshi
 E55_Type
@@ -221,7 +262,7 @@ in charge of the affairs of an office
 掌事", fillcolor="#eeeeee", style="rounded,filled"];
   n70 [label="type:zhi-jianzao-shi
 E55_Type
-Zhi jianzao shi
+Superintendent of Construction
 知建造事", fillcolor="#eeeeee", style="rounded,filled"];
   n71 [label="type:zongcai-guan
 E55_Type
@@ -229,7 +270,7 @@ Director-general
 總裁官", fillcolor="#eeeeee", style="rounded,filled"];
   n72 [label="type:zongdu-gongcheng-guan
 E55_Type
-Zongdu gongcheng guan
+General Supervisor of the Works
 總督工程官", fillcolor="#eeeeee", style="rounded,filled"];
   n73 [label="type:zuanxiu-guan
 E55_Type
@@ -237,9 +278,11 @@ Compiler
 纂修官", fillcolor="#eeeeee", style="rounded,filled"];
   n74 [label="work:siyi-chengdian
 E73_Information_Object
+Siyi chengdian (compilation on the reformed state sacrifices, commissioned 1530)
 祀儀成典", fillcolor="#ead1dc", style="rounded,filled"];
   n75 [label="work:siyi-chengdian-fanli
 E29_Design_or_Procedure
+Editorial principles of the Siyi chengdian
 祀儀成典凡例條目", fillcolor="#ead1dc", style="rounded,filled"];
   n0 -> n33 [label="P67_refers_to"];
   n0 -> n34 [label="P67_refers_to"];

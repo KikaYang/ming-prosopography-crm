@@ -1,40 +1,110 @@
 digraph G {
-  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL14_event.ttl：全部 19 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL14_event.ttl：全部 56 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
   node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
   edge [fontname="Helvetica", fontsize=9, color="#555555"];
   n0 [label="doc:shizong-shilu-161
 E31_Document
+Ming Shizong shilu, juan 161
 世宗實錄 卷161", fillcolor="#ead1dc", style="rounded,filled"];
-  n1 [label="name:date-jj13-03-jimao
+  n1 [label="event:chaiqian-68547-tidiao-xuexiao
+E7_Activity
+Duty assignment of Xu Jie as Supervisor of Education in Zhejiang (1534)
+提調學校（徐階）", fillcolor="#d9ead3", style="rounded,filled"];
+  n2 [label="event:jj13-03-jimao-sheng
+E7_Activity
+Promotion of Xu Jie from Vice Prefect of Huangzhou to Assistant Surveillance Commissioner of Zhejiang and Supervisor of Education (1534)
+升湖廣黃州府同知徐階為浙江按察司僉事，提調學校", fillcolor="#d9ead3", style="rounded,filled"];
+  n3 [label="event:jj13-03-jimao-sheng-1
+E85_Joining
+Joining of the Zhejiang Provincial Surveillance Commission by Xu Jie (1534)", fillcolor="#d9ead3", style="rounded,filled"];
+  n4 [label="event:jj13-03-jimao-sheng-2
+E86_Leaving
+Leaving of Huangzhou Prefecture by Xu Jie (implicit, 1534)", fillcolor="#d9ead3", style="rounded,filled"];
+  n5 [label="group:huangzhou-fu
+E74_Group
+Huangzhou Prefecture, Huguang
+湖廣黃州府", fillcolor="#fce5cd", style="rounded,filled"];
+  n6 [label="group:zhejiang-anchasi
+E74_Group
+Zhejiang Provincial Surveillance Commission
+浙江按察司", fillcolor="#fce5cd", style="rounded,filled"];
+  n7 [label="name:date-jj13-03-jimao
 E41_Appellation
 嘉靖十三年三月己卯", fillcolor="#cfe2f3", style="rounded,filled"];
-  n2 [label="name:guanxian-jj13-03-jimao-xu-jie-xin
+  n8 [label="name:guanxian-jj13-03-jimao-xu-jie-xin
 E41_Appellation
 浙江按察司僉事，提調學校", fillcolor="#cfe2f3", style="rounded,filled"];
-  n3 [label="name:guanxian-jj13-03-jimao-xu-jie-yuan
+  n9 [label="name:guanxian-jj13-03-jimao-xu-jie-yuan
 E41_Appellation
 湖廣黃州府同知徐階", fillcolor="#cfe2f3", style="rounded,filled"];
-  n4 [label="person:68547
+  n10 [label="pc:jj13-03-jimao-sheng-1-anchasi
+PC144_joined_with
+Membership of Xu Jie in the Zhejiang Provincial Surveillance Commission as Assistant Surveillance Commissioner", fillcolor="#d9d2e9", style="rounded,filled"];
+  n11 [label="person:68547
 E21_Person
+Xu Jie
 徐階", fillcolor="#f4cccc", style="rounded,filled"];
-  n5 [label="ts:jj13-03-jimao
+  n12 [label="person:ming-shizong
+E21_Person
+Jiajing Emperor (Ming Shizong, Zhu Houcong)
+明世宗
+朱厚熜", fillcolor="#f4cccc", style="rounded,filled"];
+  n13 [label="place:zhejiang
+E53_Place
+Zhejiang
+浙江", fillcolor="#ffffff", style="rounded,filled"];
+  n14 [label="ts:jj13-03-jimao
 E52_Time-Span", fillcolor="#fff2cc", style="rounded,filled"];
-  n6 [label="type:guanxian-chuan
+  n15 [label="type:action-sheng
+E55_Type
+promote
+升", fillcolor="#eeeeee", style="rounded,filled"];
+  n16 [label="type:anchasi-qianshi
+E55_Type
+Assistant Surveillance Commissioner
+按察司僉事", fillcolor="#eeeeee", style="rounded,filled"];
+  n17 [label="type:guanxian-chuan
 E55_Type
 official title string
 官衔串", fillcolor="#eeeeee", style="rounded,filled"];
-  n0 -> n2 [label="P67_refers_to"];
-  n0 -> n3 [label="P67_refers_to"];
-  n2 -> n6 [label="P2_has_type"];
-  n3 -> n6 [label="P2_has_type"];
-  n4 -> n2 [label="P1_is_identified_by"];
-  n4 -> n3 [label="P1_is_identified_by"];
-  n5 -> n1 [label="P1_is_identified_by"];
-  lit7 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-05-05T00:00:00
+  n18 [label="type:tidiao-xuexiao
+E55_Type
+Supervisor of Education
+提調學校", fillcolor="#eeeeee", style="rounded,filled"];
+  n0 -> n8 [label="P67_refers_to"];
+  n0 -> n9 [label="P67_refers_to"];
+  n0 -> n1 [label="P70_documents"];
+  n0 -> n2 [label="P70_documents"];
+  n0 -> n3 [label="P70_documents"];
+  n0 -> n4 [label="P70_documents"];
+  n1 -> n6 [label="P11_had_participant"];
+  n1 -> n11 [label="P14_carried_out_by"];
+  n1 -> n2 [label="P17_was_motivated_by"];
+  n1 -> n18 [label="P2_has_type"];
+  n1 -> n13 [label="P7_took_place_at"];
+  n2 -> n11 [label="P11_had_participant"];
+  n2 -> n12 [label="P14_carried_out_by"];
+  n2 -> n15 [label="P2_has_type"];
+  n2 -> n14 [label="P4_has_time-span"];
+  n2 -> n3 [label="P9_consists_of"];
+  n2 -> n4 [label="P9_consists_of"];
+  n3 -> n11 [label="P143_joined"];
+  n3 -> n6 [label="P144_joined_with"];
+  n4 -> n11 [label="P145_separated"];
+  n4 -> n5 [label="P146_separated_from"];
+  n8 -> n17 [label="P2_has_type"];
+  n9 -> n17 [label="P2_has_type"];
+  n10 -> n3 [label="P01_has_domain"];
+  n10 -> n6 [label="P02_has_range"];
+  n10 -> n16 [label="P144.1_kind_of_member"];
+  n11 -> n8 [label="P1_is_identified_by"];
+  n11 -> n9 [label="P1_is_identified_by"];
+  n14 -> n7 [label="P1_is_identified_by"];
+  lit29 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-05-05T00:00:00
 ^^xsd:dateTime"];
-  n5 -> lit7 [label="P82a_begin_of_the_begin", style=dotted];
-  lit8 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-05-05T23:59:59
+  n14 -> lit29 [label="P82a_begin_of_the_begin", style=dotted];
+  lit30 [shape=note, style=filled, fillcolor="#ffffff", fontsize=9, label="1534-05-05T23:59:59
 ^^xsd:dateTime"];
-  n5 -> lit8 [label="P82b_end_of_the_end", style=dotted];
-  legend [shape=plaintext, fontsize=9, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD><B>图例</B></TD></TR><TR><TD BGCOLOR="#ead1dc">文献 E31/E73</TD></TR><TR><TD BGCOLOR="#cfe2f3">名称 E41</TD></TR><TR><TD BGCOLOR="#f4cccc">人物 E21</TD></TR><TR><TD BGCOLOR="#fff2cc">时间段 E52</TD></TR><TR><TD BGCOLOR="#eeeeee">类型 E55</TD></TR></TABLE>>];
+  n14 -> lit30 [label="P82b_end_of_the_end", style=dotted];
+  legend [shape=plaintext, fontsize=9, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD><B>图例</B></TD></TR><TR><TD BGCOLOR="#ead1dc">文献 E31/E73</TD></TR><TR><TD BGCOLOR="#d9ead3">事件 E2</TD></TR><TR><TD BGCOLOR="#fce5cd">群体 E74</TD></TR><TR><TD BGCOLOR="#cfe2f3">名称 E41</TD></TR><TR><TD BGCOLOR="#d9d2e9">PC 属性类</TD></TR><TR><TD BGCOLOR="#f4cccc">人物 E21</TD></TR><TR><TD BGCOLOR="#ffffff">其他 / 无类型</TD></TR><TR><TD BGCOLOR="#fff2cc">时间段 E52</TD></TR><TR><TD BGCOLOR="#eeeeee">类型 E55</TD></TR></TABLE>>];
 }
