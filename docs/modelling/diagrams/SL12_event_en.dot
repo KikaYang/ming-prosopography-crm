@@ -1,5 +1,5 @@
 digraph G {
-  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl: all 297 triples (classes and labels also from vocab.ttl)", nodesep=0.25, ranksep=0.6];
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl: all 298 triples (classes and labels also from vocab.ttl)", nodesep=0.25, ranksep=0.6];
   node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
   edge [fontname="Helvetica", fontsize=9, color="#555555"];
   n0 [label="E55_Type", fillcolor="#ffffff", style="rounded,filled"];
@@ -14,7 +14,7 @@ E31_Document
 Mingshi, juan 110 (Table of Grand Secretaries, part 2)", fillcolor="#ead1dc", style="rounded,filled"];
   n5 [label="doc:mingshi-196
 E31_Document
-Mingshi, juan 196 (biography of Zhang Cong)", fillcolor="#ead1dc", style="rounded,filled"];
+History of Ming, juan 196", fillcolor="#ead1dc", style="rounded,filled"];
   n6 [label="doc:shizong-shilu-089
 E31_Document
 Ming Shizong shilu, juan 89", fillcolor="#ead1dc", style="rounded,filled"];

@@ -1,5 +1,5 @@
 digraph G {
-  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl：全部 297 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
+  graph [rankdir=LR, fontname="PingFang SC", fontsize=16, labelloc=t, label="SL12_event.ttl：全部 298 条三元组（类名与标签另查 vocab.ttl）", nodesep=0.25, ranksep=0.6];
   node [shape=box, style="rounded,filled", fontname="PingFang SC", fontsize=10];
   edge [fontname="Helvetica", fontsize=9, color="#555555"];
   n0 [label="E55_Type", fillcolor="#ffffff", style="rounded,filled"];
@@ -16,7 +16,7 @@ Mingshi, juan 110 (Table of Grand Secretaries, part 2)
 明史 卷110 宰輔年表二", fillcolor="#ead1dc", style="rounded,filled"];
   n5 [label="doc:mingshi-196
 E31_Document
-Mingshi, juan 196 (biography of Zhang Cong)
+History of Ming, juan 196
 明史 卷196 列傳第八十四", fillcolor="#ead1dc", style="rounded,filled"];
   n6 [label="doc:shizong-shilu-089
 E31_Document
@@ -97,11 +97,11 @@ Addition of Grand Mentor of the Heir Apparent to Zhang Cong (1528)
   n25 [label="event:jj07-06-jiaen-3
 E7_Activity
 Promotion of Zhang Cong to Minister of Personnel (1528)
-升吏部尚書", fillcolor="#d9ead3", style="rounded,filled"];
+陞吏部尚書", fillcolor="#d9ead3", style="rounded,filled"];
   n26 [label="event:jj07-06-jiaen-4
 E7_Activity
 Promotion of Zhang Cong to Grand Secretary of the Jinshen Hall (1528)
-升謹身殿大學士", fillcolor="#d9ead3", style="rounded,filled"];
+陞謹身殿大學士", fillcolor="#d9ead3", style="rounded,filled"];
   n27 [label="event:jj10-07-zhishi
 E86_Leaving
 Retirement of Zhang Fujing from the Grand Secretariat (1531)
@@ -109,7 +109,7 @@ Retirement of Zhang Fujing from the Grand Secretariat (1531)
   n28 [label="event:jj10-11-zhao
 E7_Activity
 Summons of Zhang Fujing back to office, delivered by the Messenger Zhou Wenzhu (1532)
-遣行人周文燭齎敕召張孚敬復任辦事", fillcolor="#d9ead3", style="rounded,filled"];
+遣行人周文燭齎勑召張孚敬復任辦事", fillcolor="#d9ead3", style="rounded,filled"];
   n29 [label="event:jj10-11-zhaohuan
 E85_Joining
 Recall of Zhang Fujing to the Grand Secretariat (1532)

@@ -56,9 +56,9 @@ name:guanxian-jj09-10-xinwei-li-shi a crm:E41_Appellation ;
 person:68140 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-li-shi .
 
 name:guanxian-jj09-10-xinwei-wang-hong a crm:E41_Appellation ;
-    rdfs:label "監視巡察工程官卿𬭎"@zh-Hant ;
+    rdfs:label "監視巡察工程官卿鋐"@zh-Hant ;
     crm:P2_has_type type:guanxian-chuan ;
-    rdfs:comment "“𬭎”照清单录文（U30），未改为“鋐”"@zh-Hans .
+    rdfs:comment "影像作“鋐”（2026-11-13 核实）；清单录文（U30）作简体“𬭎”"@zh-Hans .
 
 person:127536 crm:P1_is_identified_by name:guanxian-jj09-10-xinwei-wang-hong .
 
@@ -110,7 +110,7 @@ doc:shizong-shilu-118 crm:P67_refers_to name:guanxian-jj09-10-xu-jie .
 # ② 凡例与书（决策 D20；不建上谓、修书事件）
 
 work:siyi-chengdian-fanli a crm:E29_Design_or_Procedure ;
-    rdfs:label "祀儀成典凡例條目"@zh-Hans ;
+    rdfs:label "祀儀成典凡例條目"@zh-Hant ;
     rdfs:comment "建模者命名；内容见 J118-U15“录礼文、规制、器数、敕诰为书，不必杂以臣下之奏”"@zh-Hans .
 
 ## 凡例所指之书

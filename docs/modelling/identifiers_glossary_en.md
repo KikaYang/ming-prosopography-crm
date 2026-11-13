@@ -120,7 +120,7 @@ Columns: the identifier; its Chinese label (or, for a time-span, the date expres
 | `place:zhejiang` | 浙江 | Zhejiang | — | — | — |
 | `doc:cbdb-421880` | CBDB POSTED_TO_OFFICE_DATA posting_id 421880 | CBDB POSTED_TO_OFFICE_DATA, posting_id 421880 | — | — | — |
 | `doc:mingshi-110` | 明史 卷110 宰輔年表二 | Mingshi, juan 110 (Table of Grand Secretaries, part 2) | — | — | — |
-| `doc:mingshi-196` | 明史 卷196 列傳第八十四 | Mingshi, juan 196 (biography of Zhang Cong) | — | — | — |
+| `doc:mingshi-196` | 明史 卷196 列傳第八十四 | History of Ming, juan 196 | — | — | — |
 | `doc:shizong-shilu` | 世宗實錄 | Ming Shizong shilu | — | — | — |
 | `doc:shizong-shilu-089` | 世宗實錄 卷089 | Ming Shizong shilu, juan 89 | — | — | — |
 | `doc:shizong-shilu-118` | 世宗實錄 卷118 | Ming Shizong shilu, juan 118 | — | — | — |
@@ -163,24 +163,24 @@ Columns: the identifier; its Chinese label (or, for a time-span, the date expres
 | `event:jj07-06-jiaen` | 嘉靖七年六月加恩纂述諸臣（張璁） | Bestowal of honours on Zhang Cong for the compilation of the Minglun dadian (official compilation on the Great Rites Controversy, presented 1528) | — | — | — |
 | `event:jj07-06-jiaen-1` | 加少傅 | Addition of Junior Mentor to Zhang Cong (1528) | — | — | — |
 | `event:jj07-06-jiaen-2` | 加太子太傅 | Addition of Grand Mentor of the Heir Apparent to Zhang Cong (1528) | — | — | — |
-| `event:jj07-06-jiaen-3` | 升吏部尚書 | Promotion of Zhang Cong to Minister of Personnel (1528) | — | — | — |
-| `event:jj07-06-jiaen-4` | 升謹身殿大學士 | Promotion of Zhang Cong to Grand Secretary of the Jinshen Hall (1528) | — | — | — |
+| `event:jj07-06-jiaen-3` | 陞吏部尚書 | Promotion of Zhang Cong to Minister of Personnel (1528) | — | — | — |
+| `event:jj07-06-jiaen-4` | 陞謹身殿大學士 | Promotion of Zhang Cong to Grand Secretary of the Jinshen Hall (1528) | — | — | — |
 | `event:jj09-10-guiyou-shouzha` | 復出手扎示璁 | Handwritten note of the Jiajing Emperor shown to Zhang Cong (1530) | — | — | — |
 | `event:jj09-10-guiyou-tongshi` | 仍召輔臣璁同視 | Summons of Zhang Cong to inspect together with the Jiajing Emperor (1530) | — | — | — |
-| `event:jj09-10-xiayan-sheng` | 升翰林院侍讀學士（夏言） | Promotion of Xia Yan to Academician Reader-in-waiting of the Hanlin Academy (1530) | — | — | — |
-| `event:jj09-10-xinwei-chi` | 降敕 | Edict of the Jiajing Emperor on the compilation of the Siyi chengdian (1530) | — | — | — |
+| `event:jj09-10-xiayan-sheng` | 陞翰林院侍讀學士（夏言） | Promotion of Xia Yan to Academician Reader-in-waiting of the Hanlin Academy (1530) | — | — | — |
+| `event:jj09-10-xinwei-chi` | 降勅 | Edict of the Jiajing Emperor on the compilation of the Siyi chengdian (1530) | — | — | — |
 | `event:jj09-chuyu` | 諭……命（張璁與李時議定體例） | Instruction of the Jiajing Emperor to Zhang Cong and Li Shi to settle the format of the book (1530) | — | — | — |
 | `event:jj09-shangwei` | 上謂（凡例條目） | Pronouncement of the Jiajing Emperor on the editorial principles (1530) | — | — | — |
 | `event:jj09-xiayan-shouchang` | 首倡正議 | First proposal of the correct ritual by Xia Yan | — | — | — |
 | `event:jj09-yiding-tili` | 議定體例 | Settling of the format of the book by Zhang Cong and Li Shi | — | — | — |
 | `event:jj10-07-zhishi` | 張孚敬致仕（嘉靖十年） | Retirement of Zhang Fujing from the Grand Secretariat (1531) | — | — | — |
-| `event:jj10-11-zhao` | 遣行人周文燭齎敕召張孚敬復任辦事 | Summons of Zhang Fujing back to office, delivered by the Messenger Zhou Wenzhu (1532) | — | — | — |
+| `event:jj10-11-zhao` | 遣行人周文燭齎勑召張孚敬復任辦事 | Summons of Zhang Fujing back to office, delivered by the Messenger Zhou Wenzhu (1532) | — | — | — |
 | `event:jj10-11-zhaohuan` | 張孚敬召還入閣 | Recall of Zhang Fujing to the Grand Secretariat (1532) | — | — | — |
 | `event:jj11-03-zhijing` | 張孚敬應召至京 | Arrival of Zhang Fujing in the capital in answer to the summons (1532) | — | — | — |
 | `event:jj11-08-zhishi` | 張孚敬致仕 | Retirement of Zhang Fujing from the Grand Secretariat (1532) | — | — | — |
 | `event:jj12-01-zhao` | 遣鴻臚寺左少卿陳璋召張孚敬復任 | Summons of Zhang Fujing back to office, delivered by Chen Zhang, Left Vice Minister of the Court of State Ceremonial (1533) | — | — | — |
 | `event:jj12-04-fuzhao` | 張孚敬赴召至京 | Arrival of Zhang Fujing in the capital in answer to the summons (1533) | — | — | — |
-| `event:jj13-03-jimao-sheng` | 升湖廣黃州府同知徐階為浙江按察司僉事，提調學校 | Promotion of Xu Jie from Vice Prefect of Huangzhou to Assistant Surveillance Commissioner of Zhejiang and Supervisor of Education (1534) | — | — | — |
+| `event:jj13-03-jimao-sheng` | 陞湖廣黃州府同知徐階為浙江按察司僉事，提調學校 | Promotion of Xu Jie from Vice Prefect of Huangzhou to Assistant Surveillance Commissioner of Zhejiang and Supervisor of Education (1534) | — | — | — |
 | `event:jj13-03-jimao-sheng-1` | — | Joining of the Zhejiang Provincial Surveillance Commission by Xu Jie (1534) | — | — | — |
 | `event:jj13-03-jimao-sheng-2` | — | Leaving of Huangzhou Prefecture by Xu Jie (implicit, 1534) | — | — | — |
 | `event:minglun-dadian-jincheng` | 明倫大典書成進呈 | Completion and presentation of the Minglun dadian (official compilation on the Great Rites Controversy, presented 1528) | — | — | — |
@@ -235,7 +235,7 @@ Columns: the identifier; its Chinese label (or, for a time-span, the date expres
 | `name:guanxian-jj09-10-xinwei-gui-zhai` | 內閣輔臣大學士卿萼、卿鸞 | Assisting ministers of the Grand Secretariat, Grand Secretaries, Ministers [Gui] E and [Zhai] Luan | — | — | contextual: 輔臣 as above; titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
 | `name:guanxian-jj09-10-xinwei-guo-xun` | 知建造事總督工程官卿勛 | Superintendent of Construction, General Supervisor of the Works, Minister [Guo] Xun | — | — | titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
 | `name:guanxian-jj09-10-xinwei-li-shi` | 同知建造事，督視規制官卿時 | Associate Superintendent of Construction, Supervisor of the Building Design, Minister [Li] Shi | — | — | titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
-| `name:guanxian-jj09-10-xinwei-wang-hong` | 監視巡察工程官卿𬭎 | Inspector of the Works, Minister [Wang] Hong | — | — | titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
+| `name:guanxian-jj09-10-xinwei-wang-hong` | 監視巡察工程官卿鋐 | Inspector of the Works, Minister [Wang] Hong | — | — | titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
 | `name:guanxian-jj09-10-xinwei-xia-yan` | 監視巡察工程官吏科都給事中夏言 | Inspector of the Works, Chief Supervising Secretary of the Office of Scrutiny for Personnel, Xia Yan | — | — | titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
 | `name:guanxian-jj09-10-xinwei-zhang-cong` | 知建造事、總督工程官卿璁 | Superintendent of Construction, General Supervisor of the Works, Minister [Zhang] Cong | — | — | titles rendered with the English labels of their types; 兼 = 'concurrently'; 卿 = the emperor's form of address to a minister |
 | `name:guanxian-jj09-10-xu-jie` | 編修徐階 | Junior Compiler Xu Jie | — | — | Hucker 1985 #4635 (編修 Junior Compiler) |
@@ -282,10 +282,10 @@ Columns: the identifier; its Chinese label (or, for a time-span, the date expres
 | `type:shaobao` | 少保 | Junior Guardian | Junior Guardian: one of the Three Solitaries, an honorary title without duties (Mingshi 72: 虛銜). Zhang Cong held it in 1528 before the further rewards of that year. | — | label: Hucker 1985 #5110; explanation: Hucker 1985 #5110; Mingshi 72 |
 | `type:shaofu` | 少傅 | Junior Mentor | Junior Mentor: one of the Three Solitaries, an honorary title without duties (Mingshi 72: 虛銜). Added to Zhang Cong's titles in 1528. | — | label: Hucker 1985 #5096; explanation: Hucker 1985 #5096; Mingshi 72 |
 | `type:shouxian-action` | 授衔动作 | title-conferral action | Category grouping the verbs that sources use for conferring titles and posts: add, promote, advance. The verb is recorded because it tells whether the new title replaces an old one. | — | label: contextual translation; explanation: contextual (modelling category) |
-| `type:taifu` | 太傅 | Grand Mentor | Grand Mentor: one of the Three Dukes, an honorary title without duties in this period (Mingshi 72: 虛銜). Appears only in juan 136 as Zhang Fujing's former title, where juan 132 has Junior Mentor; Mingshi 72 records that Yang Tinghe declined this title in 1523 and that later only Zhang Juzheng received it in life. | — | label: Hucker 1985 #6158; explanation: Hucker 1985 #6158; Mingshi 72 |
+| `type:taifu` | 太傅 | Grand Mentor | Grand Mentor: one of the Three Dukes, an honorary title without duties in this period (Mingshi 72: 虛銜). Appears only in juan 136, as Zhang Fujing's former title; juan 132, 141 and 149 give Junior Mentor (少傅). The facsimile confirms the reading 太傅 in juan 136. It contradicts those juan and Mingshi 72, which states that civil officials received the Three Dukes only posthumously and that later only Zhang Juzheng received them in life, and is judged a writing error in the original (whether in compilation or in copying cannot be told). Zhang Cong was granted the title of Grand Preceptor (太師) only posthumously. | — | label: Hucker 1985 #6158; explanation: Hucker 1985 #6158; Mingshi 72; Shilu juan 132 |
 | `type:taizi-taifu` | 太子太傅 | Grand Mentor of the Heir Apparent | Grand Mentor of the Heir Apparent: one of the Three Preceptors of the Heir Apparent, an honorary title without duties (Mingshi 72: 虛銜). Added to Zhang Cong's titles in 1528. | — | label: Hucker 1985 #6256; explanation: Hucker 1985 #6256; Mingshi 72 |
 | `type:taizi-taishi` | 太子太師 | Grand Preceptor of the Heir Apparent | Grand Preceptor of the Heir Apparent: the highest of the Three Preceptors of the Heir Apparent, an honorary title without duties (Mingshi 72: 虛銜). Conferred on Zhang Fujing together with the Huagai Hall title; the sources disagree on the date. | — | label: Hucker 1985 #6258; explanation: Hucker 1985 #6258; Mingshi 72 |
-| `type:tidiao-xuexiao` | 提調學校 | Supervisor of Education | Supervision of schools and of student examinations in one province; a duty given to an official of the provincial Surveillance Commission, not a separate office. Xu Jie received it in Zhejiang together with his new post in 1534. | — | label: Hucker 1985 #6469; explanation: Hucker 1985 #6469; Mingshi 75 |
+| `type:tidiao-xuexiao` | 提調學校 | Supervisor of Education | Supervision of schools and of student examinations in one province; a duty given to an official of the provincial Surveillance Commission, not a separate office. Xu Jie received it in Zhejiang together with his new post in 1534. CBDB records this posting under the label 提學使 (office code 70951); as a formal title, 提學使 dates only from 1905, when provincial education commissioners (學政) were renamed (Qingshi gao, juan 116). | — | label: Hucker 1985 #6469; explanation: Hucker 1985 #6469; Mingshi 75; Qingshi gao 116 |
 | `type:tongzhi-jianzao-shi` | 同知建造事 | Associate Superintendent of Construction | Associate Superintendent of Construction: the title ranking below Superintendent of Construction in the same assignment. Held by Li Shi. | — | label: contextual translation (not in Hucker 1985); explanation: contextual (title words); Shilu juan 118 (SL11) |
 | `type:wenyuange-daxueshi` | 文淵閣大學士 | Grand Secretary of the Hall of Literary Profundity | Grand Secretary with the title of the Hall of Literary Profundity, one of the six hall titles in Mingshi 72. Zhang Cong held it before 1528. | — | label: Hucker 1985 #7729; explanation: Hucker 1985 #7729; Mingshi 72 |
 | `type:zhangshi` | 掌事 | in charge of the affairs of an office | Actually running the business of an office, as opposed to only holding its title. Used for Xia Yan, who ran the Office of Scrutiny for Personnel in 1530. | — | label: contextual translation; modelling type, decision D19; explanation: contextual (modelling decision D19); Mingshi 74 |

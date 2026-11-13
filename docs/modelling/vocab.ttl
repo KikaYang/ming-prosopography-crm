@@ -192,7 +192,7 @@ type:chaiqian a crm:E55_Type ;
     rdfs:label "差遣"@zh-Hant , "duty assignment"@en ;
     rdfs:comment "Hucker 1985, #67" .
 
-## D18 的两类：位次、职责（上位类按 D18 设，初拟：AI agent（Claude Code）；审定：作者，2026-10-30）
+## D18 的两类：位次、职责（上位类按 D18 设，初拟：AI agent（Claude Code）；审定：作者，2026-11-13）
 type:chaiqian-weici a crm:E55_Type ;
     rdfs:label "差遣位次"@zh-Hans , "rank within a duty assignment"@en ;
     crm:P127_has_broader_term type:chaiqian .
@@ -280,7 +280,7 @@ mpv:holds_title a rdf:Property ;
 
 # ===== 共用人物（2026-11-02 从 SL12_event / SL12_state / SL11_event / SL11_state 移入，三元组不变）=====
 # 凡在两个以上案例文件中出现的人物，定义放在这里；案例文件只写案例本身的三元组（如原文称谓串的 P1）。
-# CBDB 查询：cbdb_20261003 BIOG_MAIN 按 c_name_chn 精确查找（2026-10-30，查询：AI agent（Claude Code））。同名者按生卒、任官判定；判定由 AI agent（Claude Code） 提出，尚待作者确认。
+# CBDB 查询：cbdb_20261003（已在参照版 cbdb_20260613 复核，2026-11-13）BIOG_MAIN 按 c_name_chn 精确查找（2026-10-30，查询：AI agent（Claude Code））。同名者按生卒、任官判定；判定由 AI agent（Claude Code） 提出，尚待作者确认。
 # 原文只以“卿某”称呼、由建模者识别出姓名的，comment 注明“建模者判断”（对应清单中的隐含单元）。
 
 ## 张璁（SL12、SL11 两版共用）
@@ -422,7 +422,7 @@ type:zongcai-guan rdfs:comment "Director-general: title of the head of an offici
 type:fu-zongcai-guan rdfs:comment "Deputy Director-general: the title ranking next to the Director-general in an official compilation project. Held by the Grand Secretaries Gui E and Zhai Luan for the Siyi chengdian; the source does not state what part they took in the work."@en .
 type:jianxiu-guan rdfs:comment "Supervisor of the Compilation: a title in an official compilation project. The source does not state what the holders did; in this case it was held by Guo Xun (a hereditary noble), Li Shi and Wang Hong."@en .
 type:zuanxiu-guan rdfs:comment "Compiler: title of the members of a compilation project charged with writing and editing the text (Hucker 1985 #7058). Held here by junior members of the Hanlin Academy, among them Xu Jie."@en .
-type:tidiao-xuexiao rdfs:comment "Supervision of schools and of student examinations in one province; a duty given to an official of the provincial Surveillance Commission, not a separate office. Xu Jie received it in Zhejiang together with his new post in 1534."@en .
+type:tidiao-xuexiao rdfs:comment "Supervision of schools and of student examinations in one province; a duty given to an official of the provincial Surveillance Commission, not a separate office. Xu Jie received it in Zhejiang together with his new post in 1534. CBDB records this posting under the label 提學使 (office code 70951); as a formal title, 提學使 dates only from 1905, when provincial education commissioners (學政) were renamed (Qingshi gao, juan 116)."@en .
 type:zhangshi rdfs:comment "Actually running the business of an office, as opposed to only holding its title. Used for Xia Yan, who ran the Office of Scrutiny for Personnel in 1530."@en .
 type:jiaxian rdfs:comment "Category for honorary titles added to an official's post: they give rank and prestige but no duties (Mingshi 72: 虛銜). Includes the Three Solitaries and the titles of the heir apparent's household."@en .
 type:sangu rdfs:comment "Three Solitaries: Junior Preceptor, Junior Mentor and Junior Guardian (rank 1b). Honorary titles without duties (Mingshi 72: 虛銜), given to mark high rank and imperial favour."@en .

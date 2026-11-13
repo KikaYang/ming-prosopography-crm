@@ -65,12 +65,12 @@ event:jj07-06-jiaen-2 a crm:E7_Activity ;
     mpv:conferred_title type:taizi-taifu .
 
 event:jj07-06-jiaen-3 a crm:E7_Activity ;
-    rdfs:label "升吏部尚書"@zh-Hant ;
+    rdfs:label "陞吏部尚書"@zh-Hant ;
     crm:P2_has_type type:action-sheng ;                    
     mpv:conferred_title type:shangshu-personnel-xian .
 
 event:jj07-06-jiaen-4 a crm:E7_Activity ;
-    rdfs:label "升謹身殿大學士"@zh-Hant ;
+    rdfs:label "陞謹身殿大學士"@zh-Hant ;
     crm:P2_has_type type:action-sheng ;                    
     mpv:conferred_title type:jinshendian-daxueshi .
 
@@ -347,7 +347,7 @@ name:date-jj10-07-wuwu a crm:E41_Appellation ;
 
 ## 召（卷132，嘉靖十年十一月丁丑：遣行人周文烛赍敕召…张孚敬复任办事）
 event:jj10-11-zhao a crm:E7_Activity ;
-    rdfs:label "遣行人周文燭齎敕召張孚敬復任辦事"@zh-Hant ;
+    rdfs:label "遣行人周文燭齎勑召張孚敬復任辦事"@zh-Hant ;
     crm:P2_has_type type:zhao ;
     crm:P14_carried_out_by person:ming-shizong ;
     crm:P11_had_participant person:68266 ;
@@ -412,7 +412,8 @@ doc:shizong-shilu-141 crm:P67_refers_to name:guanxian-jj11-08-zhang-fujing .
 
 # 英文标签（D9 补充，2026-11-10）：只新增 rdfs:label @en，不改其他三元组
 doc:cbdb-421880 rdfs:label "CBDB POSTED_TO_OFFICE_DATA, posting_id 421880"@en .
-doc:mingshi-196 rdfs:label "Mingshi, juan 196 (biography of Zhang Cong)"@en .
+doc:mingshi-196 rdfs:label "History of Ming, juan 196"@en .
+doc:mingshi-196 rdfs:comment "This juan contains the biographies of Zhang Cong, Gui E, Fang Xianfu, Xia Yan and others."@en .
 event:huagaidian-claim-cbdb-421880 rdfs:label "Date of the conferral of the Huagai Hall title according to CBDB posting 421880"@en .
 event:huagaidian-claim-mingshi-110 rdfs:label "Date of the conferral of the Huagai Hall title according to Mingshi, juan 110"@en .
 event:huagaidian-claim-mingshi-196 rdfs:label "Date of the conferral of the Huagai Hall title according to Mingshi, juan 196"@en .

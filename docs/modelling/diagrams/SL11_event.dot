@@ -85,11 +85,11 @@ Summons of Zhang Cong to inspect together with the Jiajing Emperor (1530)
   n20 [label="event:jj09-10-xiayan-sheng
 E85_Joining
 Promotion of Xia Yan to Academician Reader-in-waiting of the Hanlin Academy (1530)
-升翰林院侍讀學士（夏言）", fillcolor="#d9ead3", style="rounded,filled"];
+陞翰林院侍讀學士（夏言）", fillcolor="#d9ead3", style="rounded,filled"];
   n21 [label="event:jj09-10-xinwei-chi
 E7_Activity
 Edict of the Jiajing Emperor on the compilation of the Siyi chengdian (1530)
-降敕", fillcolor="#d9ead3", style="rounded,filled"];
+降勅", fillcolor="#d9ead3", style="rounded,filled"];
   n22 [label="event:jj09-chuyu
 E7_Activity
 Instruction of the Jiajing Emperor to Zhang Cong and Li Shi to settle the format of the book (1530)
@@ -148,7 +148,7 @@ E41_Appellation
 同知建造事，督視規制官卿時", fillcolor="#cfe2f3", style="rounded,filled"];
   n38 [label="name:guanxian-jj09-10-xinwei-wang-hong
 E41_Appellation
-監視巡察工程官卿𬭎", fillcolor="#cfe2f3", style="rounded,filled"];
+監視巡察工程官卿鋐", fillcolor="#cfe2f3", style="rounded,filled"];
   n39 [label="name:guanxian-jj09-10-xinwei-xia-yan
 E41_Appellation
 監視巡察工程官吏科都給事中夏言", fillcolor="#cfe2f3", style="rounded,filled"];

@@ -90,12 +90,12 @@ doc:shizong-shilu-149 crm:P67_refers_to name:guanxian-jj12-04-zhang-fujing .
 ## 补充定义
 type:sangong a crm:E55_Type ;
     rdfs:label "三公"@zh-Hant , "Three Dukes"@en ;
-    rdfs:comment "本块新增，仅用于记录卷136'太傅'异文；Hucker 条目号待查"@zh-Hans ;
+    rdfs:comment "本块新增，仅用于记录卷136'太傅'异文；Hucker 1985, #4871"@zh-Hans ;
     crm:P127_has_broader_term type:jiaxian .
 
 type:taifu a crm:E55_Type ;
     rdfs:label "太傅"@zh-Hant , "Grand Mentor"@en ;
-    rdfs:comment "Hucker 条目号待查"@zh-Hans ;
+    rdfs:comment "Hucker 1985, #6158"@zh-Hans ;
     crm:P127_has_broader_term type:sangong .
 
 mpv:holds_title a crm:E55_Type .        # 决策 D10：让它可以出现在 P177 后面
@@ -127,4 +127,4 @@ pc:neige-member-68266 rdfs:label "Membership of Zhang Cong in the Grand Secretar
 
 # 英文释义（D9 补充，2026-11-12）：类型节点只新增 rdfs:comment @en，面向不了解明代制度的读者
 type:sangong rdfs:comment "Three Dukes: Grand Preceptor, Grand Mentor and Grand Guardian, the highest honorary titles (rank 1a) and without duties in this period (Mingshi 72: 虛銜). Mingshi 72 notes that civil officials received them in life only exceptionally. Used here only to record the reading 'Grand Mentor' in juan 136."@en .
-type:taifu rdfs:comment "Grand Mentor: one of the Three Dukes, an honorary title without duties in this period (Mingshi 72: 虛銜). Appears only in juan 136 as Zhang Fujing's former title, where juan 132 has Junior Mentor; Mingshi 72 records that Yang Tinghe declined this title in 1523 and that later only Zhang Juzheng received it in life."@en .
+type:taifu rdfs:comment "Grand Mentor: one of the Three Dukes, an honorary title without duties in this period (Mingshi 72: 虛銜). Appears only in juan 136, as Zhang Fujing's former title; juan 132, 141 and 149 give Junior Mentor (少傅). The facsimile confirms the reading 太傅 in juan 136. It contradicts those juan and Mingshi 72, which states that civil officials received the Three Dukes only posthumously and that later only Zhang Juzheng received them in life, and is judged a writing error in the original (whether in compilation or in copying cannot be told). Zhang Cong was granted the title of Grand Preceptor (太師) only posthumously."@en .
