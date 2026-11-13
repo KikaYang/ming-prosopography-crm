@@ -239,6 +239,14 @@ type:jiaxian a crm:E55_Type ; rdfs:label "加衔" .
 **To be checked**
 The exact dates of Zhang Cong's several retirements and recalls are to be added after checking each juan.
 
+Note (2026-11-13; dates checked against the facsimile images):
+- juan 132, Jiajing 10, eleventh month, *dingchou* (14 January 1532): Zhang Fujing summoned back to office (遣行人周文燭齎勑召致仕……張孚敬復任辦事);
+- juan 136, Jiajing 11, third month, *jiayin* (20 April 1532): Zhang Fujing arrived in the capital in answer to the summons (張孚敬應召至京);
+- juan 141, Jiajing 11, eighth month, *xinchou* (4 October 1532): Zhang Fujing retired (張孚敬致仕);
+- juan 149, Jiajing 12, fourth month, *yihai* (6 May 1533): the retired Zhang Fujing arrived in the capital (致仕……張孚敬赴台至京).
+
+The retirements of Jiajing 8 and of Jiajing 10, seventh month, are still to be checked (the latter is already modelled from juan 128, seventh month, *wuwu*; see Q4; juan 128 has not been checked against the facsimile).
+
 Reinstatement after recall is for now not created as an E85; this will be decided once Q6 (whether reinstatement dates from the decree or from the arrival in the capital) is confirmed. (approved by the author, 2026-10-16)
 
 Supplement: where the source says "令／著致仕" (ordered to retire), P14 records the emperor; recall and re-entry into the Grand Secretariat is an E85, with P82a/b expressing a range when the date is uncertain; Q6 is resolved within the scope of SL12. (approved by the author, 2026-10-24)
@@ -454,6 +462,12 @@ Supplement (drafted by AI agent (Claude Code); approved by the author, 2026-11-0
 
 - For the three core persons (Zhang Cong, Xia Yan, Xu Jie), all offices and assignments recorded in the source are modelled; for other persons, only what bears directly on the modelling problems of the case (in SL11, their assignment nodes in this edict); the rest is judged not_modelled / scope in the evaluation.
 - CBDB personids of the three core persons (from `data/deep_cases/factoids_3persons.csv` and `cbdb_postings_3persons.csv`, which agree): 張璁 Zhang Cong 68266, 夏言 Xia Yan 68194, 徐階 Xu Jie 68547.
+- Note (2026-11-13): whether Xia Yan was appointed Compiler (充纂修官) remains doubtful. The evidence is set side by side, without a judgement:
+  (1) *Mingshi*, juan 196, his biography: "帝欲輯郊禮為成書，擢言侍讀學士，充纂修官，直經筵日講" (the emperor wished to compile the suburban rites into a book; he promoted Yan to Academician Reader-in-waiting, appointed him Compiler, and put him on duty at the Classics Colloquium and the daily lectures) (explicit in the source; undated, narrated before Jiajing 10, third month).
+  (2) *Shilu*, juan 118, Jiajing 9, tenth month, *xinwei* (*Siyi chengdian*; checked against the facsimile): the original is unpunctuated, and the sentence "夏言陞翰林院侍讀學士……不妨照舊掌科事，及中允廖道南……為纂修官" can be read as leaving Xia Yan out of the compilers (the reading of J118-U51, the author) or as including him; the text itself cannot decide.
+  (3) *Shilu*, juan 148, Jiajing 12, third month, *renzi* (checked against the facsimile): the Minister of Rites Xia Yan presented his treatise on the rites of the four suburbs, saying of himself "臣始既預論議之末……恭輯聖制，歲餘始獲成編" (having taken a humble part in the debates, … I respectfully compiled the imperial rulings, and after more than a year the book was complete), and the emperor named the book *Jiaoli tongdian* (郊禮通典). This is a book compiled by Xia Yan himself as a participant in the ritual debates, not the same matter as the compilation team of the *Siyi chengdian* in juan 118; the passage does not say that he had been appointed Compiler.
+  The biography's "appointed Compiler" may rest on (2), or may summarise compiling activity such as (3); either account is only a presumption.
+  Conclusion: doubtful; not treated as a disagreement between sources; no Compiler node is created; J118-U51 is unchanged.
 
 ---
 

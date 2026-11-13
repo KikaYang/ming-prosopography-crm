@@ -54,7 +54,7 @@ Evaluation by information units: the historical sources are broken down into inf
 ## Change log of info_units.csv
 
 - v1.0 (2026-10-19, commit e4db843): first version, three passages from *Shizong shilu* juan 89, 136 and 149.
-- v1.1 (2026-10-21): two changes, based on checking the page images. Note of J136-U04 changed to "影像核实，原文作'太傅'，与卷89'少傅'不合，疑传抄误，待查《校勘记》" (checked against the image: the original reads 太傅 (Grand Mentor), which disagrees with 少傅 (Junior Mentor) in juan 89; probably a copying error; the collation notes are to be consulted); in_scope of J149-U13 changed from "待核" (to be checked) to "否" (no), with the note "影像核实，属下一条" (checked against the image: belongs to the next entry).
+- v1.1 (2026-10-21): two changes, based on checking the page images. Note of J136-U04 changed to "影像核实，原文作'太傅'，与卷89'少傅'不合，疑传抄误，待查《校勘记》" (checked against the image: the original reads 太傅 (Grand Mentor), which disagrees with 少傅 (Junior Mentor) in juan 89; probably a copying error; the collation notes are to be consulted; this is the wording of the v1.1 note in info_units.csv, which is not changed). Correction (2026-11-13): checked against the facsimile, the original reads 太傅 (Grand Mentor). This contradicts 少傅 (Junior Mentor) in juan 132, 141 and 149 and *Mingshi*, juan 72, "文臣無生加三公者，惟贈乃得之……其後文臣得加三公惟張居正" (no civil official received the Three Dukes in life, only posthumously … later the only civil official to receive the Three Dukes was Zhang Juzheng), and is judged a writing error in the original (whether it arose in compilation or in copying cannot be told); the collation notes (校勘記) are still to be consulted; in_scope of J149-U13 changed from "待核" (to be checked) to "否" (no), with the note "影像核实，属下一条" (checked against the image: belongs to the next entry).
 - List v1.2: 66 units of J118 added (SL11, listed before modelling; approved by the author, 2026-10-29)
 - List v1.3: 10 units of J161 added (SL14, listed before modelling)
 - Addendum (approved by the author, 2026-11-08): J089-U09 (加正一品俸, salary of rank 1a added) and J089-U24 (荫一子为中书舍人, one son given the protection privilege as Secretariat Drafter)
@@ -156,3 +156,8 @@ The following explain how rules v1 are applied; they are not changes to the rule
 ## To do
 
 - ~~Before SL11, extract the vocabulary shared by the two versions into vocab.ttl~~ (done 2026-10-28: `docs/modelling/vocab.ttl`)
+
+## Source checks (2026-11-13)
+
+- The *Shilu* passages used in the evaluation have been checked against the facsimile images; the differences between the transcription and the images are limited to variant characters and punctuation and do not affect the content of the units on which the evaluation is based.
+- Xia Yan as Compiler (2026-11-13): his biography in *Mingshi*, juan 196, says he was appointed Compiler (充纂修官); the edict of juan 118, *xinwei*, is unpunctuated and can be read either way as to whether he was among the compilers; the *Jiaoli tongdian* that he compiled himself (juan 148) is a different matter from juan 118. Doubtful; not treated as a disagreement between sources; no Compiler node is created; J118-U51 is unchanged. See the note of 2026-11-13 under D21 in docs/modelling/modelling_decisions_en.md.
