@@ -6,17 +6,18 @@ This is a snapshot of November 2026 of work in progress.
 
 ## Start here
 
-1. Two worked examples, provided separately from this repository. Read them first.
-2. `docs/modelling/modelling_decisions_en.md`: the modelling decisions (D1–D26), the open questions (Q1–Q7, T1–T4) and a code reference.
-   `docs/modelling/identifiers_glossary_en.md` explains how identifiers are formed and gives a glossary of every identifier: Chinese and English labels, what each title or category means, dates, and the basis of each English rendering.
-3. `data/evaluation/README_en.md`: the evaluation method, rules and versions.
-4. The models (`docs/modelling/*.ttl`) and the evaluation tables (`data/evaluation/*_vs_units*.csv`, `cases_summary.csv`, `cq_results.csv`).
+1. `docs/worked_examples/SL14_worked_example.pdf`: a short passage followed through the full procedure, from the source text to the information units, to the CBDB, event-based and state-based representations, and to the evaluation.
+2. `docs/worked_examples/SL12_worked_example.pdf`: disagreement between sources: a disputed date, an error in the source, and the phrase "his other offices as before" (餘官如故).
+3. For reference: the decision log `docs/modelling/modelling_decisions_en.md` (the modelling decisions D1–D27, the open questions Q1–Q7 and T1–T5, and a code reference), and the identifier glossary `docs/modelling/identifiers_glossary_en.md` (how identifiers are formed, with the Chinese and English labels of every identifier, what each title or category means, dates, and the basis of each English rendering).
+4. `data/evaluation/README_en.md`: the evaluation method, rules and versions.
+5. The models (`docs/modelling/*.ttl`) and the evaluation tables (`data/evaluation/*_vs_units*.csv`, `cases_summary.csv`, `cq_results.csv`).
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
 | `docs/modelling/` | CIDOC-CRM models in Turtle: `SL12_event.ttl`, `SL12_state.ttl`, `SL11_*.ttl`, `SL14_*.ttl`, the shared vocabulary `vocab.ttl` and `prefixes.ttl`; diagrams of the event versions (Chinese labels, and English labels in `*_en.png`); the modelling decision log; `identifiers_glossary_en.md`, the identifier rules and a glossary of all identifiers, generated with its two source tables `name_glosses_en.csv` and `glossary_basis_en.csv` |
+| `docs/worked_examples/` | Two worked examples (PDF): SL14, the full procedure on one short passage; SL12, disagreement between sources |
 | `data/evaluation/` | Information units (`info_units.csv`), evaluation tables and summaries, competency questions with their queries (`cq_queries/`), raw results (`cq_raw/`) and judgements (`cq_results.csv`); evaluation notes (`README_en.md`) |
 | `evaluated_versions/` | Verbatim copies of the model files as they stood at each evaluation (see below) |
 | `data/deep_cases/` | Multi-source factoid tables for the three core persons (Zhang Cong, Xia Yan, Xu Jie) |
