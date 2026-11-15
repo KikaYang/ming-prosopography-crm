@@ -21,7 +21,7 @@ This is a snapshot of November 2026 of work in progress.
 | `data/evaluation/` | Information units (`info_units.csv`), evaluation tables and summaries, competency questions with their queries (`cq_queries/`), raw results (`cq_raw/`) and judgements (`cq_results.csv`); evaluation notes (`README_en.md`) |
 | `evaluated_versions/` | Verbatim copies of the model files as they stood at each evaluation (see below) |
 | `data/deep_cases/` | Multi-source factoid tables for the three core persons (Zhang Cong, Xia Yan, Xu Jie) |
-| `data/mingshi_zaifu/` | Grand secretaries of the *Mingshi* tables (juan 109–110) and their matching to CBDB |
+| `data/mingshi_zaifu/` | Grand secretaries of the *Mingshi* tables (juan 109–110; Wikisource oldid=2594725 and 2594726) and their matching to CBDB; the parsing pipeline, its intermediate files and sources are described in `data/mingshi_zaifu/README.md` |
 | `coverage_ming_grand_secretaries.csv`, `coverage_check.py` | CBDB coverage of the Jiajing and Longqing grand secretaries, and the script that produces it |
 | `data/apis/` | A record from the Austrian APIS prosopography, for comparison |
 | `scripts/` | `check_crm.py` (checks Turtle against CIDOC-CRM), `ttl_to_diagram.py` (with `--lang en` for English diagrams), `naming_table.py` (regenerates the glossary in `identifiers_glossary_en.md`), `match_mingshi_cbdb.py`; `scripts/eval/` generates the evaluation tables and runs the competency questions |
@@ -30,7 +30,6 @@ This is a snapshot of November 2026 of work in progress.
 
 Some tables were produced by scripts that are not part of this snapshot, because they depend on material that is not included:
 - `data/deep_cases/`: built from CBDB, from an LLM extraction of *Mingshi* biographies and from manual checks of the *Shilu*; the extraction cache and the scripts are not included.
-- `data/mingshi_zaifu/mingshi_zaifu_*.csv`: parsed from the Wikisource text of *Mingshi* juan 109–110; the parser and its input are not included. The CBDB matching (`mingshi_cbdb_*.csv`) is produced by `scripts/match_mingshi_cbdb.py`.
 
 ## Installation
 
