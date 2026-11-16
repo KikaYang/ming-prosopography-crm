@@ -85,6 +85,7 @@ Each evaluation table was produced against the model files as they stood at a gi
 - **Historical sources**: *Shizong shilu* passages were checked on the Shidian Guji platform (red-line manuscript); *Mingshi* passages are from Wikisource. Short quotations only. Quotations from the Shilu have been checked against facsimile images; where the transcription differs from the image, the image reading is used.
 - **Licences**:
   - Unless otherwise noted, CC BY-NC-SA 4.0 (see `LICENSE`), which also covers the CBDB-derived content. Attribution of CBDB: China Biographical Database (CBDB), https://cbdb.hsites.harvard.edu/, release CBDB_20260602 (`cbdb_20260613.sqlite3`).
+  - Code (all `.py` files): MIT; see `LICENSE-CODE`. Data and documentation remain under CC BY-NC-SA 4.0.
   - `ontologies/`: CC BY 4.0 (FORTH-ICS); see `ontologies/LICENSE.md`.
   - `data/apis/`: CC BY-NC-SA 3.0; see `data/apis/LICENSE.md`.
 

@@ -8,7 +8,8 @@ This directory holds the grand secretaries of the Yongle to Chongzhen reigns and
   - https://zh.wikisource.org/w/index.php?title=明史/卷109&oldid=2594725
   - https://zh.wikisource.org/w/index.php?title=明史/卷110&oldid=2594726
 - Printed to PDF from a browser (Safari) on 2026-10-06. The PDFs are not included in this repository.
-- The pages do not name a base edition. The text is in the public domain.
+- The pages do not name a base edition.
+- The text of the Mingshi is in the public domain; the licence of this repository applies only to the extraction, parsing and derived tables.
 
 ## Pipeline
 
