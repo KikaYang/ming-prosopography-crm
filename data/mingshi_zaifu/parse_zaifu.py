@@ -31,6 +31,8 @@ def resolve(tok_text, prev_open):
             if tok_text.startswith(key): cands.append((len(key),persons[full],full,key))
     if cands:
         cands.sort(reverse=True); _,_,full,key=cands[0]
+        if prev_open and len(key)==1:  # previous entry not ending in "。": a one-character short name is read as a continuation line (fixes the misreading of Xu Youzhen's continuation line in juan 109, 2026-11-18)
+            return None, tok_text
         rest=tok_text[len(key):]
         if rest=='' or re.match(STOP, rest) and (re.match(MON,rest) or not re.match(r'[\u4e00-\u9fff]',rest) or re.match(r'(以|由|召|復|晉|加|致仕|卒|免|丁憂|起復|兼|為|改|罷|削|入|仍|是|吏部|戶部|禮部|兵部|刑部|工部|少|太子|太常|翰林|詹事|左|右|南京)',rest)):
             seen['n']+=1; persons[full]=seen['n']; return full, rest.strip()

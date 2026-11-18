@@ -34,7 +34,7 @@ python ../parse_zaifu.py
 python ../zaifu_to_csv.py zaifu.json ../mingshi_zaifu_long.csv ../mingshi_zaifu_persons.csv
 ```
 
-`zaifu_to_csv.py` requires the `opencc` package (verified with 1.4.2), and `extract_text.py` requires `pdftotext` from poppler. Neither is listed in `requirements.txt`.
+`zaifu_to_csv.py` requires the `opencc` package (1.4.2, listed in `requirements.txt`); `extract_text.py` requires `pdftotext` from poppler, a system tool not listed in `requirements.txt`.
 
 ## Missing characters
 
@@ -47,13 +47,17 @@ The note column of `mingshi_zaifu_persons.csv` marks both names: 名字含缺字
 
 ## History
 
-The original parsing was carried out on 2026-10-06 in a cloud session; its intermediate files were not preserved. The pipeline was reconstructed in November 2026 and reproduces both CSV files byte for byte.
+The original parsing was carried out on 2026-10-06; its intermediate files were not preserved. The pipeline was reconstructed in November 2026. The present version contains the correction of 2026-11-18 (see "Known issues") and differs from the original version of October 2026 in three rows: `mingshi_zaifu_long.csv` has 1,039 rows instead of 1,040, and three rows of `mingshi_zaifu_persons.csv` differ. The files are reproducible byte for byte from the corrected pipeline; they are no longer identical to the original version.
 
-- Running `zaifu_to_csv.py` on `sources/zaifu.json` gives both CSV files identical to those in this directory, and running `parse_zaifu.py` on the two text files in `sources/` gives a `zaifu.json` identical to `sources/zaifu.json` (verified 2026-11-15).
+- Running `zaifu_to_csv.py` on `sources/zaifu.json` gives both CSV files identical to those in this directory, and running `parse_zaifu.py` on the two text files in `sources/` gives a `zaifu.json` identical to `sources/zaifu.json`. `parse_zaifu.py` reports `109 cost 0.06`, `110 cost 1.94`, `1039 rows` and `163 persons`.
+- `tests/test_zaifu_parse.py` checks that the alignment cost of each juan is below 100 and that no (person, year) pair occurs twice within a juan.
 - The extraction of the two text files from the PDFs with poppler 24.02 was carried out in a separate Linux environment.
 
 ## Known issues
 
-- For juan 109, `parse_zaifu.py` reports an abnormal score for the alignment of years (cost ≈ 1000; 1000.06 when reproduced), so a few records may be assigned to the wrong year; this has not been checked. Juan 110 is normal (cost 1.94).
+- Resolved (2026-11-18): abnormal alignment cost for juan 109 (about 1000; 1000.06 when reproduced).
+  - Cause: the entry for Xu Youzhen 徐有貞 in Jingtai 8 is broken over two lines in the layout, and the second line begins with 文淵閣事. `resolve()` read the initial 文 as the one-character short name of Wang Wen 王文 and started a new record for him. Wang Wen then appeared twice in the same year segment, which the year alignment penalises with 1000.
+  - Effect on three persons: the record of Xu Youzhen was cut off after 掌; Wang Wen had a false record for 1457 (淵閣事。六月下獄……); the entry of Shang Lu 商輅, 五月兼太常寺卿 (fifth month, concurrently Chief Minister of the Court of Imperial Sacrifices), was assigned to 1457 instead of 1456 (Jingtai 7).
+  - Correction: in `resolve()`, when the previous entry does not end with 。, a one-character short name is read as a continuation line and does not start a new record. The cost for juan 109 is now 0.06; juan 110 is unchanged (1.94). `mingshi_zaifu_long.csv` has 1,039 rows instead of 1,040.
 - The reign label of 1402 was once given as 洪武四年; since 2026-10-09 it reads 建文四年(洪武三十五年). The year_ce column was always correct.
 - In `mingshi_zaifu_persons.csv`, 23 persons have discontinuous years in office; their note column marks them for checking.
