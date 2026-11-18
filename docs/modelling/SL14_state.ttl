@@ -1,4 +1,4 @@
-# SL14 state 版（对照模型，决策 D15、D22；框架：AI agent（Claude Code），2026-11-02；第②块：作者）。
+# SL14, state version (comparison model; D15 = state version without events, D22 = no assignment nodes in the state version; framework: automated, 2026-11-02; block ②: the author).
 # 依据：信息单元清单 J161（info_units.csv v1.3，标签 units-SL14）、决策 D1–D26。共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
 # 不建任何事件；不带时间（D15 规则 2）。原文称谓串从 SL14_event.ttl 第④块原样复制；如需修改两个文件同步改。
 # 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。

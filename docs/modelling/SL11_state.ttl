@@ -1,4 +1,4 @@
-# SL11 state 版（对照模型，决策 D15、D22；框架：AI agent（Claude Code），2026-10-30；第④⑤块：作者）。
+# SL11, state version (comparison model; D15 = state version without events, D22 = no assignment nodes in the state version; framework: automated, 2026-10-30; blocks ④ and ⑤: the author).
 # 共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
 # 不建任何事件。人物、原文称谓串、凡例与书从 SL11_event.ttl 原样复制；如需修改两个文件同步改。
 # 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。

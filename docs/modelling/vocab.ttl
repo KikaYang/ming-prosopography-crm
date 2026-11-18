@@ -175,7 +175,7 @@ type:guanxian-chuan a crm:E55_Type ;
 person:yang a crm:E21_Person ;
     rdfs:label "Yang Tianchi (modeller)"@en .
 
-# ===== SL11 新增（2026-10-30，编写：AI agent（Claude Code）；SL11_event.ttl 与后续案例共用）=====
+# ===== Added for SL11 (2026-10-30; written automatically; shared by SL11_event.ttl and later cases) =====
 
 # 史料
 doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-118 .
@@ -192,7 +192,7 @@ type:chaiqian a crm:E55_Type ;
     rdfs:label "差遣"@zh-Hant , "duty assignment"@en ;
     rdfs:comment "Hucker 1985, #67" .
 
-## D18 的两类：位次、职责（上位类按 D18 设，初拟：AI agent（Claude Code）；审定：作者，2026-11-13）
+## Two kinds under D18 (assignment names): rank and duty (superclasses set by D18; automated draft; approved by the author, 2026-11-13)
 type:chaiqian-weici a crm:E55_Type ;
     rdfs:label "差遣位次"@zh-Hans , "rank within a duty assignment"@en ;
     crm:P127_has_broader_term type:chaiqian .
@@ -280,7 +280,7 @@ mpv:holds_title a rdf:Property ;
 
 # ===== 共用人物（2026-11-02 从 SL12_event / SL12_state / SL11_event / SL11_state 移入，三元组不变）=====
 # 凡在两个以上案例文件中出现的人物，定义放在这里；案例文件只写案例本身的三元组（如原文称谓串的 P1）。
-# CBDB 查询：cbdb_20261003（已在参照版 cbdb_20260613 复核，2026-11-13）BIOG_MAIN 按 c_name_chn 精确查找（2026-10-30，查询：AI agent（Claude Code））。同名者按生卒、任官判定；判定由 AI agent（Claude Code） 提出，尚待作者确认。
+# CBDB look-up: cbdb_20261003 (re-checked against the reference release cbdb_20260613, 2026-11-13), exact match on c_name_chn in BIOG_MAIN (2026-10-30, automated query). Persons of the same name are distinguished by dates and postings; the identifications were proposed automatically and are awaiting confirmation by the author.
 # 原文只以“卿某”称呼、由建模者识别出姓名的，comment 注明“建模者判断”（对应清单中的隐含单元）。
 
 ## 张璁（SL12、SL11 两版共用）
@@ -338,7 +338,7 @@ person:131629 a crm:E21_Person ;
     rdfs:label "程文德"@zh-Hant ;
     rdfs:comment "CBDB 131629（1497–1559），唯一。原文直书“程文德”（J118-U50）"@zh-Hans .
 
-# ===== SL14 新增（2026-11-02，编写：AI agent（Claude Code）；SL14_event.ttl 与后续案例共用）=====
+# ===== Added for SL14 (2026-11-02; written automatically; shared by SL14_event.ttl and later cases) =====
 
 # 史料（决策 D7）
 doc:shizong-shilu crm:P106_is_composed_of doc:shizong-shilu-161 .

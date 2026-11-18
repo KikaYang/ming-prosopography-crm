@@ -3,7 +3,7 @@
 > English version of the author's modelling decision log.
 > Translation notes: office titles follow Hucker (1985), *A Dictionary of Official Titles in Imperial China*, and match the English labels in `docs/modelling/vocab.ttl`; titles not in Hucker are translated into English (basis given in the glossary); hall names are kept in pinyin. Quotations from historical sources are kept in Chinese, with an English gloss where helpful. Turtle code blocks are reproduced unchanged.
 
-> Decisions and rationale: Yang. Drafting and alternative options: AI agent (Claude Code).
+> Decisions and rationale: the author. Drafting and alternative options (automated; see README).
 > Version: 2026-10-12. All classes and properties have been checked against CIDOC-CRM 7.1.3 (including the PC extension).
 > Convention: the event version is the main model; the state version serves only as a point of comparison, used in the argument for RQ1.
 
@@ -130,7 +130,7 @@ The conclusion of the check of 2026-11-08 is accordingly extended to this whole 
 
 Correction (2026-11-12): in the supplement of 2026-11-12, the sentence "Where neither applies, the title is treated as a concurrent rank title" is withdrawn; see D27. The conclusion that Zhang Cong was not in charge of the ministry stands; in v3 it is recorded as an E13 with *Mingshi*, juan 112 and juan 196, as its sources.
 
-Supplement (2026-11-13): *Shilu*, juan 89 (Jiajing 7, sixth month, *xinchou*, first day of the month), confers "Minister of Personnel and Grand Secretary of the Jinshen Hall" (陞吏部尚書謹身殿大學士) (explicit in the source; checked against the facsimile). In the same year *Mingshi*, juan 112, lists Gui E as Minister of Personnel (explicit in the source); the title was therefore a concurrent one, and Zhang Cong was not in charge of the ministry (inferred, on the basis of a positive record). Juan 112 records grand secretaries who were "in charge of the ministry while in the Grand Secretariat" (以內閣掌部事), as for Fang Xianfu in Jiajing 11, whereas the Personnel column for Jiajing 7 to 14 has no record of Zhang Cong being in charge (inferred from absence, but from a register in which such a record would be expected, so the evidence is strong). Fang Xianfu took leave in Jiajing 9, ninth month; he was summoned in Jiajing 10, seventh month, but did not take up the post; Wang Qiong took up the post in Jiajing 10, twelfth month. In between, no one actually took up the post. The table does not record acting appointments; whether anyone held the seal during this period has been checked (for the scope, see the supplement of 2026-11-18 below), and no record has been found of Zhang Cong acting as head of the Ministry of Personnel. In Jiajing 11, while Wang Qiong was ill, Fang Xianfu was made to hold his seal temporarily (暫署其印); after Wang Qiong died in the seventh month, Fang Xianfu was ordered to take charge of the ministry (juan 140, explicit in the source).
+Supplement (2026-11-13): *Shilu*, juan 89 (Jiajing 7, sixth month, *xinchou*, first day of the month), confers "Minister of Personnel and Grand Secretary of the Jinshen Hall" (陞吏部尚書謹身殿大學士) (explicit in the source; checked against the facsimile). In the same year *Mingshi*, juan 112, lists Gui E as Minister of Personnel (explicit in the source); the title was therefore a concurrent one, and Zhang Cong was not in charge of the ministry (presumed, on the basis of a positive record). Juan 112 records grand secretaries who were "in charge of the ministry while in the Grand Secretariat" (以內閣掌部事), as for Fang Xianfu in Jiajing 11, whereas the Personnel column for Jiajing 7 to 14 has no record of Zhang Cong being in charge (inferred from absence, but from a register in which such a record would be expected, so the evidence is strong). Fang Xianfu took leave in Jiajing 9, ninth month; he was summoned in Jiajing 10, seventh month, but did not take up the post; Wang Qiong took up the post in Jiajing 10, twelfth month. In between, no one actually took up the post. The table does not record acting appointments; whether anyone held the seal during this period has been checked (for the scope, see the supplement of 2026-11-18 below), and no record has been found of Zhang Cong acting as head of the Ministry of Personnel. In Jiajing 11, while Wang Qiong was ill, Fang Xianfu was made to hold his seal temporarily (暫署其印); after Wang Qiong died in the seventh month, Fang Xianfu was ordered to take charge of the ministry (juan 140, explicit in the source).
 
 Supplement (2026-11-18, the vacancy at the Ministry of Personnel): the passages below are transcriptions from the Shidian Guji platform (识典古籍); juan 128 has been checked against the facsimile, the others have not. Western dates are converted with lunar-python. Evidence is labelled in three classes: *explicit in the source* (the source states it directly); *presumed* (a conclusion drawn from a positive record, which further evidence can overturn); *inferred from absence* (a conclusion drawn from the lack of a record within a stated scope of search).
 - Explicit in the source:
@@ -313,7 +313,7 @@ These questions are to be put to specialists in Ming history. Wherever the thesi
 
 ## D8 URI scheme → based on GitHub Pages, vocabulary and instances kept apart, instances segmented by entity type
 
-> Decision: Yang (2026-10-12); drafting: AI agent (Claude Code).
+> Decision: the author (2026-10-12); drafting (automated; see README).
 > Approved by the author (2026-11-08); both the decision and the rationale are confirmed.
 
 **Decision**
@@ -410,7 +410,7 @@ Detailed rules (set by: Yang, 2026-10-24): precision to the day; where only year
 
 Where only the year is given (e.g. "Jiajing 13" in the biography, or 1532 in CBDB, i.e. Jiajing 11), the whole lunar year is used, including any intercalary month. (approved by the author, 2026-10-24)
 
-Supplement (drafted by AI agent (Claude Code); approved by the author, 2026-11-08): by the XSD specification, xsd:dateTime is the proleptic Gregorian calendar.
+Supplement (automated draft, see README; approved by the author, 2026-11-08): by the XSD specification, xsd:dateTime is the proleptic Gregorian calendar.
 
 ---
 

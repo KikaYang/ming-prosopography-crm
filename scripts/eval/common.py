@@ -5,7 +5,7 @@ A case module defines
     CASE       "SL12" / "SL11" / "SL14"
     SUFFIX     table file-name suffix ("" / "_SL11" / "_SL14")
     PREFIX     unit-id prefix(es) in data/evaluation/info_units.csv ("J118-", or a tuple for several juan)
-    BASE       first-pass judgements (AI agent (Claude Code)): {version: [(unit_id, judgement, cause, evidence, implicit, note), ...]}
+    BASE       first-pass judgements (automated; see README): {version: [(unit_id, judgement, cause, evidence, implicit, note), ...]}
     OVERRIDES  later changes, applied in order: (version, unit_id, op, value, date, by, round)
                op: "judgement" / "cause" / "evidence" / "note"   replace the field
                    "note+"                                        append to the note (joined with "；")

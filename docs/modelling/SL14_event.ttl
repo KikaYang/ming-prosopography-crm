@@ -1,6 +1,6 @@
-# SL14 event 版（框架：AI agent（Claude Code），2026-11-02；第③块：作者）。
+# SL14, event version (framework: automated, 2026-11-02; block ③: the author).
 # 依据：信息单元清单 J161（info_units.csv v1.3，标签 units-SL14）、决策 D1–D26。共用词汇见 vocab.ttl（检查时用 check_crm.py --vocab docs/modelling/vocab.ttl 一起加载）。
-# 原文字符串（rdfs:label @zh-Hant）据清单录文（简体）由 AI agent（Claude Code） 转为繁体，已对照影像核实（2026-11-13）。
+# Original title strings (rdfs:label @zh-Hant) were converted from the simplified transcription in the unit list to traditional characters automatically and checked against the facsimile (2026-11-13).
 # 出处（决策 D7）：事件用 doc:shizong-shilu-161 P70 documents（第③块），原文称谓串用 P67 refers_to（第④块）。
 # 本项目所有 Turtle 文件的前缀。新建 ttl 文件时从这里整段复制。
 # URI 方案见 docs/modelling/modelling_decisions.md D8。

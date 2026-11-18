@@ -73,7 +73,7 @@ def run_all(out_dir):
         (raw / f"{q.name}.csv").write_bytes(render(header, rows))
 
 
-# first-pass judgements (AI agent (Claude Code), tag eval-cq-v1): (cq_id, version) -> (verdict, result summary, note)
+# first-pass judgements (automated; see README; tag eval-cq-v1): (cq_id, version) -> (verdict, result summary, note)
 # verdicts: 答对 correct / 部分答对 partially correct / 答不了 cannot answer / 答错 wrong (rules in data/evaluation/README_en.md, "Competency questions")
 VERDICTS = {
     ("CQ1", "cbdb"): ("部分答对", "带衔：列出杨一清、张璁等 8 人（含桂萼、吴一鹏、李承勋等本案史料未及者），都只是“吏部尚書”一条任官，任命方式未詳。掌部事：无结果。",
@@ -180,7 +180,7 @@ OVERRIDES = [
      '结果中“提學使 1534–1539”一行是与卷161 矛盾的肯定性结论（同 CQ8）。两处机构和官职能读出，先后只靠同知止于 1534、佥事始于 1534，同年相接；离任是否隐含看不出；机构由官名加地点拼出（J161-U07）',
      '2026-11-04', 'Yang 审定', 'eval-cq-v1.2'),
 ]
-STATUS = "agent 初判，待 Yang 审核"
+STATUS = "first pass (automated); not reviewed"
 
 
 def rationale(cq, version):

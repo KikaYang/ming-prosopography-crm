@@ -1,6 +1,6 @@
 """
 Generate the SL12 evaluation tables: cbdb / event / state_vs_units.csv.
-Base: first-pass judgements at tags eval-v1 (cbdb, event) and eval-state-v1 (state) (AI agent (Claude Code));
+Base: first-pass judgements at tags eval-v1 (cbdb, event) and eval-state-v1 (state) (automated; see README);
 the later changes of v1.1, v1-final, v2 and eval-SL11-v1.2 are entered commit by commit in OVERRIDES
 (untagged commits between tags are listed separately to keep their dates and reviewers).
 Run from the repository root:
@@ -23,7 +23,7 @@ PREFIX = ("J089-", "J136-", "J149-")
 VOCAB_REV = "eval-SL11-v1.2"
 EVALUATED = {'event': ('eval-SL11-v1.2', 'docs/modelling/SL12_event.ttl'), 'state': ('eval-SL11-v1.2', 'docs/modelling/SL12_state.ttl')}
 
-# first-pass judgements (AI agent (Claude Code)): cbdb and event from tag eval-v1 (f0c14e8), state from tag eval-state-v1 (55c345f),
+# first-pass judgements (automated; see README): cbdb and event from tag eval-v1 (f0c14e8), state from tag eval-state-v1 (55c345f),
 # transcribed once from those tags' tables and not changed since; every later change goes into OVERRIDES
 BASE = {
     'cbdb': [

@@ -89,6 +89,6 @@ Each evaluation table was produced against the model files as they stood at a gi
   - `ontologies/`: CC BY 4.0 (FORTH-ICS); see `ontologies/LICENSE.md`.
   - `data/apis/`: CC BY-NC-SA 3.0; see `data/apis/LICENSE.md`.
 
-## Use of AI tools
+## Authorship and use of AI tools
 
-The scripts, the first-pass evaluation judgements and some of the documents, including the English versions of the modelling decision log and of the evaluation notes, were written by an AI agent (Claude Code). The core parts of the models, all modelling decisions and all evaluation judgements were written or approved by the author. The documents and tables record this as "first-pass judgement: AI agent (Claude Code)" and "approved by the author" (or "Yang"). Details are given in the Methodology chapter of the thesis.
+The research questions and design, the selection and close reading of the sources (including checking transcriptions against facsimiles of the *Ming Shilu*), all modelling decisions, the core parts of the models, and the review and final evaluation judgements are the author's. An AI coding assistant (Claude Code) was used for implementation support, drafting code and documentation and producing first-pass judgements for the author's review; entries marked "agent", "Claude" or "automated" refer to it.

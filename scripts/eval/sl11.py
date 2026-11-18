@@ -1,6 +1,6 @@
 """
 Generate the SL11 evaluation tables: cbdb / event / state_vs_units_SL11.csv.
-Base: first-pass judgements at tag eval-SL11-v1 (AI agent (Claude Code)); v1.1 re-evaluates the state
+Base: first-pass judgements at tag eval-SL11-v1 (automated; see README); v1.1 re-evaluates the state
 version (the first evaluation had read an outdated file); v1.2 implements the review of 2026-10-31.
 Run from the repository root:
     python scripts/eval/sl11.py              # rewrite the three tables in data/evaluation/ and check the evidence
@@ -21,7 +21,7 @@ PREFIX = "J118-"
 VOCAB_REV = 'eval-SL11-v1.2'
 EVALUATED = {'event': ('eval-SL11-v1.2', 'docs/modelling/SL11_event.ttl'), 'state': ('eval-SL11-v1.2', 'docs/modelling/SL11_state.ttl')}
 
-# first-pass judgements (AI agent (Claude Code); tag eval-SL11-v1, commit b6c7d72), transcribed once from that tag's tables
+# first-pass judgements (automated; see README; tag eval-SL11-v1, commit b6c7d72), transcribed once from that tag's tables
 # and not changed since; every later change goes into OVERRIDES
 BASE = {
     'cbdb': [

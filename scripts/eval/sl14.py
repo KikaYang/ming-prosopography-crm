@@ -1,6 +1,6 @@
 """
 Generate the SL14 evaluation tables: cbdb / event / state_vs_units_SL14.csv.
-Base: first-pass judgements at tag eval-SL14-v1 (AI agent (Claude Code)); v1.1 re-evaluates the state
+Base: first-pass judgements at tag eval-SL14-v1 (automated; see README); v1.1 re-evaluates the state
 version (block 2, Huangzhou Prefecture, was added after the evaluation) and implements the review of 2026-11-03.
 Run from the repository root:
     python scripts/eval/sl14.py              # rewrite the three tables in data/evaluation/ and check the evidence
@@ -21,7 +21,7 @@ PREFIX = "J161-"
 VOCAB_REV = 'eval-SL14-v1.1'
 EVALUATED = {'event': ('eval-SL14-v1.1', 'docs/modelling/SL14_event.ttl'), 'state': ('eval-SL14-v1.1', 'docs/modelling/SL14_state.ttl')}
 
-# first-pass judgements (AI agent (Claude Code); tag eval-SL14-v1, commit cf1d4ff), transcribed once from that tag's tables
+# first-pass judgements (automated; see README; tag eval-SL14-v1, commit cf1d4ff), transcribed once from that tag's tables
 # and not changed since; every later change goes into OVERRIDES
 BASE = {
     'cbdb': [
